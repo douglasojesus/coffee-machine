@@ -1,0 +1,63 @@
+Simplificação do D3
+
+D = ~w3.~w2.~w1.~w0.SR.SP.SN.A.VL.B0.B1 + ~w3.w2.~w1.w0 + ~w3.w2.w1.~w0 + ~w3.w2.w1.w0 + w3.~w2.~w1.~w0 + w3.~w2.~w1.w0.SR.SN.SP + w3.~w2.w1.~w0.SR.SN.SP
+
+D = ~w3.~w2.~w1.~w0.SR.SP.SN.A.VL.B0.B1 + ~w3.w2.~w1.w0 + ~w3.w2.w1.~w0 + ~w3.w2.w1.w0 + w3.~w2.~w1.~w0 + w3.~w2.~w1.w0.SR.SN.SP + w3.~w2.w1.~w0.SR.SN.SP
+
+D = ~w3.~w2.~w1.~w0.SR.SP.SN.A.VL.B0.B1 + ~w3.w2.(~w1.w0 + w1.~w0 + w1.w0) + w3.~w2.~w1.~w0 + SR.SN.SP.w3.~w2.(~w1.w0 + w1.~w0)
+
+D = ~w3.~w2.~w1.~w0.SR.SP.SN.A.VL.B0.B1 + ~w3.w2.(~w1.w0 + w1.(~w0 + w0)) + w3.~w2.~w1.~w0 + SR.SN.SP.w3.~w2.(~w1.w0 + w1.~w0)
+
+D = ~w3.~w2.~w1.~w0.SR.SP.SN.A.VL.B0.B1 + ~w3.w2.(~w1.w0 + w1.(1)) + w3.~w2.~w1.~w0 + SR.SN.SP.w3.~w2.(~w1.w0 + w1.~w0)
+
+D = ~w3.~w2.~w1.~w0.SR.SP.SN.A.VL.B0.B1 + ~w3.w2.(~w1.w0 + w1) + w3.~w2.~w1.~w0 + SR.SN.SP.w3.~w2.(~w1.w0 + w1.~w0)
+
+D = ~w3.~w2.~w1.~w0.SR.SP.SN.A.VL.B0.B1 + ~w3.w2.(w0 + w1) + w3.~w2.~w1.~w0 + SR.SN.SP.w3.~w2.(~w1.w0 + w1.~w0)
+
+D = ~w3.~w2.~w1.~w0.SR.SP.SN.A.VL.B0.B1 + ~w3.w2.(w0 + w1) + w3.~w2.~w1.~w0 + SR.SN.SP.w3.~w2.~w1.w0 + SR.SN.SP.w3.~w2.w1.~w0
+
+D = SR.SP.SN.~w2.(~w3.~w1.~w0.A.VL.B0.B1 + w3.(~w1.w0 + w1.~w0)) + ~w3.w2.(w0 + w1) + w3.~w2.~w1.~w0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+D = ~w3.~w2.~w1.~w0.SR.SP.SN.A.VL.B0.B1 + ~w3.w2.~w1.w0 + ~w3.w2.w1.~w0 + ~w3.w2.w1.w0 + w3.~w2.~w1.w0.SR.SN.SP + w3.~w2.w1.~w0.SR.SN.SP
+
+D = ~w3.~w2.~w1.~w0.SR.SP.SN.A.VL.B0.B1 + ~w3.w2.(~w1.w0 + w1.~w0 + w1.w0) + SR.SN.SP.w3.~w2.(~w1.w0 + w1.~w0)
+
+D = ~w3.~w2.~w1.~w0.SR.SP.SN.A.VL.B0.B1 + ~w3.w2.(~w1.w0 + w1.(~w0 + w0)) + SR.SN.SP.w3.~w2.(~w1.w0 + w1.~w0)
+
+D = ~w3.~w2.~w1.~w0.SR.SP.SN.A.VL.B0.B1 + ~w3.w2.(~w1.w0 + w1.(1)) + SR.SN.SP.w3.~w2.(~w1.w0 + w1.~w0)
+
+D = ~w3.~w2.~w1.~w0.SR.SP.SN.A.VL.B0.B1 + ~w3.w2.(~w1.w0 + w1) + SR.SN.SP.w3.~w2.(~w1.w0 + w1.~w0)
+
+D = ~w3.~w2.~w1.~w0.SR.SP.SN.A.VL.B0.B1 + ~w3.w2.(w0 + w1) + SR.SN.SP.w3.~w2.(~w1.w0 + w1.~w0)
+
+D = ~w3.~w2.~w1.~w0.SR.SP.SN.A.VL.B0.B1 + ~w3.w2.w0 + ~w3.w2.w1 + SR.SN.SP.w3.~w2.~w1.w0 + SR.SN.SP.w3.~w2.w1.~w0
+
+D = SR.SP.SN.~w2.(~w3.~w1.~w0.A.VL.B0.B1 + w3.(~w1.w0 + w1.~w0)) + ~w3.w2.(w0 + w1)
+

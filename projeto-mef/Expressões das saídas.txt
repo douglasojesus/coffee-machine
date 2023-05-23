@@ -1,0 +1,96 @@
+E0	~w3.~w2.~w1.~w0.~SR + ~w3.~w2.~w1.w0.~SR		
+E0	~w3.~w2.~w1.~SR(~w0 + w0)
+E0	~w3.~w2.~w1.~SR
+						
+E1	~w3.~w2.~w1.~w0.SR.~SP + ~w3.~w2.w1.~w0.~SP
+E1	~w3.~w2.~w0.~SP(~w1.SR + w1)
+E1	~w3.~w2.~w0.~SP.(SR + w1)
+								
+E2	~w3.~w2.~w1.~w0.SR.SP.~SN + ~w3.~w2.w1.w0.~SN	
+E2	~w3.~w2.~SN(~w1.~w0.SR.SP + w1.w0)
+							
+E3	~w3.~w2.~w1.~w0.SR.SP.SN.A.~VL + ~w3.w2.~w1.~w0.~VL	
+E3	~w3.~w1.~w0.~VL(~w2.SR.SP.SN.A + w2)
+E3	~w3.~w1.~w0.~VL.(SR.SP.SN.A + w2)
+							
+S0	~w3.~w2.~w1.~w0.SR.SP.SN.A.VL.~B0.~B1 + ~w3.w2.~w1.w0	
+S0	~w3.~w1(~w2.~w0.SR.SP.SN.A.VL.~B0.~B1 + w2.w0)
+							
+S1	~w3.~w2.~w1.~w0.SR.SP.SN.A.VL.~B0.B1 + ~w3.w2.w1.~w0	
+S1	~w3.~w0(~w2.~w1.SR.SP.SN.A.VL.~B0.B1 + w2.w1)
+					
+S2	~w3.~w2.~w1.~w0.SR.SP.SN.A.VL.B0.~B1 + ~w3.w2.w1.w0	
+							
+S3	~w3.~w2.~w1.~w0.SR.SP.SN.A.VL.B0.B1 + w3.~w2.~w1.~w0	
+S3	~w2.~w1.~w0(~w3.SR.SP.SN.A.VL.B0.B1 + w3)
+S3	~w2.~w1.~w0(SR.SP.SN.A.VL.B0.B1 + w3)
+							
+P	w3.~w2.~w1.w0.SR.SP.SN + w3.~w2.w1.~w0.SR.SP.SN + w3.~w2.w1.w0	
+P	w3.~w2.SR.SP.SN(~w1.w0 + w1.~w0) + w3.~w2.w1.w0	
+	
+AQ	w3.~w2.w1.~w0.SR.SP.SN + w3.~w2.w1.w0
+AQ	w3.~w2.w1.(~w0.SR.SP.SN + w0)
+AQ	w3.~w2.w1.(SR.SP.SN + w0)
+					
+PP	w3.~w2.w1.w0	
+							
+M	~w3.~w2.~w1.~w0.SR.SP.SN.~A + ~w3.~w2.~w1.w0.SR + ~w3.~w2.w1.~w0.SP + ~w3.~w2.w1.w0.SN + ~w3.w2.~w1.~w0.VL + w3.~w2.~w1.w0.SR.SP.~SN + w3.~w2.~w1.w0.SR.~SP.SN + w3.~w2.~w1.w0.~SR.SP.SN + w3.~w2.w1.~w0.SR.SP.~SN + w3.~w2.w1.~w0.SR.~SP.SN + w3.~w2.w1.~w0.~SR.SP.SN	
+M	~w3.~w2.~w1.SR(~w0.SP.SN.~A + w0) + ~w3.~w2.w1.~w0.SP + ~w3.~w2.w1.w0.SN + ~w3.w2.~w1.~w0.VL + w3.~w2.~w1.w0.(SR.SP.~SN + SR.~SP.SN + ~SR.SP.SN) + w3.~w2.w1.~w0.(SR.SP.~SN + SR.~SP.SN + ~SR.SP.SN)		
+M	~w3.~w2.~w1.SR(SP.SN.~A + w0) + ~w3.~w2.w1.(~w0.SP + w0.SN) + ~w3.w2.~w1.~w0.VL + w3.~w2.~w1.w0.(SR.SP.~SN + SR.~SP.SN + ~SR.SP.SN) + w3.~w2.w1.~w0.(SR.SP.~SN + SR.~SP.SN + ~SR.SP.SN)			
+M	~w3.~w2.~w1.SR.(SP.SN.~A + w0) + ~w3.~w2.w1.(~w0.SP + w0.SN) + ~w3.w2.~w1.~w0.VL + w3.~w2.~w1.w0.(SR.SP.~SN + SR.~SP.SN + ~SR.SP.SN) + w3.~w2.w1.~w0.(SR.SP.~SN + SR.~SP.SN + ~SR.SP.SN)		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		

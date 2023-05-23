@@ -1,0 +1,11 @@
+D = ~w3.~w2.~w1.~w0.SR.~SP + ~w3.~w2.~w1.~w0.SR.SP.~SN + ~w3.~w2.~w1.~w0.SR.SP.SN.A.VL.~B0.B1 + ~w3.~w2.~w1.~w0.SR.SP.SN.A.VL.B0.~B1 + ~w3.~w2.w1.~w0.~SP + ~w3.~w2.w1.w0.~SN + w3.~w2.~w1.w0.SR.SP.SN + w3.~w2.w1.~w0.SR.SP.SN
+
+D = ~w3.~w2.~w1.~w0.SR.(~SP + SP.~SN + SP.SN.A.VL.~B0.B1 + SP.SN.A.VL.B0.~B1) + ~w3.~w2.w1.~w0.~SP + ~w3.~w2.w1.w0.~SN + w3.~w2.~w1.w0.SR.SP.SN + w3.~w2.w1.~w0.SR.SP.SN
+
+D = ~w3.~w2.~w1.~w0.SR.(~SP + SP.~SN + SP.SN.A.VL.~B0.B1 + SP.SN.A.VL.B0.~B1) + ~w3.~w2.w1(~w0.~SP + w0.~SN) + w3.~w2.SR.SP.SN(~w1.w0 + w1.~w0)
+
+D = ~w3.~w2.~w1.~w0.SR.(~SP + SP.~SN + SP.SN.A.VL.~B0.B1 + SP.SN.A.VL.B0.~B1) + ~w3.~w2.w1(~w0.~SP + w0.~SN) + w3.~w2.SR.SP.SN(~w1.w0 + w1.~w0)
+
+D = ~w3.~w2.~w1.~w0.SR.(~SP + SP.~SN + SP.SN.A.VL.~B0.B1 + SP.SN.A.VL.B0.~B1) + ~w3.~w2.w1(~w0.~SP + w0.~SN) + w3.~w2.SR.SP.SN(~w1.w0 + w1.~w0)
+
+D = ~w3.~w2.~w1.~w0.SR.(~SP + SP.~SN + SP.SN.A.VL.(~B0.B1 + B0.~B1))) + ~w3.~w2.w1.(~w0.~SP + w0.~SN) + w3.~w2.SR.SP.SN.(~w1.w0 + w1.~w0)

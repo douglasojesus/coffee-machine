@@ -1,0 +1,23 @@
+D = ~w3.~w2.~w1.~w0.SR.SP.SN.A.~VL + ~w3.~w2.~w1.~w0.SR.SP.SN.A.VL.~B0.~B1 + ~w3.~w2.~w1.~w0.SR.SP.SN.A.VL.~B0.B1 + ~w3.~w2.~w1.~w0.SR.SP.SN.A.VL.B0.~B1 + ~w3.w2.~w1.~w0.~VL
+
+D = ~w3.~w2.~w1.~w0.(SR.SP.SN.A.~VL + SR.SP.SN.A.VL.~B0.~B1 + SR.SP.SN.A.VL.~B0.B1 + SR.SP.SN.A.VL.B0.~B1) + ~w3.w2.~w1.~w0.~VL
+
+D = ~w3.~w2.~w1.~w0.SR.SP.SN.A.(~VL + VL.~B0.~B1 + VL.~B0.B1 + VL.B0.~B1) + ~w3.w2.~w1.~w0.~VL
+
+D = ~w3.~w2.~w1.~w0.SR.SP.SN.A.(~VL + VL.(~B0.~B1 + ~B0.B1 + B0.~B1)) + ~w3.w2.~w1.~w0.~VL
+
+D = ~w3.~w2.~w1.~w0.SR.SP.SN.A.(~VL + VL.(~B0.(~B1 + B1) + B0.~B1)) + ~w3.w2.~w1.~w0.~VL
+
+D = ~w3.~w2.~w1.~w0.SR.SP.SN.A.(~VL + VL.(~B0.(1) + B0.~B1)) + ~w3.w2.~w1.~w0.~VL
+
+D = ~w3.~w2.~w1.~w0.SR.SP.SN.A.(~VL + VL.(~B0 + B0.~B1)) + ~w3.w2.~w1.~w0.~VL
+
+D = ~w3.~w2.~w1.~w0.SR.SP.SN.A.(~VL + VL.(~B0 + B0.~B1)) + ~w3.w2.~w1.~w0.~VL
+
+D = ~w3.~w2.~w1.~w0.SR.SP.SN.A.(~VL + VL.(~B0 + B0.~B1)) + ~w3.w2.~w1.~w0.~VL
+
+D = ~w3.~w2.~w1.~w0.SR.SP.SN.A.(~VL + VL.~B0 + VL.B0.~B1) + ~w3.w2.~w1.~w0.~VL
+
+D = ~w3.~w1.~w0.(~w2.SR.SP.SN.A.~VL + ~w2.SR.SP.SN.A.VL.~B0 + ~w2.SR.SP.SN.A.VL.B0.~B1) + w2.~VL)
+
+CORRIGIDO
