@@ -1,0 +1,218 @@
+\chapter{METODOLOGIA}
+
+\section{Recursos utilizados}
+Em todo o processo de criação do protótipo , algumas ferramentas foram utilizadas como auxiliadoras no processo.
+
+Para desenvolvimento das tabelas, foi utilizado a plataforma do Google Sheets, disponível virtualemnte. Para o desenho do circuito, o software Logisim foi utilizado como uma ferramenta poderosa de desenho e simulação. Na parte de registro, o Overleaf foi utilizado como uma ferramenta que permite escrever em LateX, utilizando o modelo da ABNT disponibilizado no site do Módulo Integrador de Circuitos Digitais da UEFS. O site foi escolhido por ter uma ótima estruturação de escrita e permitir o desenvolvimento em grupo dentro da plataforma. Além do Overleaf, também para registros, o Trello foi utilizado como uma tabela de registro do que foi tratado nas sessões armazenando as ideias, fatos, questões e metas propostos pela metodologia PBL. Os recursos bibliográficos estão apresentados na sessão de referência deste relatório.
+
+\section{Escolha do modelo de máquina}
+
+Máquinas de estados são modelos matemáticos amplamente utilizados na área de engenharia de sistemas digitais para descrever o comportamento sequencial de sistemas. Essas máquinas são compostas por um conjunto finito de estados, transições entre esses estados e ações associadas a essas transições. Elas desempenham um papel fundamental no projeto e implementação de circuitos lógicos que respondem a estímulos externos de forma controlada e previsível.
+
+No contexto do projeto da Coffee Machine, a escolha do modelo de máquina de estados se baseia na necessidade de descrever o comportamento sequencial do sistema, que envolve desde a inserção e validação das moedas até a entrega do produto escolhido ao cliente. As máquinas de estados oferecem uma estrutura clara e organizada para especificar todas as etapas e condições necessárias para o funcionamento adequado do sistema.
+
+A escolha do modelo de Mealy para a Coffee Machine tem como objetivo aproveitar a capacidade de considerar as entradas durante as transições de estados para otimizar o controle do sistema \cite{tocci2010sistemas}. Isso é particularmente relevante para o processo de validação das moedas, onde a decisão de aceitar ou rejeitar uma moeda depende tanto do estado atual quanto do valor inserido.
+
+\section{Desenho do diagrama de transição de estados}
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=1\textwidth]{imagens/diagramaDeTransicao.png}
+    \caption{Desenho do diagrama de transição de estados}
+    \label{fig:diagramaTransicao}
+\end{figure}
+
+No desenho do diagrama de transição de estados \ref{fig:diagramaTransicao}, o texto que descreve as entradas estão na cor preta e o texto que descreve as saídas estão na cor verde. As setas pretas seguem um fluxo a partir do estado inicial, enquanto as de outras cores voltam para o estado inicial, seja devido aos erros ou devido a finalização do processo. 
+
+As saídas estão representadas pelos códigos:  E0, E1, E2, E3, S0, S1, S2, S3, P, AQ, PP. As saídas que irão acionar o display de led para demonstração de erros são: E0 (para o sensor SR), E1 (para o sensor SP), E2 (para o sensor SN) e E3 (valor não correspondente com bebida selecionada). Para o preparo da bebida: S0 (café expresso), S1 (café com leite), S2 (camomila) e S3 (cappuccino). Para representar o processo de preparo, seguem as seguintes saídas: P (pressurizador), AQ (aquecedor) e PP (pisca-pisca, que representa a liberação da bebida). Por fim, o M representa o modo de espera.
+
+As entradas estão representadas pelos códigos: SR, SP, SN, A, VL (V0 e V1), B0, B1. As entradas dos sensores são o SR (copos), SP (cápsulas) e SN (nível mínimo). Para acionamento do pedido, há a entrada A. O VL entrará como um validador do valor selecionado. Se o valor selecionado (V0 e V1) estiver de acordo com a bebida selecionada (B0 e B1), VL será nível lógico alto (1). Caso contrário, será nível lógico baixo (0). Para efetuar a validação, as entradas V0 e V1 entraram no sistema, mas não entrarão na MEF, responsabilizando a entrada VL da MEF. Por fim, B0 e B1 são as entradas que representam a seleção da bebida. 
+
+Os estados irão ter um atraso de transição de 2 segundos, para todas as exibições previstas a partir da saída serem efetuadas.
+
+\section{Tabela de transição de estados e redução de estados}
+
+Devido a máquina obter 7 entradas, 128 possibilidades são registradas apenas a partir do estado inicial. Tendo a noção que nem todas as possibilidades precisam ser registradas, já que várias entradas podem ser utilizadas como sem importância para as equações de excitação, a tabela foi definida de acordo com todas as possibilidades possíveis abstraídas. 
+
+Os estados apresentados foram "INICIAL", que é o estado ideal de inicio da MEF, "EE0", "EE1", "EE2", "EE3", que representam os estados de erro dos sensores SR, SP, SN e da validação do valor e bebida, respectivamente, "ES0", "ES1", "ES2", "ES3", que representam a escolha da bebida com o valor inserido corretamente, "P" para presurização, "AQ" para aquecimento e "PP" para saída final, que será o acionamento contínuo de um LED. A Figura \ref{fig:tabelaTransicao} apresenta a tabela desenvolvida.
+
+\begin{figure}[]
+    \centering
+    \includegraphics[width=1\textwidth]{imagens/tabelaDeTransicaoDeEstados.png}
+    \caption{Tabela da transição de estados reduzida}
+    \label{fig:tabelaTransicao}
+\end{figure}
+
+\section{Codificação de estados e modificação da tabela de transição de estados}
+
+Como são 12 estados, serão necessários 4 flip-flops para construir a MEF, precisando de uma codificação de 4 bits. Foi decidido a seguinte representação:
+
+\begin{itemize}
+    \item INICIAL = 0000
+    \item EE0 = 0001
+    \item EE1 = 0010
+    \item EE2 = 0011
+    \item EE3 = 0100
+    \item ES0 = 0101
+    \item ES1 = 0110
+    \item ES2 = 0111
+    \item ES3 = 1000
+    \item P = 1001
+    \item AQ = 1010
+    \item PP = 1011
+\end{itemize}
+
+A figura \ref{fig:tabelaCodificada} apresenta a codificação aplicada na tabela.
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=1\textwidth]{imagens/tabelaCodificada.png}
+    \caption{Tabela da transição de estados codificada}
+    \label{fig:tabelaCodificada}
+\end{figure}
+
+\section{Escolha dos elementos de memória}
+
+Para armazenar e representar os estados da máquina de estados, o flip-flop do tipo D é utilizado. Esse tipo de flip-flop possui uma entrada de dados (D) que determina o valor a ser armazenado e uma entrada de clock (CLK) que controla o momento de atualização do valor armazenado.
+
+A escolha do flip-flop do tipo D se justifica pela sua simplicidade e facilidade de utilização, além de ser amplamente disponível e de baixo custo. Ele oferece a capacidade de armazenar e atualizar os estados da máquina de forma confiável e sincronizada com o clock do sistema \cite{floyd}.
+
+Dessa forma, a combinação do modelo de máquina de estados de Mealy com o uso do flip-flop do tipo D proporciona uma abordagem adequada para o projeto da Coffee Machine. Essa escolha permite a especificação e implementação eficiente do controle do sistema, levando em consideração tanto o estado atual quanto as entradas relevantes para a geração de saída adequada.
+
+\section{Construção da tabela e obtenção das equações de excitação}
+
+Para gerar a tabela de excitação a partir de uma tabela codificada, é necessário tomar cada bit da quantidade de bits da codificação dos estados como a saída de um flip-flop. Como são 4 bits, serão 4 flip-flops. A expressão de saída pode ser construída através das situações onde a saída do flip-flop é 1. Para isso, basta registrar o estado atual de cada variável (saídas dos flip-flops atuais mais as entradas) através de min-terms. Uma forma de simplificar é utilizando o Mapa de Karnaugh, entretanto o mesmo não é recomendável para a quantidade de variáveis que são necessárias para cada termo da expressão da saída do flip-flop. Por isso, a simplificação será através da álgebra booleana. 
+
+De acordo com a análise da Figura \ref{fig:tabelaExcitacao} é possível verificar quais são as expressões obtidas, utilizando a estratégia de min-terms.
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=1\textwidth]{imagens/tabelaDeExcitacao.png}
+    \caption{Tabela das equações de excitação}
+    \label{fig:tabelaExcitacao}
+\end{figure}
+
+
+O flip-flop 3 (D3) tem a seguinte expressão de saída: \~w3.\~w2.\~w1.\~w0.SR.SP.SN.A.VL.B0.B1 + \~w3.w2.\~w1.w0 + \~w3.w2.w1.\~w0 + \~w3.w2.w1.w0 + w3.\~w2.\~w1.\~w0 + w3.\~w2.\~w1.w0.SR.SN.SP + w3.\~w2.w1.\~w0.SR.SN.SP
+
+O flip-flop 2 (D2) tem a seguinte expressão de saída: \~w3.\~w2.\~w1.\~w0.SR.SP.SN.A.\~VL + \~w3.\~w2.\~w1.\~w0.SR.SP.SN.A.VL.\~B0.\~B1 + \~w3.\~w2.\~w1.\~w0.SR.SP.SN.A.VL.\~B0.B1 + \~w3.\~w2.\~w1.\~w0.SR.\\SP.SN.A.VL.B0.\~B1 + \~w3.w2.\~w1.\~w0.\~VL
+
+O flip-flop 1 (D1) tem a seguinte expressão de saída: \~w3.\~w2.\~w1.\~w0.SR.\~SP + \~w3.\~w2.\~w1.\~w0.SR.\\SP.\~SN + \~w3.\~w2.\~w1.\~w0.SR.SP.SN.A.VL.\~B0.B1 + \~w3.\~w2.\~w1.\~w0.SR.SP.SN.A.VL.B0.\~B1 + \~w3.\~w2.w1.\\ \~w0.\~SP + \~w3.\~w2.w1.w0.\~SN + w3.\~w2.\~w1.w0.SR.SP.SN + w3.\~w2.w1.\~w0.SR.SP.SN
+
+O flip-flop 0 (D0) tem a seguinte expressão de saída: \~w3.\~w2.\~w1.\~w0.\~SR + \~w3.\~w2.\~w1.\~w0.SR.SP.\\ \~SN + \~w3.\~w2.\~w1.\~w0.SR.SP.SN.A.VL.\~B0.\~B1 + \~w3.\~w2.\~w1.\~w0.SR.SP.SN.A.VL.B0.\~B1 + \~w3.\~w2.\~w1.w0.\\ \~SR + \~w3.\~w2.w1.w0.\~SN +w3.\~w2.w1.\~w0.SR.SP.SN + \~w3.w2.\~w1.w0 + \~w3.w2.w1.\~w0 + \~w3.w2.w1.w0 + w3.\~w2.\~w1.\~w0
+
+Os bits "w3", "w2", "w1" e "w0" representam a saídas dos flip-flops D3, D2, D1 e D0, respectivamente, também conhecidas comumentes como "Q". O símbolo "." representa uma porta AND e o símbolo "+" representa uma porta OR.
+
+Contudo, as expressões acima não estão simplificadas. Com a simplificação, e a fatoração de alguns termos, através da álgebra de boole, as equações ficam da seguinte forma:
+
+O flip-flop 3 (D3): \~w2.\~w0(SR.SP.SN.(w3 + \~w1.A.VL.B0.B1) + \~w2.\~w0) + \~w3.w2.(w1 + w0)
+
+O flip-flop 2 (D2): \~w3.\~w1.\~w0.(\~w2.SR.SP.SN.A.(\~VL + \~B0 + \~B1) + w2.\~VL)
+
+O flip-flop 1 (D1): \~w3.\~w2.\~w1.\~w0.SR.(\~SP + \~SN + SN.A.VL.(\~B0.B1 + B0.\~B1)) + \~w3.\~w2.w1\\(\~w0.\~SP + w0.\~SN) + w3.\~w2.SR.SP.SN(\~w1.w0 + w1.\~w0)
+
+O flip-flop 0 (D0): \~w2.\~w0(\~w3.\~w1(\~SR + SP.(\~SN + A.VL.\~B1)) + w3.w1.SR.SP.SN) + \~w3.\~w2.w0.(\~w1.\~SR + w1.\~SN)
+
+\section{Obtenção das equações de saída}
+
+No caso específico deste projeto, o modelo de máquina de estados escolhido é o modelo de Mealy. Nesse modelo, as saídas do sistema dependem tanto do estado atual quanto das entradas no momento da transição entre os estados. Isso significa que a geração de saída é determinada pelo estado em que a máquina se encontra e pelas entradas recebidas nesse momento, permitindo uma maior flexibilidade e adaptabilidade do sistema. Portanto, as equações de saída terão tanto os estados quanto as entradas.
+
+A saída E0 tem a seguinte expressão: \~w3.\~w2.\~w1.\~w0.\~SR + \~w3.\~w2.\~w1.w0.\~SR		
+
+A saída E1 tem a seguinte expressão: \~w3.\~w2.\~w1.\~w0.SR.\~SP + \~w3.\~w2.w1.\~w0.\~SP	
+
+A saída E2 tem a seguinte expressão: \~w3.\~w2.\~w1.\~w0.SR.SP.\~SN + \~w3.\~w2.w1.w0.\~SN								
+
+A saída E3 tem a seguinte expressão: \~w3.\~w2.\~w1.\~w0.SR.SP.SN.A.\~VL + \~w3.w2.\~w1.\~w0.\~VL	
+
+A saída S0 tem a seguinte expressão: \~w3.\~w2.\~w1.\~w0.SR.SP.SN.A.VL.\~B0.\~B1 + \~w3.w2.\~w1.w0		
+
+A saída S1 tem a seguinte expressão: \~w3.\~w2.\~w1.\~w0.SR.SP.SN.A.VL.\~B0.B1 + \~w3.w2.w1.\~w0								
+A saída S2 tem a seguinte expressão: \~w3.\~w2.\~w1.\~w0.SR.SP.SN.A.VL.B0.\~B1 + \~w3.w2.w1.w0								
+A saída S3 tem a seguinte expressão: \~w3.\~w2.\~w1.\~w0.SR.SP.SN.A.VL.B0.B1 + w3.\~w2.\~w1.\~w0	
+
+A saída P tem a seguinte expressão:	w3.\~w2.\~w1.w0.SR.SP.SN + w3.\~w2.w1.\~w0.SR.SP.SN + w3.\~w2.w1.w0								
+
+A saída AQ tem a seguinte expressão: w3.\~w2.w1.\~w0.SR.SP.SN + w3.\~w2.w1.w0								
+
+A saída PP tem a seguinte expressão: w3.\~w2.w1.w0								
+A saída M tem a seguinte expressão:	\~w3.\~w2.\~w1.\~w0.SR.SP.SN.\~A + \~w3.\~w2.\~w1.w0.SR + \~w3.\~w2.w1.\~w0.SP + \~w3.\~w2.w1.w0.SN + \~w3.w2.\~w1.\~w0.VL + w3.\~w2.\~w1.w0.SR.SP.\~SN + w3.\~w2.\~w1.w0.SR.\~SP.SN + w3.\~w2.\~w1.w0.\~SR.SP.SN + w3.\~w2.w1.\~w0.SR.SP.\~SN + w3.\~w2.w1.\~w0.SR.\~SP.SN + w3.\~w2.w1.\~w0.\~SR.SP.SN								
+
+Após a simplificação e fatoração de alguns termos utilizando a algebra de boole, as equações das saídas ficaram da seguinte forma:
+
+Saída E0: \~w3.\~w2.\~w1.\~SR
+
+Saída E1: \~w3.\~w2.\~w0.\~SP(SR + w1)
+
+Saída E2: \~w3.\~w2.\~SN(\~w1.\~w0.SR.SP + w1.w0)
+
+Saída E3: \~w3.\~w1.\~w0.\~VL(SR.SP.SN.A + w2)
+
+Saída S0: \~w3.\~w1(\~w2.\~w0.SR.SP.SN.A.VL.\~B0.\~B1 + w2.w0)
+
+Saída S1: \~w3.\~w0(\~w2.\~w1.SR.SP.SN.A.VL.\~B0.B1 + w2.w1)
+
+Saída S2: \~w3.\~w2.\~w1.\~w0.SR.SP.SN.A.VL.B0.\~B1 + \~w3.w2.w1.w0
+
+Saída S3: \~w2.\~w1.\~w0(SR.SP.SN.A.VL.B0.B1 + w3)
+
+Saída P: w3.\~w2.SR.SP.SN(\~w1.w0 + w1.\~w0) + w3.\~w2.w1.w0
+
+Saída AQ: w3.\~w2.w1.(SR.SP.SN + w0)
+
+Saída PP: w3.\~w2.w1.w0
+
+Saída M: \~w3.\~w2.\~w1.SR(SP.SN.\~A + w0) + \~w3.\~w2.w1.(\~w0.SP + w0.SN) + \~w3.w2.\~w1.\~w0.VL + w3.\~w2.\~w1.w0.(SR.SP.\~SN + SR.\~SP.SN + \~SR.SP.SN) + w3.\~w2.w1.\~w0.(SR.SP.\~SN + SR.\~SP.SN + \~SR.SP.SN)
+
+\section{Desenho do circuito}
+
+O circuito foi desenhado utilizando o software Logisim, que é um simulador lógico que permite o desenho de circuitos. Com ele, foi possível desenhar as portas lógicas e as relações de entradas e saídas. Além disso, ele permite efetuar a simulação e teste do circuito. A Figura 5 apresenta todo o circuito da MEF desenvolvida.
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=1\textwidth]{imagens/DesenhoCircuito.png}
+    \caption{Desenho do circuito lógico}
+    \label{fig:desenhoCircuito}
+\end{figure}
+
+\section{Teste e simulação}
+
+Algumas simulações utilizando o software do Logisim foram utilizadas para realizar os testes de funcionalidades da máquina de estados. As entradas foram movidas para próximo das saídas para que fosse melhor visualizado o comportamento das saídas de acordo com as entradas.
+
+Como é possível verificar na simulação da Figura 6, todas as entradas possuem nível lógico baixo, com isso a saída E0 é apresentada, informando que o sensor SR está recebendo nível lógico baixo.
+
+\begin{figure}[]
+    \centering
+    \includegraphics[width=0.3\textwidth]{imagens/simulacao1.png}
+    \caption{Simulação com entradas 0000000 e saídas 1000000000000}
+    \label{fig:simulacao1}
+\end{figure}
+
+Na segunda simulação (Figura 7), o sensor SR envia nível lógico alto, mas as outras entradas continuam recebendo nível lógico baixo, o que possibilita que a saída E1 seja apresentada, informando que o sensor SP está enviando nível lógico baixo.
+
+\begin{figure}[]
+    \centering
+    \includegraphics[width=0.3\textwidth]{imagens/simulacao2.png}
+    \caption{Desenho do circuito }
+    \label{fig:simulacao2}
+\end{figure}
+
+Com todos os sensores enviando nível lógico alto (Figura 8), a MEF entra em estado inicial. A saída apresentada é o modo de espera. Com isso o usuário pode modificar as entradas para acionar o preparo.
+
+\begin{figure}[]
+    \centering
+    \includegraphics[width=0.35\textwidth]{imagens/simulacao3.png}
+    \caption{ do circuito lógico}
+    \label{fig:simulacao3}
+\end{figure}
+
+Por fim, na Figura 9 é possível verificar, após acionamento com a entrada "A", com todos os sensores em nível lógico alto, junto com o VL, e a escolha de bebida B0=0 e B1=1, a saída S1 é apresentada, informando o tipo de bebida selecionado.
+
+\begin{figure}[]
+    \centering
+    \includegraphics[width=0.3\textwidth]{imagens/simulacao4.png}
+    \caption{Desenho d lógico}
+    \label{fig:simulacao4}
+\end{figure}
+
+Outras simulações foram feitas, mas devido a quantidade de possibilidades de testes a serem feitos, não cabe a inserção neste relatório técnico.

@@ -1,0 +1,170 @@
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+% abnTeX2: Modelo de Trabalho Academico (tese de doutorado, dissertacao de
+% mestrado e trabalhos monograficos em geral) em conformidade com 
+% ABNT NBR 14724:2011: Informacao e documentacao - Trabalhos academicos -
+% Apresentacao
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+
+\documentclass[
+	% -- opções da classe memoir --
+	11pt,				% tamanho da fonte
+	openany,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
+	oneside,
+	%twoside,			% para impressão em verso e anverso. Oposto a oneside
+	a4paper,			% tamanho do papel. 
+	% -- opções da classe abntex2 --
+	chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
+	section=TITLE,		% títulos de seções convertidos em letras maiúsculas
+	%subsection=TITLE,	% títulos de subseções convertidos em letras maiúsculas
+	%subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
+	% -- opções do pacote babel --
+	english,			% idioma adicional para hifenização
+	%french,				% idioma adicional para hifenização
+	%spanish,			% idioma adicional para hifenização
+	brazil				% o último idioma é o principal do documento
+	]{abntex2}
+
+% ---
+% Pacotes
+% ---
+
+%\documentclass{report}
+\usepackage{graphicx}
+\usepackage{config}
+\usepackage{caption}
+\usepackage{lmodern}			% Usa a fonte Latin Modern			
+\usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
+\usepackage[utf8]{inputenc}		
+\usepackage{lastpage}			% Usado pela Ficha catalográfica
+\usepackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção.
+\usepackage{color}				% Controle das cores
+\usepackage{graphicx}			% Inclusão de gráficos
+\usepackage{microtype} 			% para melhorias de justificação
+\usepackage{lipsum}				% para geração de dummy text
+\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
+\usepackage[alf]{abntex2cite}	% Citações padrão ABNT
+% ---
+% Configurações do pacote backref
+% Usado sem a opção hyperpageref de backref
+\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
+% Texto padrão antes do número das páginas
+\renewcommand{\backref}{}
+% Define os textos da citação
+\renewcommand*{\backrefalt}[4]{
+	\ifcase #1 %
+		Nenhuma citação no texto.%
+	\or
+		Citado na página #2.%
+	\else
+		Citado #1 vezes nas páginas #2.%
+	\fi}%
+% ---
+
+% ---
+% Informações de dados para CABEÇALHO
+% ---
+\titulo{DESENVOLVIMENTO DO CIRCUITO DIGITAL DE UMA MÁQUINA DE CAFÉ}
+% TODO: lista com vários autores
+\autor{Douglas Oliveira de Jesus}
+\local{Feira de Santana}
+\data{2023}
+% TODO: mudar para tutor
+\tutor{Armando Sanca Sanca}
+\modulo{TEC498 Projeto de Circuitos Digitais}
+\instituicao{%
+  \textbf{Universidade Estadual de Feira de Santana}
+}
+\departamento{Tecnologia}
+  
+\tipotrabalho{PROTÓTIPO DE UM PAINEL ELETRÔNICO DIGITAL}
+% ---
+
+% ---
+% Configurações de aparência do PDF final
+
+% alterando o aspecto da cor azul
+\definecolor{blue}{RGB}{41,5,195}
+
+% informações do PDF
+\makeatletter
+\hypersetup{
+     	%pagebackref=true,
+		pdftitle={\@title}, 
+		pdfauthor={\@author},
+    	pdfsubject={\imprimirpreambulo},
+	    pdfcreator={LaTeX with abnTeX2},
+		pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico}, 
+		colorlinks=true,       		% false: boxed links; true: colored links
+    	linkcolor=blue,          	% color of internal links
+    	citecolor=blue,        		% color of links to bibliography
+    	filecolor=magenta,      		% color of file links
+		urlcolor=blue,
+		bookmarksdepth=4
+}
+\makeatother
+% --- 
+
+% --- 
+% Espaçamentos entre linhas e parágrafos 
+% --- 
+
+% O tamanho do parágrafo é dado por:
+\setlength{\parindent}{1.3cm}
+
+% Controle do espaçamento entre um parágrafo e outro:
+\setlength{\parskip}{0.2cm}  % tente também \onelineskip
+     
+% ---
+% compila o indice
+% ---
+\makeindex
+% ---
+
+% ----
+% Início do documento
+% ----
+\begin{document}
+
+
+\frenchspacing 
+\textual
+\pagestyle{uefs-pbl}
+\aliaspagestyle{chapter}{uefs-pbl-capitulo}
+\imprimircabecalho
+\begingroup
+\let\clearpage\relax
+% -----------------------------------------------------------
+% Resumo
+\begin{resumoumacoluna}
+\textit{Este relatório técnico descreve os seguintes passos para o desenvolvimento do circuito digital de uma máquina de café: desenho do diagrama de transição de estados, bem como sua tabela e minimização dos estados; codificação; escolha dos elementos de memória; tabela de excitação; equações de exitação e de saída e desenho do circuito. A produção foi solicitada pela disciplina de M.I de Circuitos Digitais, do curso de Engenharia de Computação da Universidade Estadual de Feira de Santana, utilizando a metodologia PBL (Problem Based Learning).}
+
+
+ \vspace{\onelineskip}
+ 
+ \noindent
+ \textbf{Palavras-chaves}: Máquina de Estados, MEF, Circuitos Digitais.
+\end{resumoumacoluna}
+% ----------------------------------------------------------
+%IMPORTAÇÂO DOS TÒPICOS
+% ----------------------------------------------------------
+\include{textuais/introducao.tex}
+
+\include{textuais/referencialTeorico}
+
+\include{textuais/metodologia.tex}
+
+\include{textuais/resultados.tex}
+
+
+
+\postextual
+\endgroup
+
+% ----------------------------------------------------------
+% Referências bibliográficas
+% ----------------------------------------------------------
+\bibliography{bibliografia}
+
+\end{document}
