@@ -1,0 +1,94 @@
+	buf(dig0, saida1);,
+	buf(dig1, saida2);
+	buf(dig2, saida3);
+	buf(dig3, saida4);
+	
+	and inst1(s0_nivelAlto, S0, ~S1, ~S2, ~S3, ~SR, ~SP, ~SN, ~VL, ~M);
+	and inst2(s1_nivelAlto, ~S0, S1, ~S2, ~S3, ~SR, ~SP, ~SN, ~VL, ~M);
+	and inst3(s2_nivelAlto, ~S0, ~S1, S2, ~S3, ~SR, ~SP, ~SN, ~VL, ~M);
+	and inst4(s3_nivelAlto, ~S0, ~S1, ~S2, S3, ~SR, ~SP, ~SN, ~VL, ~M);
+	and inst5(sr_nivelAlto, ~S0, ~S1, ~S2, ~S3, SR, ~SP, ~SN, ~VL, ~M);
+	and inst6(sp_nivelAlto, ~S0, ~S1, ~S2, ~S3, ~SR, SP, ~SN, ~VL, ~M);
+	and inst7(sn_nivelAlto, ~S0, ~S1, ~S2, ~S3, ~SR, ~SP, SN, ~VL, ~M);
+	and inst8(vl_nivelAlto, ~S0, ~S1, ~S2, ~S3, ~SR, ~SP, ~SN, VL, ~M);
+	and inst9(m_nivelAlto, ~S0, ~S1, ~S2, ~S3, ~SR, ~SP, ~SN, ~VL, M);
+	
+	or (a, vl_nivelAlto, sn_nivelAlto, sp_nivelAlto, sr_nivelAlto, s3_nivelAlto, s2_nivelAlto, s1_nivelAlto, s0_nivelAlto);
+	or (b, vl_nivelAlto, sp_nivelAlto, sr_nivelAlto, s3_nivelAlto, s2_nivelAlto, s1_nivelAlto, s0_nivelAlto);
+	or (c, vl_nivelAlto, sn_nivelAlto, sp_nivelAlto, sr_nivelAlto, s3_nivelAlto, s2_nivelAlto, s1_nivelAlto, s0_nivelAlto);
+	or (d, vl_nivelAlto, sn_nivelAlto, sp_nivelAlto, sr_nivelAlto, s3_nivelAlto, s2_nivelAlto, s1_nivelAlto, s0_nivelAlto);
+	or (e, vl_nivelAlto, sn_nivelAlto, sp_nivelAlto, sr_nivelAlto, s3_nivelAlto, s2_nivelAlto, s1_nivelAlto, s0_nivelAlto);
+	or (f, vl_nivelAlto, sn_nivelAlto, sp_nivelAlto, sr_nivelAlto, s3_nivelAlto, s2_nivelAlto, s1_nivelAlto, s0_nivelAlto);
+	or (g, vl_nivelAlto, sn_nivelAlto, sp_nivelAlto, sr_nivelAlto, s3_nivelAlto, s2_nivelAlto, s1_nivelAlto, s0_nivelAlto);
+	buf (h, m_nivelAlto);
+
+	
+	and(letraC, S0, dig0);
+
+
+module interfaceS1 (saida1Contador, saida2Contador, a, b, c, d, e, f, g);
+	//CE01: escolha do S0
+	output a, b, c, d, e, f, g;
+
+
+	wire saida1a, saida2a, saida3a, saida4a,
+	saida1b, saida2b, saida3b, saida4b,
+	saida1c, saida2c, saida3c, saida4c,
+	saida1d, saida2d, saida3d, saida4d,
+	saida1e, saida2e, saida3e, saida4e,
+	saida1f, saida2f, saida3f, saida4f,
+	saida1g, saida2g, saida3g, saida4g,
+	saida1h, saida2h, saida3h, saida4h;
+	
+	//a
+	//como o segmento a é ativado 3 vezes nas letras CE0, ele fica nessa configuração no multiplexador
+	and(saida1a, ~saida1Contador, ~saida2Contador, );
+	and(saida2a, ~saida1Contador, saida2Contador, );
+	and(saida3a, saida1Contador, ~saida2Contador, );
+	and(saida4a, saida1Contador, saida2Contador, );
+	or(a, saida1a, saida2a, saida3a, saida4a);
+	
+	//b
+	and(saida1b, ~saida1Contador, ~saida2Contador, );
+	and(saida2b, ~saida1Contador, saida2Contador, );
+	and(saida3b, saida1Contador, ~saida2Contador, );
+	and(saida4b, saida1Contador, saida2Contador, );
+	or(b, saida1b, saida2b, saida3b, saida4b);
+	
+	//c
+	and(saida1c, ~saida1Contador, ~saida2Contador, );
+	and(saida2c, ~saida1Contador, saida2Contador, );
+	and(saida3c, saida1Contador, ~saida2Contador, );
+	and(saida4c, saida1Contador, saida2Contador, );
+	or(c, saida1c, saida2c, saida3c, saida4c);
+	
+	//d
+	and(saida1d, ~saida1Contador, ~saida2Contador, );
+	and(saida2d, ~saida1Contador, saida2Contador, );
+	and(saida3d, saida1Contador, ~saida2Contador, );
+	and(saida4d, saida1Contador, saida2Contador, );
+	or(d, saida1d, saida2d, saida3d, saida4d);
+	
+	//e
+	and(saida1e, ~saida1Contador, ~saida2Contador, );
+	and(saida2e, ~saida1Contador, saida2Contador, );
+	and(saida3e, saida1Contador, ~saida2Contador, );
+	and(saida4e, saida1Contador, saida2Contador, );
+	or(e, saida1e, saida2e, saida3e, saida4e);
+	
+	//f
+	and(saida1f, ~saida1Contador, ~saida2Contador, );
+	and(saida2f, ~saida1Contador, saida2Contador, );
+	and(saida3f, saida1Contador, ~saida2Contador, );
+	and(saida4f, saida1Contador, saida2Contador, );
+	or(f, saida1f, saida2f, saida3f, saida4f);
+	
+	//g
+	and(saida1g, ~saida1Contador, ~saida2Contador, );
+	and(saida2g, ~saida1Contador, saida2Contador, );
+	and(saida3g, saida1Contador, ~saida2Contador, );
+	and(saida4g, saida1Contador, saida2Contador, );
+	or(g, saida1g, saida2g, saida3g, saida4g);
+
+
+endmodule

@@ -1,0 +1,390 @@
+Analysis & Synthesis report for coffeeMachine
+Wed May 31 17:20:37 2023
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. Registers Removed During Synthesis
+  8. General Register Statistics
+  9. Port Connectivity Checks: "interfaceS1:comb_5"
+ 10. Port Connectivity Checks: "contador:comb_4|FlipflopT:inst3"
+ 11. Port Connectivity Checks: "contador:comb_4|FlipflopT:inst2"
+ 12. Port Connectivity Checks: "contador:comb_4|FlipflopT:inst1"
+ 13. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                               ;
++-----------------------------+----------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Wed May 31 17:20:37 2023        ;
+; Quartus II Version          ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
+; Revision Name               ; coffeeMachine                                ;
+; Top-level Entity Name       ; coffeeMachine                                ;
+; Family                      ; MAX II                                       ;
+; Total logic elements        ; 4                                            ;
+; Total pins                  ; 18                                           ;
+; Total virtual pins          ; 0                                            ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                                ;
++-----------------------------+----------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                          ;
++--------------------------------------------------------------+--------------------+--------------------+
+; Option                                                       ; Setting            ; Default Value      ;
++--------------------------------------------------------------+--------------------+--------------------+
+; Device                                                       ; EPM240T100C5       ;                    ;
+; Top-level entity name                                        ; coffeeMachine      ; coffeeMachine      ;
+; Family name                                                  ; MAX II             ; Stratix II         ;
+; Optimization Technique                                       ; Area               ; Balanced           ;
+; Use Generated Physical Constraints File                      ; Off                ;                    ;
+; Use smart compilation                                        ; Off                ; Off                ;
+; Restructure Multiplexers                                     ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                          ; Off                ; Off                ;
+; Preserve fewer node names                                    ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                    ; Off                ; Off                ;
+; Verilog Version                                              ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                 ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                     ; Auto               ; Auto               ;
+; Safe State Machine                                           ; Off                ; Off                ;
+; Extract Verilog State Machines                               ; On                 ; On                 ;
+; Extract VHDL State Machines                                  ; On                 ; On                 ;
+; Ignore Verilog initial constructs                            ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                   ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops               ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                      ; On                 ; On                 ;
+; Parallel Synthesis                                           ; Off                ; Off                ;
+; NOT Gate Push-Back                                           ; On                 ; On                 ;
+; Power-Up Don't Care                                          ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                 ; Off                ; Off                ;
+; Remove Duplicate Registers                                   ; On                 ; On                 ;
+; Ignore CARRY Buffers                                         ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                       ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                    ; Off                ; Off                ;
+; Ignore LCELL Buffers                                         ; Off                ; Off                ;
+; Ignore SOFT Buffers                                          ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                               ; Off                ; Off                ;
+; Carry Chain Length                                           ; 70                 ; 70                 ;
+; Auto Carry Chains                                            ; On                 ; On                 ;
+; Auto Open-Drain Pins                                         ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                        ; Off                ; Off                ;
+; Auto Shift Register Replacement                              ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                ; On                 ; On                 ;
+; Allow Synchronous Control Signals                            ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                       ; Off                ; Off                ;
+; Auto Resource Sharing                                        ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing          ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives            ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report           ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                           ; Off                ; Off                ;
+; Synchronization Register Chain Length                        ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                 ; Normal compilation ; Normal compilation ;
+; HDL message level                                            ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages              ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report     ; 100                ; 100                ;
+; Number of Inverted Registers Reported in Synthesis Report    ; 100                ; 100                ;
+; Clock MUX Protection                                         ; On                 ; On                 ;
+; Block Design Naming                                          ; Auto               ; Auto               ;
+; Synthesis Effort                                             ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                           ; Medium             ; Medium             ;
++--------------------------------------------------------------+--------------------+--------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                            ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------+
+; ../Decoder/contador.v            ; yes             ; User Verilog HDL File  ; C:/Users/usuario/Desktop/Douglas/coffee-machine/protótipo/Decoder/contador.v            ;
+; ../Decoder/interfaceS0.v         ; yes             ; User Verilog HDL File  ; C:/Users/usuario/Desktop/Douglas/coffee-machine/protótipo/Decoder/interfaceS0.v         ;
+; ../Decoder/interfaceS1.v         ; yes             ; User Verilog HDL File  ; C:/Users/usuario/Desktop/Douglas/coffee-machine/protótipo/Decoder/interfaceS1.v         ;
+; coffeeMachine.v                  ; yes             ; User Verilog HDL File  ; C:/Users/usuario/Desktop/Douglas/coffee-machine/protótipo/coffeeMachine/coffeeMachine.v ;
+; FlipflopT.v                      ; yes             ; User Verilog HDL File  ; C:/Users/usuario/Desktop/Douglas/coffee-machine/protótipo/coffeeMachine/FlipflopT.v     ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                     ;
++---------------------------------------------+-----------------------------------+
+; Resource                                    ; Usage                             ;
++---------------------------------------------+-----------------------------------+
+; Total logic elements                        ; 4                                 ;
+;     -- Combinational with no register       ; 2                                 ;
+;     -- Register only                        ; 0                                 ;
+;     -- Combinational with a register        ; 2                                 ;
+;                                             ;                                   ;
+; Logic element usage by number of LUT inputs ;                                   ;
+;     -- 4 input functions                    ; 0                                 ;
+;     -- 3 input functions                    ; 0                                 ;
+;     -- 2 input functions                    ; 2                                 ;
+;     -- 1 input functions                    ; 2                                 ;
+;     -- 0 input functions                    ; 0                                 ;
+;                                             ;                                   ;
+; Logic elements by mode                      ;                                   ;
+;     -- normal mode                          ; 4                                 ;
+;     -- arithmetic mode                      ; 0                                 ;
+;     -- qfbk mode                            ; 0                                 ;
+;     -- register cascade mode                ; 0                                 ;
+;     -- synchronous clear/load mode          ; 0                                 ;
+;     -- asynchronous clear/load mode         ; 0                                 ;
+;                                             ;                                   ;
+; Total registers                             ; 2                                 ;
+; I/O pins                                    ; 18                                ;
+; Maximum fan-out node                        ; contador:comb_4|FlipflopT:inst1|Q ;
+; Maximum fan-out                             ; 6                                 ;
+; Total fan-out                               ; 15                                ;
+; Average fan-out                             ; 0.68                              ;
++---------------------------------------------+-----------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                             ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                            ; Library Name ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------+--------------+
+; |coffeeMachine             ; 4 (0)       ; 2            ; 0          ; 18   ; 0            ; 2 (0)        ; 0 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |coffeeMachine                                 ; work         ;
+;    |contador:comb_4|       ; 2 (0)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |coffeeMachine|contador:comb_4                 ; work         ;
+;       |FlipflopT:inst1|    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |coffeeMachine|contador:comb_4|FlipflopT:inst1 ; work         ;
+;       |FlipflopT:inst2|    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |coffeeMachine|contador:comb_4|FlipflopT:inst2 ; work         ;
+;    |interfaceS0:inst1|     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |coffeeMachine|interfaceS0:inst1               ; work         ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; contador:comb_4|FlipflopT:inst3|Q     ; Lost fanout        ;
+; Total Number of Removed Registers = 1 ;                    ;
++---------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 2     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "interfaceS1:comb_5"                                                                 ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; a    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; b    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; c    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; d    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; e    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; f    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; g    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "contador:comb_4|FlipflopT:inst3"                                                                                                                                                   ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; T     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; T[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "contador:comb_4|FlipflopT:inst2"                                                                                                                                                   ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; T     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; T[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "contador:comb_4|FlipflopT:inst1"                                                                                                                                                   ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; T     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; T[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Wed May 31 17:20:37 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off coffeeMachine -c coffeeMachine
+Info: Found 1 design units, including 1 entities, in source file ../Decoder/contador.v
+    Info: Found entity 1: contador
+Info: Found 1 design units, including 1 entities, in source file ../Decoder/decoders.v
+    Info: Found entity 1: decoders
+Info: Found 1 design units, including 1 entities, in source file ../Decoder/demux.v
+    Info: Found entity 1: demux
+Info: Found 1 design units, including 1 entities, in source file ../Decoder/interfaceERDI.v
+    Info: Found entity 1: interfaceERDI
+Info: Found 1 design units, including 1 entities, in source file ../Decoder/interfaceESN.v
+    Info: Found entity 1: interfaceESN
+Info: Found 1 design units, including 1 entities, in source file ../Decoder/interfaceESP.v
+    Info: Found entity 1: interfaceESP
+Info: Found 1 design units, including 1 entities, in source file ../Decoder/interfaceESR.v
+    Info: Found entity 1: interfaceESR
+Info: Found 1 design units, including 1 entities, in source file ../Decoder/interfaceS0.v
+    Info: Found entity 1: interfaceS0
+Info: Found 1 design units, including 1 entities, in source file ../Decoder/interfaceS1.v
+    Info: Found entity 1: interfaceS1
+Info: Found 1 design units, including 1 entities, in source file ../Decoder/interfaceS2.v
+    Info: Found entity 1: interfaceS2
+Info: Found 1 design units, including 1 entities, in source file ../Decoder/interfaceS3.v
+    Info: Found entity 1: interfaceS3
+Warning: Entity "mux" obtained from "C:/Users/usuario/Desktop/Douglas/coffee-machine/protótipo/Decoder/mux.v" instead of from Quartus II megafunction library
+Info: Found 1 design units, including 1 entities, in source file ../Decoder/mux.v
+    Info: Found entity 1: mux
+Info: Found 1 design units, including 1 entities, in source file coffeeMachine.v
+    Info: Found entity 1: coffeeMachine
+Info: Found 1 design units, including 1 entities, in source file FlipflopT.v
+    Info: Found entity 1: FlipflopT
+Warning (10236): Verilog HDL Implicit Net warning at contador.v(7): created implicit net for "Q3"
+Critical Warning (10846): Verilog HDL Instantiation warning at decoders.v(17): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at decoders.v(19): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at decoders.v(20): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at decoders.v(21): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at decoders.v(22): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at decoders.v(23): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at decoders.v(24): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at decoders.v(25): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at decoders.v(26): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at coffeeMachine.v(20): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at coffeeMachine.v(24): instance has no name
+Info: Elaborating entity "coffeeMachine" for the top level hierarchy
+Warning (10034): Output port "h" at coffeeMachine.v(13) has no driver
+Info: Elaborating entity "contador" for hierarchy "contador:comb_4"
+Info: Elaborating entity "FlipflopT" for hierarchy "contador:comb_4|FlipflopT:inst1"
+Info: Elaborating entity "interfaceS0" for hierarchy "interfaceS0:inst1"
+Warning (10739): Verilog HDL warning at interfaceS0.v(18): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS0.v(19): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS0.v(20): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS0.v(21): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS0.v(25): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS0.v(26): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS0.v(27): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS0.v(28): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS0.v(32): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS0.v(33): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS0.v(34): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS0.v(35): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS0.v(39): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS0.v(40): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS0.v(41): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS0.v(42): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS0.v(46): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS0.v(47): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS0.v(48): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS0.v(49): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS0.v(53): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS0.v(54): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS0.v(55): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS0.v(56): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS0.v(60): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS0.v(61): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS0.v(62): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS0.v(63): actual bit length 32 differs from formal bit length 1
+Info: Elaborating entity "interfaceS1" for hierarchy "interfaceS1:comb_5"
+Warning (10739): Verilog HDL warning at interfaceS1.v(18): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS1.v(19): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS1.v(20): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS1.v(21): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS1.v(25): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS1.v(26): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS1.v(27): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS1.v(28): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS1.v(32): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS1.v(33): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS1.v(34): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS1.v(35): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS1.v(39): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS1.v(40): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS1.v(41): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS1.v(42): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS1.v(46): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS1.v(47): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS1.v(48): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS1.v(49): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS1.v(53): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS1.v(54): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS1.v(55): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS1.v(56): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS1.v(60): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS1.v(61): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS1.v(62): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at interfaceS1.v(63): actual bit length 32 differs from formal bit length 1
+Warning: 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning: Output pins are stuck at VCC or GND
+    Warning (13410): Pin "h" is stuck at GND
+Info: 1 registers lost all their fanouts during netlist optimizations. The first 1 are displayed below.
+    Info: Register "contador:comb_4|FlipflopT:inst3|Q" lost all its fanouts during netlist optimizations.
+Warning: Design contains 9 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "S0"
+    Warning (15610): No output dependent on input pin "S1"
+    Warning (15610): No output dependent on input pin "S2"
+    Warning (15610): No output dependent on input pin "S3"
+    Warning (15610): No output dependent on input pin "SR"
+    Warning (15610): No output dependent on input pin "SP"
+    Warning (15610): No output dependent on input pin "SN"
+    Warning (15610): No output dependent on input pin "VL"
+    Warning (15610): No output dependent on input pin "M"
+Info: Implemented 22 device resources after synthesis - the final resource count might be different
+    Info: Implemented 10 input pins
+    Info: Implemented 8 output pins
+    Info: Implemented 4 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 83 warnings
+    Info: Peak virtual memory: 225 megabytes
+    Info: Processing ended: Wed May 31 17:20:37 2023
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
+
+

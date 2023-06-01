@@ -1,0 +1,47 @@
+module decoders(CLK, S0, S1, S2, S3, SR, SP, SN, VL, M, a, b, c, d, e, f, g, h, dig0, dig1, dig2, dig3);
+	//CE01: escolha do S0
+	//CL02: escolha do S1
+	//CC05: escolha do S2
+	//CP10: escolha do S3
+	//ERSR: erro do sensor SR
+	//ERSP: erro do sensor SP
+	//ERSN: erro do sensor SN
+	//ERDI: erro de validação de valor/dinheiro
+	//...: modo de espera
+	
+	input CLK, S0, S1, S2, S3, SR, SP, SN, VL, M;
+	output a, b, c, d, e, f, g, h, dig0, dig1, dig2, dig3;
+	
+	wire s0_nivelAlto, s1_nivelAlto, s2_nivelAlto, s3_nivelAlto, sr_nivelAlto, sp_nivelAlto, sn_nivelAlto, vl_nivelAlto, m_nivelAlto;
+	wire saida1, saida2, saida3, saida4;
+	
+	demux inst1(CLK, saida1, saida2, saida3, saida4);
+	
+	buf(dig0, saida1);,
+	buf(dig1, saida2);
+	buf(dig2, saida3);
+	buf(dig3, saida4);
+	
+	and inst1(s0_nivelAlto, S0, ~S1, ~S2, ~S3, ~SR, ~SP, ~SN, ~VL, ~M);
+	and inst2(s1_nivelAlto, ~S0, S1, ~S2, ~S3, ~SR, ~SP, ~SN, ~VL, ~M);
+	and inst3(s2_nivelAlto, ~S0, ~S1, S2, ~S3, ~SR, ~SP, ~SN, ~VL, ~M);
+	and inst4(s3_nivelAlto, ~S0, ~S1, ~S2, S3, ~SR, ~SP, ~SN, ~VL, ~M);
+	and inst5(sr_nivelAlto, ~S0, ~S1, ~S2, ~S3, SR, ~SP, ~SN, ~VL, ~M);
+	and inst6(sp_nivelAlto, ~S0, ~S1, ~S2, ~S3, ~SR, SP, ~SN, ~VL, ~M);
+	and inst7(sn_nivelAlto, ~S0, ~S1, ~S2, ~S3, ~SR, ~SP, SN, ~VL, ~M);
+	and inst8(vl_nivelAlto, ~S0, ~S1, ~S2, ~S3, ~SR, ~SP, ~SN, VL, ~M);
+	and inst9(m_nivelAlto, ~S0, ~S1, ~S2, ~S3, ~SR, ~SP, ~SN, ~VL, M);
+	
+	or (a, vl_nivelAlto, sn_nivelAlto, sp_nivelAlto, sr_nivelAlto, s3_nivelAlto, s2_nivelAlto, s1_nivelAlto, s0_nivelAlto);
+	or (b, vl_nivelAlto, sp_nivelAlto, sr_nivelAlto, s3_nivelAlto, s2_nivelAlto, s1_nivelAlto, s0_nivelAlto);
+	or (c, vl_nivelAlto, sn_nivelAlto, sp_nivelAlto, sr_nivelAlto, s3_nivelAlto, s2_nivelAlto, s1_nivelAlto, s0_nivelAlto);
+	or (d, vl_nivelAlto, sn_nivelAlto, sp_nivelAlto, sr_nivelAlto, s3_nivelAlto, s2_nivelAlto, s1_nivelAlto, s0_nivelAlto);
+	or (e, vl_nivelAlto, sn_nivelAlto, sp_nivelAlto, sr_nivelAlto, s3_nivelAlto, s2_nivelAlto, s1_nivelAlto, s0_nivelAlto);
+	or (f, vl_nivelAlto, sn_nivelAlto, sp_nivelAlto, sr_nivelAlto, s3_nivelAlto, s2_nivelAlto, s1_nivelAlto, s0_nivelAlto);
+	or (g, vl_nivelAlto, sn_nivelAlto, sp_nivelAlto, sr_nivelAlto, s3_nivelAlto, s2_nivelAlto, s1_nivelAlto, s0_nivelAlto);
+	buf (h, m_nivelAlto);
+
+	
+	and(letraC, S0, dig0);
+
+endmodule

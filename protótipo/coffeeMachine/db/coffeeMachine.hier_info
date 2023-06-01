@@ -1,0 +1,138 @@
+|coffeeMachine
+CLK => CLK~0.IN1
+S0 => ~NO_FANOUT~
+S1 => ~NO_FANOUT~
+S2 => ~NO_FANOUT~
+S3 => ~NO_FANOUT~
+SR => ~NO_FANOUT~
+SP => ~NO_FANOUT~
+SN => ~NO_FANOUT~
+VL => ~NO_FANOUT~
+M => ~NO_FANOUT~
+a <= interfaceS0:inst1.port2
+b <= interfaceS0:inst1.port3
+c <= interfaceS0:inst1.port4
+d <= interfaceS0:inst1.port5
+e <= interfaceS0:inst1.port6
+f <= interfaceS0:inst1.port7
+g <= interfaceS0:inst1.port8
+h <= <GND>
+
+
+|coffeeMachine|contador:comb_4
+CLK => CLK~0.IN1
+Q1 <= FlipflopT:inst1.port3
+Q2 <= FlipflopT:inst2.port3
+
+
+|coffeeMachine|contador:comb_4|FlipflopT:inst1
+clear => Q~1.OUTPUTSELECT
+CLK => Q~reg0.CLK
+T => Q~0.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|coffeeMachine|contador:comb_4|FlipflopT:inst2
+clear => Q~1.OUTPUTSELECT
+CLK => Q~reg0.CLK
+T => Q~0.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|coffeeMachine|contador:comb_4|FlipflopT:inst3
+clear => Q~1.OUTPUTSELECT
+CLK => Q~reg0.CLK
+T => Q~0.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|coffeeMachine|interfaceS0:inst1
+saida1Contador => WideAnd22.IN0
+saida1Contador => WideAnd18.IN0
+saida1Contador => WideAnd14.IN0
+saida1Contador => WideAnd11.IN0
+saida1Contador => WideAnd10.IN0
+saida1Contador => WideAnd7.IN0
+saida1Contador => WideAnd6.IN0
+saida1Contador => WideAnd2.IN0
+saida1Contador => WideAnd25.IN0
+saida1Contador => WideAnd21.IN0
+saida1Contador => WideAnd20.IN0
+saida1Contador => WideAnd17.IN0
+saida1Contador => WideAnd16.IN0
+saida1Contador => WideAnd13.IN0
+saida1Contador => WideAnd12.IN0
+saida1Contador => WideAnd1.IN0
+saida1Contador => WideAnd0.IN0
+saida2Contador => WideAnd25.IN1
+saida2Contador => WideAnd21.IN1
+saida2Contador => WideAnd17.IN1
+saida2Contador => WideAnd13.IN1
+saida2Contador => WideAnd11.IN1
+saida2Contador => WideAnd7.IN1
+saida2Contador => WideAnd1.IN1
+saida2Contador => WideAnd22.IN1
+saida2Contador => WideAnd20.IN1
+saida2Contador => WideAnd18.IN1
+saida2Contador => WideAnd16.IN1
+saida2Contador => WideAnd14.IN1
+saida2Contador => WideAnd12.IN1
+saida2Contador => WideAnd10.IN1
+saida2Contador => WideAnd6.IN1
+saida2Contador => WideAnd2.IN1
+saida2Contador => WideAnd0.IN1
+a <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+b <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+c <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+d <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+e <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+f <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+g <= WideAnd25.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|coffeeMachine|interfaceS1:comb_5
+saida1Contador => WideAnd27.IN0
+saida1Contador => WideAnd22.IN0
+saida1Contador => WideAnd19.IN0
+saida1Contador => WideAnd18.IN0
+saida1Contador => WideAnd15.IN0
+saida1Contador => WideAnd14.IN0
+saida1Contador => WideAnd10.IN0
+saida1Contador => WideAnd7.IN0
+saida1Contador => WideAnd6.IN0
+saida1Contador => WideAnd3.IN0
+saida1Contador => WideAnd2.IN0
+saida1Contador => WideAnd21.IN0
+saida1Contador => WideAnd20.IN0
+saida1Contador => WideAnd17.IN0
+saida1Contador => WideAnd16.IN0
+saida1Contador => WideAnd13.IN0
+saida1Contador => WideAnd12.IN0
+saida1Contador => WideAnd0.IN0
+saida2Contador => WideAnd27.IN1
+saida2Contador => WideAnd21.IN1
+saida2Contador => WideAnd19.IN1
+saida2Contador => WideAnd17.IN1
+saida2Contador => WideAnd15.IN1
+saida2Contador => WideAnd13.IN1
+saida2Contador => WideAnd7.IN1
+saida2Contador => WideAnd3.IN1
+saida2Contador => WideAnd22.IN1
+saida2Contador => WideAnd20.IN1
+saida2Contador => WideAnd18.IN1
+saida2Contador => WideAnd16.IN1
+saida2Contador => WideAnd14.IN1
+saida2Contador => WideAnd12.IN1
+saida2Contador => WideAnd10.IN1
+saida2Contador => WideAnd6.IN1
+saida2Contador => WideAnd2.IN1
+saida2Contador => WideAnd0.IN1
+a <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+b <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+c <= WideAnd10.DB_MAX_OUTPUT_PORT_TYPE
+d <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+e <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+f <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+g <= WideAnd27.DB_MAX_OUTPUT_PORT_TYPE
+
+
