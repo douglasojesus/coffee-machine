@@ -27,7 +27,7 @@ P, AQ, PP, a, b, c, d, e, f, g, h, dig1, dig2, dig3, dig4);
 	MefCoffeeMachine INST(CLK, SR, SP, SN, A, VL, B0, B1, 
 				E0, E1, E2, E3, S0, S1, S2, S3, P, AQ, PP, M);
 				
-	Decoders INST2(CLK, S0, S1, S2, S3, SR, SP, SN, VL, M, a, b, c, d, e, f, g, h);
+	Decoders INST2(CLK, S0, S1, S2, S3, SR, SP, SN, VL, M, a, b, c, d, e, f, g, h, dig1, dig2, dig3, dig4);
 	//////////////////////////////BODY
 	
 	

@@ -73,3 +73,29 @@ set_global_assignment -name VERILOG_FILE Demux.v
 set_global_assignment -name VERILOG_FILE FlipflopT.v
 set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
 set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_location_assignment PIN_44 -to A
+set_location_assignment PIN_75 -to AQ
+set_location_assignment PIN_36 -to B0
+set_location_assignment PIN_38 -to B1
+set_location_assignment PIN_12 -to CLK
+set_location_assignment PIN_76 -to P
+set_location_assignment PIN_72 -to PP
+set_location_assignment PIN_34 -to SN
+set_location_assignment PIN_30 -to SP
+set_location_assignment PIN_33 -to SR
+set_location_assignment PIN_40 -to V0
+set_location_assignment PIN_42 -to V1
+set_location_assignment PIN_90 -to a
+set_location_assignment PIN_70 -to b
+set_location_assignment PIN_41 -to c
+set_location_assignment PIN_98 -to d
+set_location_assignment PIN_88 -to dig1
+set_location_assignment PIN_66 -to dig2
+set_location_assignment PIN_68 -to dig3
+set_location_assignment PIN_37 -to dig4
+set_location_assignment PIN_100 -to e
+set_location_assignment PIN_92 -to f
+set_location_assignment PIN_39 -to g
+set_location_assignment PIN_96 -to h
+set_global_assignment -name MISC_FILE "C:/Users/usuario/Desktop/Douglas/coffee-machine/protótipo/MainCoffeeMachine/MainCoffeeMachine.dpf"

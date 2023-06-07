@@ -1,5 +1,5 @@
 Classic Timing Analyzer report for MainCoffeeMachine
-Wed Jun 07 20:31:39 2023
+Wed Jun 07 20:42:09 2023
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -44,11 +44,11 @@ applicable agreement for further details.
 +------------------------------+-------+---------------+----------------------------------+--------------------------------+--------------------------------+------------+----------+--------------+
 ; Type                         ; Slack ; Required Time ; Actual Time                      ; From                           ; To                             ; From Clock ; To Clock ; Failed Paths ;
 +------------------------------+-------+---------------+----------------------------------+--------------------------------+--------------------------------+------------+----------+--------------+
-; Worst-case tsu               ; N/A   ; None          ; 6.499 ns                         ; B1                             ; MefCoffeeMachine:INST|FFD:D1|Q ; --         ; CLK      ; 0            ;
-; Worst-case tco               ; N/A   ; None          ; 22.533 ns                        ; MefCoffeeMachine:INST|FFD:D2|Q ; f                              ; CLK        ; --       ; 0            ;
-; Worst-case tpd               ; N/A   ; None          ; 21.205 ns                        ; SR                             ; f                              ; --         ; --       ; 0            ;
-; Worst-case th                ; N/A   ; None          ; -2.299 ns                        ; A                              ; MefCoffeeMachine:INST|FFD:D2|Q ; --         ; CLK      ; 0            ;
-; Clock Setup: 'CLK'           ; N/A   ; None          ; 154.44 MHz ( period = 6.475 ns ) ; MefCoffeeMachine:INST|FFD:D2|Q ; MefCoffeeMachine:INST|FFD:D3|Q ; CLK        ; CLK      ; 0            ;
+; Worst-case tsu               ; N/A   ; None          ; 5.867 ns                         ; SR                             ; MefCoffeeMachine:INST|FFD:D1|Q ; --         ; CLK      ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 21.778 ns                        ; MefCoffeeMachine:INST|FFD:D2|Q ; d                              ; CLK        ; --       ; 0            ;
+; Worst-case tpd               ; N/A   ; None          ; 21.282 ns                        ; SN                             ; d                              ; --         ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -2.162 ns                        ; B0                             ; MefCoffeeMachine:INST|FFD:D1|Q ; --         ; CLK      ; 0            ;
+; Clock Setup: 'CLK'           ; N/A   ; None          ; 150.08 MHz ( period = 6.663 ns ) ; MefCoffeeMachine:INST|FFD:D0|Q ; MefCoffeeMachine:INST|FFD:D2|Q ; CLK        ; CLK      ; 0            ;
 ; Total number of failed paths ;       ;               ;                                  ;                                ;                                ;            ;          ; 0            ;
 +------------------------------+-------+---------------+----------------------------------+--------------------------------+--------------------------------+------------+----------+--------------+
 
@@ -110,24 +110,24 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------+------------------------------------------------+--------------------------------------------------+--------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
 ; Slack ; Actual fmax (period)                           ; From                                             ; To                                               ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
 +-------+------------------------------------------------+--------------------------------------------------+--------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
-; N/A   ; 154.44 MHz ( period = 6.475 ns )               ; MefCoffeeMachine:INST|FFD:D2|Q                   ; MefCoffeeMachine:INST|FFD:D3|Q                   ; CLK        ; CLK      ; None                        ; None                      ; 5.766 ns                ;
-; N/A   ; 156.45 MHz ( period = 6.392 ns )               ; MefCoffeeMachine:INST|FFD:D1|Q                   ; MefCoffeeMachine:INST|FFD:D0|Q                   ; CLK        ; CLK      ; None                        ; None                      ; 5.683 ns                ;
-; N/A   ; 159.31 MHz ( period = 6.277 ns )               ; MefCoffeeMachine:INST|FFD:D0|Q                   ; MefCoffeeMachine:INST|FFD:D1|Q                   ; CLK        ; CLK      ; None                        ; None                      ; 5.568 ns                ;
-; N/A   ; 169.75 MHz ( period = 5.891 ns )               ; MefCoffeeMachine:INST|FFD:D1|Q                   ; MefCoffeeMachine:INST|FFD:D1|Q                   ; CLK        ; CLK      ; None                        ; None                      ; 5.182 ns                ;
-; N/A   ; 172.80 MHz ( period = 5.787 ns )               ; MefCoffeeMachine:INST|FFD:D0|Q                   ; MefCoffeeMachine:INST|FFD:D0|Q                   ; CLK        ; CLK      ; None                        ; None                      ; 5.078 ns                ;
-; N/A   ; 172.83 MHz ( period = 5.786 ns )               ; MefCoffeeMachine:INST|FFD:D2|Q                   ; MefCoffeeMachine:INST|FFD:D2|Q                   ; CLK        ; CLK      ; None                        ; None                      ; 5.077 ns                ;
-; N/A   ; 180.67 MHz ( period = 5.535 ns )               ; MefCoffeeMachine:INST|FFD:D3|Q                   ; MefCoffeeMachine:INST|FFD:D1|Q                   ; CLK        ; CLK      ; None                        ; None                      ; 4.826 ns                ;
-; N/A   ; 181.49 MHz ( period = 5.510 ns )               ; MefCoffeeMachine:INST|FFD:D1|Q                   ; MefCoffeeMachine:INST|FFD:D3|Q                   ; CLK        ; CLK      ; None                        ; None                      ; 4.801 ns                ;
-; N/A   ; 184.98 MHz ( period = 5.406 ns )               ; MefCoffeeMachine:INST|FFD:D0|Q                   ; MefCoffeeMachine:INST|FFD:D2|Q                   ; CLK        ; CLK      ; None                        ; None                      ; 4.697 ns                ;
-; N/A   ; 186.88 MHz ( period = 5.351 ns )               ; MefCoffeeMachine:INST|FFD:D3|Q                   ; MefCoffeeMachine:INST|FFD:D0|Q                   ; CLK        ; CLK      ; None                        ; None                      ; 4.642 ns                ;
-; N/A   ; 187.79 MHz ( period = 5.325 ns )               ; MefCoffeeMachine:INST|FFD:D0|Q                   ; MefCoffeeMachine:INST|FFD:D3|Q                   ; CLK        ; CLK      ; None                        ; None                      ; 4.616 ns                ;
-; N/A   ; 199.36 MHz ( period = 5.016 ns )               ; MefCoffeeMachine:INST|FFD:D3|Q                   ; MefCoffeeMachine:INST|FFD:D3|Q                   ; CLK        ; CLK      ; None                        ; None                      ; 4.307 ns                ;
-; N/A   ; 203.67 MHz ( period = 4.910 ns )               ; MefCoffeeMachine:INST|FFD:D2|Q                   ; MefCoffeeMachine:INST|FFD:D1|Q                   ; CLK        ; CLK      ; None                        ; None                      ; 4.201 ns                ;
-; N/A   ; 216.45 MHz ( period = 4.620 ns )               ; MefCoffeeMachine:INST|FFD:D1|Q                   ; MefCoffeeMachine:INST|FFD:D2|Q                   ; CLK        ; CLK      ; None                        ; None                      ; 3.911 ns                ;
-; N/A   ; 223.76 MHz ( period = 4.469 ns )               ; MefCoffeeMachine:INST|FFD:D3|Q                   ; MefCoffeeMachine:INST|FFD:D2|Q                   ; CLK        ; CLK      ; None                        ; None                      ; 3.760 ns                ;
-; N/A   ; 296.91 MHz ( period = 3.368 ns )               ; MefCoffeeMachine:INST|FFD:D2|Q                   ; MefCoffeeMachine:INST|FFD:D0|Q                   ; CLK        ; CLK      ; None                        ; None                      ; 2.659 ns                ;
-; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; Decoders:INST2|Contador:comb_4|FlipflopT:inst2|Q ; Decoders:INST2|Contador:comb_4|FlipflopT:inst2|Q ; CLK        ; CLK      ; None                        ; None                      ; 1.532 ns                ;
-; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; Decoders:INST2|Contador:comb_4|FlipflopT:inst1|Q ; Decoders:INST2|Contador:comb_4|FlipflopT:inst1|Q ; CLK        ; CLK      ; None                        ; None                      ; 1.503 ns                ;
+; N/A   ; 150.08 MHz ( period = 6.663 ns )               ; MefCoffeeMachine:INST|FFD:D0|Q                   ; MefCoffeeMachine:INST|FFD:D2|Q                   ; CLK        ; CLK      ; None                        ; None                      ; 5.954 ns                ;
+; N/A   ; 152.39 MHz ( period = 6.562 ns )               ; MefCoffeeMachine:INST|FFD:D0|Q                   ; MefCoffeeMachine:INST|FFD:D1|Q                   ; CLK        ; CLK      ; None                        ; None                      ; 5.853 ns                ;
+; N/A   ; 152.72 MHz ( period = 6.548 ns )               ; MefCoffeeMachine:INST|FFD:D1|Q                   ; MefCoffeeMachine:INST|FFD:D0|Q                   ; CLK        ; CLK      ; None                        ; None                      ; 5.839 ns                ;
+; N/A   ; 155.16 MHz ( period = 6.445 ns )               ; MefCoffeeMachine:INST|FFD:D3|Q                   ; MefCoffeeMachine:INST|FFD:D3|Q                   ; CLK        ; CLK      ; None                        ; None                      ; 5.736 ns                ;
+; N/A   ; 155.16 MHz ( period = 6.445 ns )               ; MefCoffeeMachine:INST|FFD:D3|Q                   ; MefCoffeeMachine:INST|FFD:D0|Q                   ; CLK        ; CLK      ; None                        ; None                      ; 5.736 ns                ;
+; N/A   ; 155.26 MHz ( period = 6.441 ns )               ; MefCoffeeMachine:INST|FFD:D1|Q                   ; MefCoffeeMachine:INST|FFD:D3|Q                   ; CLK        ; CLK      ; None                        ; None                      ; 5.732 ns                ;
+; N/A   ; 156.05 MHz ( period = 6.408 ns )               ; MefCoffeeMachine:INST|FFD:D1|Q                   ; MefCoffeeMachine:INST|FFD:D1|Q                   ; CLK        ; CLK      ; None                        ; None                      ; 5.699 ns                ;
+; N/A   ; 161.73 MHz ( period = 6.183 ns )               ; MefCoffeeMachine:INST|FFD:D3|Q                   ; MefCoffeeMachine:INST|FFD:D2|Q                   ; CLK        ; CLK      ; None                        ; None                      ; 5.474 ns                ;
+; N/A   ; 162.34 MHz ( period = 6.160 ns )               ; MefCoffeeMachine:INST|FFD:D2|Q                   ; MefCoffeeMachine:INST|FFD:D3|Q                   ; CLK        ; CLK      ; None                        ; None                      ; 5.451 ns                ;
+; N/A   ; 164.12 MHz ( period = 6.093 ns )               ; MefCoffeeMachine:INST|FFD:D0|Q                   ; MefCoffeeMachine:INST|FFD:D0|Q                   ; CLK        ; CLK      ; None                        ; None                      ; 5.384 ns                ;
+; N/A   ; 165.10 MHz ( period = 6.057 ns )               ; MefCoffeeMachine:INST|FFD:D3|Q                   ; MefCoffeeMachine:INST|FFD:D1|Q                   ; CLK        ; CLK      ; None                        ; None                      ; 5.348 ns                ;
+; N/A   ; 169.12 MHz ( period = 5.913 ns )               ; MefCoffeeMachine:INST|FFD:D0|Q                   ; MefCoffeeMachine:INST|FFD:D3|Q                   ; CLK        ; CLK      ; None                        ; None                      ; 5.204 ns                ;
+; N/A   ; 172.12 MHz ( period = 5.810 ns )               ; MefCoffeeMachine:INST|FFD:D1|Q                   ; MefCoffeeMachine:INST|FFD:D2|Q                   ; CLK        ; CLK      ; None                        ; None                      ; 5.101 ns                ;
+; N/A   ; 174.52 MHz ( period = 5.730 ns )               ; MefCoffeeMachine:INST|FFD:D2|Q                   ; MefCoffeeMachine:INST|FFD:D2|Q                   ; CLK        ; CLK      ; None                        ; None                      ; 5.021 ns                ;
+; N/A   ; 230.47 MHz ( period = 4.339 ns )               ; MefCoffeeMachine:INST|FFD:D2|Q                   ; MefCoffeeMachine:INST|FFD:D1|Q                   ; CLK        ; CLK      ; None                        ; None                      ; 3.630 ns                ;
+; N/A   ; 297.00 MHz ( period = 3.367 ns )               ; MefCoffeeMachine:INST|FFD:D2|Q                   ; MefCoffeeMachine:INST|FFD:D0|Q                   ; CLK        ; CLK      ; None                        ; None                      ; 2.658 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; Decoders:INST2|Contador:comb_4|FlipflopT:inst2|Q ; Decoders:INST2|Contador:comb_4|FlipflopT:inst2|Q ; CLK        ; CLK      ; None                        ; None                      ; 1.543 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; Decoders:INST2|Contador:comb_4|FlipflopT:inst1|Q ; Decoders:INST2|Contador:comb_4|FlipflopT:inst1|Q ; CLK        ; CLK      ; None                        ; None                      ; 1.519 ns                ;
 +-------+------------------------------------------------+--------------------------------------------------+--------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
 
 
@@ -136,38 +136,38 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------+--------------+------------+------+--------------------------------+----------+
 ; Slack ; Required tsu ; Actual tsu ; From ; To                             ; To Clock ;
 +-------+--------------+------------+------+--------------------------------+----------+
-; N/A   ; None         ; 6.499 ns   ; B1   ; MefCoffeeMachine:INST|FFD:D1|Q ; CLK      ;
-; N/A   ; None         ; 6.488 ns   ; SR   ; MefCoffeeMachine:INST|FFD:D1|Q ; CLK      ;
-; N/A   ; None         ; 6.265 ns   ; SN   ; MefCoffeeMachine:INST|FFD:D1|Q ; CLK      ;
-; N/A   ; None         ; 6.196 ns   ; B0   ; MefCoffeeMachine:INST|FFD:D1|Q ; CLK      ;
-; N/A   ; None         ; 6.145 ns   ; B1   ; MefCoffeeMachine:INST|FFD:D2|Q ; CLK      ;
-; N/A   ; None         ; 6.089 ns   ; V1   ; MefCoffeeMachine:INST|FFD:D1|Q ; CLK      ;
-; N/A   ; None         ; 5.923 ns   ; SP   ; MefCoffeeMachine:INST|FFD:D1|Q ; CLK      ;
-; N/A   ; None         ; 5.860 ns   ; V0   ; MefCoffeeMachine:INST|FFD:D1|Q ; CLK      ;
-; N/A   ; None         ; 5.842 ns   ; B0   ; MefCoffeeMachine:INST|FFD:D2|Q ; CLK      ;
-; N/A   ; None         ; 5.779 ns   ; B1   ; MefCoffeeMachine:INST|FFD:D0|Q ; CLK      ;
-; N/A   ; None         ; 5.758 ns   ; SR   ; MefCoffeeMachine:INST|FFD:D0|Q ; CLK      ;
-; N/A   ; None         ; 5.735 ns   ; V1   ; MefCoffeeMachine:INST|FFD:D2|Q ; CLK      ;
-; N/A   ; None         ; 5.690 ns   ; B1   ; MefCoffeeMachine:INST|FFD:D3|Q ; CLK      ;
-; N/A   ; None         ; 5.535 ns   ; SN   ; MefCoffeeMachine:INST|FFD:D0|Q ; CLK      ;
-; N/A   ; None         ; 5.506 ns   ; V0   ; MefCoffeeMachine:INST|FFD:D2|Q ; CLK      ;
-; N/A   ; None         ; 5.476 ns   ; B0   ; MefCoffeeMachine:INST|FFD:D0|Q ; CLK      ;
-; N/A   ; None         ; 5.387 ns   ; B0   ; MefCoffeeMachine:INST|FFD:D3|Q ; CLK      ;
-; N/A   ; None         ; 5.369 ns   ; V1   ; MefCoffeeMachine:INST|FFD:D0|Q ; CLK      ;
-; N/A   ; None         ; 5.280 ns   ; V1   ; MefCoffeeMachine:INST|FFD:D3|Q ; CLK      ;
-; N/A   ; None         ; 5.193 ns   ; SP   ; MefCoffeeMachine:INST|FFD:D0|Q ; CLK      ;
-; N/A   ; None         ; 5.147 ns   ; SR   ; MefCoffeeMachine:INST|FFD:D3|Q ; CLK      ;
-; N/A   ; None         ; 5.140 ns   ; V0   ; MefCoffeeMachine:INST|FFD:D0|Q ; CLK      ;
-; N/A   ; None         ; 5.051 ns   ; V0   ; MefCoffeeMachine:INST|FFD:D3|Q ; CLK      ;
-; N/A   ; None         ; 5.030 ns   ; SP   ; MefCoffeeMachine:INST|FFD:D3|Q ; CLK      ;
-; N/A   ; None         ; 5.025 ns   ; A    ; MefCoffeeMachine:INST|FFD:D1|Q ; CLK      ;
-; N/A   ; None         ; 4.933 ns   ; SN   ; MefCoffeeMachine:INST|FFD:D3|Q ; CLK      ;
-; N/A   ; None         ; 4.458 ns   ; SR   ; MefCoffeeMachine:INST|FFD:D2|Q ; CLK      ;
-; N/A   ; None         ; 4.341 ns   ; SP   ; MefCoffeeMachine:INST|FFD:D2|Q ; CLK      ;
-; N/A   ; None         ; 4.244 ns   ; SN   ; MefCoffeeMachine:INST|FFD:D2|Q ; CLK      ;
-; N/A   ; None         ; 4.216 ns   ; A    ; MefCoffeeMachine:INST|FFD:D3|Q ; CLK      ;
-; N/A   ; None         ; 3.829 ns   ; A    ; MefCoffeeMachine:INST|FFD:D0|Q ; CLK      ;
-; N/A   ; None         ; 2.853 ns   ; A    ; MefCoffeeMachine:INST|FFD:D2|Q ; CLK      ;
+; N/A   ; None         ; 5.867 ns   ; SR   ; MefCoffeeMachine:INST|FFD:D1|Q ; CLK      ;
+; N/A   ; None         ; 5.767 ns   ; SP   ; MefCoffeeMachine:INST|FFD:D1|Q ; CLK      ;
+; N/A   ; None         ; 5.568 ns   ; SR   ; MefCoffeeMachine:INST|FFD:D0|Q ; CLK      ;
+; N/A   ; None         ; 5.468 ns   ; SP   ; MefCoffeeMachine:INST|FFD:D0|Q ; CLK      ;
+; N/A   ; None         ; 5.438 ns   ; B1   ; MefCoffeeMachine:INST|FFD:D0|Q ; CLK      ;
+; N/A   ; None         ; 5.438 ns   ; SN   ; MefCoffeeMachine:INST|FFD:D1|Q ; CLK      ;
+; N/A   ; None         ; 5.353 ns   ; V0   ; MefCoffeeMachine:INST|FFD:D0|Q ; CLK      ;
+; N/A   ; None         ; 5.263 ns   ; V1   ; MefCoffeeMachine:INST|FFD:D0|Q ; CLK      ;
+; N/A   ; None         ; 5.244 ns   ; B0   ; MefCoffeeMachine:INST|FFD:D0|Q ; CLK      ;
+; N/A   ; None         ; 5.234 ns   ; SN   ; MefCoffeeMachine:INST|FFD:D2|Q ; CLK      ;
+; N/A   ; None         ; 5.139 ns   ; SN   ; MefCoffeeMachine:INST|FFD:D0|Q ; CLK      ;
+; N/A   ; None         ; 4.997 ns   ; B1   ; MefCoffeeMachine:INST|FFD:D2|Q ; CLK      ;
+; N/A   ; None         ; 4.992 ns   ; SP   ; MefCoffeeMachine:INST|FFD:D2|Q ; CLK      ;
+; N/A   ; None         ; 4.905 ns   ; SR   ; MefCoffeeMachine:INST|FFD:D2|Q ; CLK      ;
+; N/A   ; None         ; 4.875 ns   ; B1   ; MefCoffeeMachine:INST|FFD:D1|Q ; CLK      ;
+; N/A   ; None         ; 4.851 ns   ; V0   ; MefCoffeeMachine:INST|FFD:D2|Q ; CLK      ;
+; N/A   ; None         ; 4.800 ns   ; B1   ; MefCoffeeMachine:INST|FFD:D3|Q ; CLK      ;
+; N/A   ; None         ; 4.790 ns   ; V0   ; MefCoffeeMachine:INST|FFD:D1|Q ; CLK      ;
+; N/A   ; None         ; 4.761 ns   ; V1   ; MefCoffeeMachine:INST|FFD:D2|Q ; CLK      ;
+; N/A   ; None         ; 4.742 ns   ; B0   ; MefCoffeeMachine:INST|FFD:D2|Q ; CLK      ;
+; N/A   ; None         ; 4.700 ns   ; V1   ; MefCoffeeMachine:INST|FFD:D1|Q ; CLK      ;
+; N/A   ; None         ; 4.696 ns   ; V0   ; MefCoffeeMachine:INST|FFD:D3|Q ; CLK      ;
+; N/A   ; None         ; 4.681 ns   ; B0   ; MefCoffeeMachine:INST|FFD:D1|Q ; CLK      ;
+; N/A   ; None         ; 4.606 ns   ; V1   ; MefCoffeeMachine:INST|FFD:D3|Q ; CLK      ;
+; N/A   ; None         ; 4.587 ns   ; B0   ; MefCoffeeMachine:INST|FFD:D3|Q ; CLK      ;
+; N/A   ; None         ; 4.474 ns   ; A    ; MefCoffeeMachine:INST|FFD:D1|Q ; CLK      ;
+; N/A   ; None         ; 4.380 ns   ; A    ; MefCoffeeMachine:INST|FFD:D3|Q ; CLK      ;
+; N/A   ; None         ; 3.863 ns   ; SN   ; MefCoffeeMachine:INST|FFD:D3|Q ; CLK      ;
+; N/A   ; None         ; 3.621 ns   ; SP   ; MefCoffeeMachine:INST|FFD:D3|Q ; CLK      ;
+; N/A   ; None         ; 3.611 ns   ; A    ; MefCoffeeMachine:INST|FFD:D0|Q ; CLK      ;
+; N/A   ; None         ; 3.534 ns   ; SR   ; MefCoffeeMachine:INST|FFD:D3|Q ; CLK      ;
+; N/A   ; None         ; 3.111 ns   ; A    ; MefCoffeeMachine:INST|FFD:D2|Q ; CLK      ;
 +-------+--------------+------------+------+--------------------------------+----------+
 
 
@@ -176,72 +176,72 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------+--------------+------------+--------------------------------------------------+------+------------+
 ; Slack ; Required tco ; Actual tco ; From                                             ; To   ; From Clock ;
 +-------+--------------+------------+--------------------------------------------------+------+------------+
-; N/A   ; None         ; 22.533 ns  ; MefCoffeeMachine:INST|FFD:D2|Q                   ; f    ; CLK        ;
-; N/A   ; None         ; 22.423 ns  ; MefCoffeeMachine:INST|FFD:D2|Q                   ; b    ; CLK        ;
-; N/A   ; None         ; 21.675 ns  ; MefCoffeeMachine:INST|FFD:D2|Q                   ; e    ; CLK        ;
-; N/A   ; None         ; 21.576 ns  ; MefCoffeeMachine:INST|FFD:D2|Q                   ; g    ; CLK        ;
-; N/A   ; None         ; 21.451 ns  ; MefCoffeeMachine:INST|FFD:D0|Q                   ; f    ; CLK        ;
-; N/A   ; None         ; 21.449 ns  ; MefCoffeeMachine:INST|FFD:D2|Q                   ; a    ; CLK        ;
-; N/A   ; None         ; 21.341 ns  ; MefCoffeeMachine:INST|FFD:D0|Q                   ; b    ; CLK        ;
-; N/A   ; None         ; 21.253 ns  ; MefCoffeeMachine:INST|FFD:D2|Q                   ; d    ; CLK        ;
-; N/A   ; None         ; 20.802 ns  ; MefCoffeeMachine:INST|FFD:D1|Q                   ; f    ; CLK        ;
-; N/A   ; None         ; 20.724 ns  ; MefCoffeeMachine:INST|FFD:D2|Q                   ; c    ; CLK        ;
-; N/A   ; None         ; 20.681 ns  ; MefCoffeeMachine:INST|FFD:D1|Q                   ; b    ; CLK        ;
-; N/A   ; None         ; 20.593 ns  ; MefCoffeeMachine:INST|FFD:D0|Q                   ; e    ; CLK        ;
-; N/A   ; None         ; 20.514 ns  ; MefCoffeeMachine:INST|FFD:D3|Q                   ; f    ; CLK        ;
-; N/A   ; None         ; 20.494 ns  ; MefCoffeeMachine:INST|FFD:D0|Q                   ; g    ; CLK        ;
-; N/A   ; None         ; 20.404 ns  ; MefCoffeeMachine:INST|FFD:D3|Q                   ; b    ; CLK        ;
-; N/A   ; None         ; 20.367 ns  ; MefCoffeeMachine:INST|FFD:D0|Q                   ; a    ; CLK        ;
-; N/A   ; None         ; 20.171 ns  ; MefCoffeeMachine:INST|FFD:D0|Q                   ; d    ; CLK        ;
-; N/A   ; None         ; 19.834 ns  ; MefCoffeeMachine:INST|FFD:D1|Q                   ; g    ; CLK        ;
-; N/A   ; None         ; 19.807 ns  ; MefCoffeeMachine:INST|FFD:D1|Q                   ; e    ; CLK        ;
-; N/A   ; None         ; 19.718 ns  ; MefCoffeeMachine:INST|FFD:D1|Q                   ; a    ; CLK        ;
-; N/A   ; None         ; 19.656 ns  ; MefCoffeeMachine:INST|FFD:D3|Q                   ; e    ; CLK        ;
-; N/A   ; None         ; 19.642 ns  ; MefCoffeeMachine:INST|FFD:D0|Q                   ; c    ; CLK        ;
-; N/A   ; None         ; 19.557 ns  ; MefCoffeeMachine:INST|FFD:D3|Q                   ; g    ; CLK        ;
-; N/A   ; None         ; 19.511 ns  ; MefCoffeeMachine:INST|FFD:D1|Q                   ; d    ; CLK        ;
-; N/A   ; None         ; 19.430 ns  ; MefCoffeeMachine:INST|FFD:D3|Q                   ; a    ; CLK        ;
-; N/A   ; None         ; 19.234 ns  ; MefCoffeeMachine:INST|FFD:D3|Q                   ; d    ; CLK        ;
-; N/A   ; None         ; 18.856 ns  ; MefCoffeeMachine:INST|FFD:D1|Q                   ; c    ; CLK        ;
-; N/A   ; None         ; 18.705 ns  ; MefCoffeeMachine:INST|FFD:D3|Q                   ; c    ; CLK        ;
-; N/A   ; None         ; 17.489 ns  ; Decoders:INST2|Contador:comb_4|FlipflopT:inst2|Q ; a    ; CLK        ;
-; N/A   ; None         ; 17.275 ns  ; Decoders:INST2|Contador:comb_4|FlipflopT:inst2|Q ; c    ; CLK        ;
-; N/A   ; None         ; 17.212 ns  ; Decoders:INST2|Contador:comb_4|FlipflopT:inst2|Q ; g    ; CLK        ;
-; N/A   ; None         ; 16.805 ns  ; Decoders:INST2|Contador:comb_4|FlipflopT:inst2|Q ; f    ; CLK        ;
-; N/A   ; None         ; 16.443 ns  ; MefCoffeeMachine:INST|FFD:D2|Q                   ; h    ; CLK        ;
-; N/A   ; None         ; 16.272 ns  ; Decoders:INST2|Contador:comb_4|FlipflopT:inst2|Q ; b    ; CLK        ;
-; N/A   ; None         ; 16.075 ns  ; Decoders:INST2|Contador:comb_4|FlipflopT:inst2|Q ; d    ; CLK        ;
-; N/A   ; None         ; 15.979 ns  ; Decoders:INST2|Contador:comb_4|FlipflopT:inst2|Q ; e    ; CLK        ;
-; N/A   ; None         ; 15.744 ns  ; Decoders:INST2|Contador:comb_4|FlipflopT:inst1|Q ; b    ; CLK        ;
-; N/A   ; None         ; 15.464 ns  ; MefCoffeeMachine:INST|FFD:D3|Q                   ; h    ; CLK        ;
-; N/A   ; None         ; 15.433 ns  ; Decoders:INST2|Contador:comb_4|FlipflopT:inst1|Q ; g    ; CLK        ;
-; N/A   ; None         ; 15.026 ns  ; Decoders:INST2|Contador:comb_4|FlipflopT:inst1|Q ; f    ; CLK        ;
-; N/A   ; None         ; 14.854 ns  ; Decoders:INST2|Contador:comb_4|FlipflopT:inst1|Q ; a    ; CLK        ;
-; N/A   ; None         ; 14.808 ns  ; MefCoffeeMachine:INST|FFD:D1|Q                   ; h    ; CLK        ;
-; N/A   ; None         ; 14.200 ns  ; Decoders:INST2|Contador:comb_4|FlipflopT:inst1|Q ; e    ; CLK        ;
-; N/A   ; None         ; 14.181 ns  ; MefCoffeeMachine:INST|FFD:D0|Q                   ; h    ; CLK        ;
-; N/A   ; None         ; 13.977 ns  ; Decoders:INST2|Contador:comb_4|FlipflopT:inst1|Q ; d    ; CLK        ;
-; N/A   ; None         ; 13.976 ns  ; MefCoffeeMachine:INST|FFD:D1|Q                   ; P    ; CLK        ;
-; N/A   ; None         ; 13.821 ns  ; MefCoffeeMachine:INST|FFD:D1|Q                   ; AQ   ; CLK        ;
-; N/A   ; None         ; 13.764 ns  ; Decoders:INST2|Contador:comb_4|FlipflopT:inst2|Q ; dig1 ; CLK        ;
-; N/A   ; None         ; 13.585 ns  ; Decoders:INST2|Contador:comb_4|FlipflopT:inst2|Q ; dig2 ; CLK        ;
-; N/A   ; None         ; 13.529 ns  ; MefCoffeeMachine:INST|FFD:D3|Q                   ; P    ; CLK        ;
-; N/A   ; None         ; 13.113 ns  ; Decoders:INST2|Contador:comb_4|FlipflopT:inst2|Q ; dig4 ; CLK        ;
-; N/A   ; None         ; 13.071 ns  ; MefCoffeeMachine:INST|FFD:D1|Q                   ; PP   ; CLK        ;
-; N/A   ; None         ; 13.012 ns  ; MefCoffeeMachine:INST|FFD:D3|Q                   ; AQ   ; CLK        ;
-; N/A   ; None         ; 12.313 ns  ; MefCoffeeMachine:INST|FFD:D0|Q                   ; P    ; CLK        ;
-; N/A   ; None         ; 12.263 ns  ; MefCoffeeMachine:INST|FFD:D3|Q                   ; PP   ; CLK        ;
-; N/A   ; None         ; 11.980 ns  ; Decoders:INST2|Contador:comb_4|FlipflopT:inst1|Q ; dig1 ; CLK        ;
-; N/A   ; None         ; 11.935 ns  ; Decoders:INST2|Contador:comb_4|FlipflopT:inst2|Q ; dig3 ; CLK        ;
-; N/A   ; None         ; 11.895 ns  ; MefCoffeeMachine:INST|FFD:D2|Q                   ; P    ; CLK        ;
-; N/A   ; None         ; 11.806 ns  ; Decoders:INST2|Contador:comb_4|FlipflopT:inst1|Q ; dig2 ; CLK        ;
-; N/A   ; None         ; 11.588 ns  ; Decoders:INST2|Contador:comb_4|FlipflopT:inst1|Q ; c    ; CLK        ;
-; N/A   ; None         ; 11.472 ns  ; MefCoffeeMachine:INST|FFD:D0|Q                   ; AQ   ; CLK        ;
-; N/A   ; None         ; 11.334 ns  ; Decoders:INST2|Contador:comb_4|FlipflopT:inst1|Q ; dig4 ; CLK        ;
-; N/A   ; None         ; 11.242 ns  ; MefCoffeeMachine:INST|FFD:D2|Q                   ; AQ   ; CLK        ;
-; N/A   ; None         ; 10.723 ns  ; MefCoffeeMachine:INST|FFD:D0|Q                   ; PP   ; CLK        ;
-; N/A   ; None         ; 10.617 ns  ; Decoders:INST2|Contador:comb_4|FlipflopT:inst1|Q ; dig3 ; CLK        ;
-; N/A   ; None         ; 10.493 ns  ; MefCoffeeMachine:INST|FFD:D2|Q                   ; PP   ; CLK        ;
+; N/A   ; None         ; 21.778 ns  ; MefCoffeeMachine:INST|FFD:D2|Q                   ; d    ; CLK        ;
+; N/A   ; None         ; 21.657 ns  ; MefCoffeeMachine:INST|FFD:D2|Q                   ; c    ; CLK        ;
+; N/A   ; None         ; 21.138 ns  ; MefCoffeeMachine:INST|FFD:D0|Q                   ; d    ; CLK        ;
+; N/A   ; None         ; 21.017 ns  ; MefCoffeeMachine:INST|FFD:D0|Q                   ; c    ; CLK        ;
+; N/A   ; None         ; 20.983 ns  ; MefCoffeeMachine:INST|FFD:D2|Q                   ; e    ; CLK        ;
+; N/A   ; None         ; 20.819 ns  ; MefCoffeeMachine:INST|FFD:D2|Q                   ; g    ; CLK        ;
+; N/A   ; None         ; 20.688 ns  ; MefCoffeeMachine:INST|FFD:D2|Q                   ; f    ; CLK        ;
+; N/A   ; None         ; 20.658 ns  ; MefCoffeeMachine:INST|FFD:D3|Q                   ; d    ; CLK        ;
+; N/A   ; None         ; 20.537 ns  ; MefCoffeeMachine:INST|FFD:D3|Q                   ; c    ; CLK        ;
+; N/A   ; None         ; 20.343 ns  ; MefCoffeeMachine:INST|FFD:D0|Q                   ; e    ; CLK        ;
+; N/A   ; None         ; 20.285 ns  ; MefCoffeeMachine:INST|FFD:D1|Q                   ; d    ; CLK        ;
+; N/A   ; None         ; 20.179 ns  ; MefCoffeeMachine:INST|FFD:D0|Q                   ; g    ; CLK        ;
+; N/A   ; None         ; 20.178 ns  ; MefCoffeeMachine:INST|FFD:D2|Q                   ; a    ; CLK        ;
+; N/A   ; None         ; 20.164 ns  ; MefCoffeeMachine:INST|FFD:D1|Q                   ; c    ; CLK        ;
+; N/A   ; None         ; 20.161 ns  ; MefCoffeeMachine:INST|FFD:D2|Q                   ; b    ; CLK        ;
+; N/A   ; None         ; 20.048 ns  ; MefCoffeeMachine:INST|FFD:D0|Q                   ; f    ; CLK        ;
+; N/A   ; None         ; 19.863 ns  ; MefCoffeeMachine:INST|FFD:D3|Q                   ; e    ; CLK        ;
+; N/A   ; None         ; 19.699 ns  ; MefCoffeeMachine:INST|FFD:D3|Q                   ; g    ; CLK        ;
+; N/A   ; None         ; 19.568 ns  ; MefCoffeeMachine:INST|FFD:D3|Q                   ; f    ; CLK        ;
+; N/A   ; None         ; 19.538 ns  ; MefCoffeeMachine:INST|FFD:D0|Q                   ; a    ; CLK        ;
+; N/A   ; None         ; 19.521 ns  ; MefCoffeeMachine:INST|FFD:D0|Q                   ; b    ; CLK        ;
+; N/A   ; None         ; 19.490 ns  ; MefCoffeeMachine:INST|FFD:D1|Q                   ; e    ; CLK        ;
+; N/A   ; None         ; 19.326 ns  ; MefCoffeeMachine:INST|FFD:D1|Q                   ; g    ; CLK        ;
+; N/A   ; None         ; 19.195 ns  ; MefCoffeeMachine:INST|FFD:D1|Q                   ; f    ; CLK        ;
+; N/A   ; None         ; 19.058 ns  ; MefCoffeeMachine:INST|FFD:D3|Q                   ; a    ; CLK        ;
+; N/A   ; None         ; 19.041 ns  ; MefCoffeeMachine:INST|FFD:D3|Q                   ; b    ; CLK        ;
+; N/A   ; None         ; 18.685 ns  ; MefCoffeeMachine:INST|FFD:D1|Q                   ; a    ; CLK        ;
+; N/A   ; None         ; 18.668 ns  ; MefCoffeeMachine:INST|FFD:D1|Q                   ; b    ; CLK        ;
+; N/A   ; None         ; 17.696 ns  ; Decoders:INST2|Contador:comb_4|FlipflopT:inst2|Q ; g    ; CLK        ;
+; N/A   ; None         ; 16.949 ns  ; Decoders:INST2|Contador:comb_4|FlipflopT:inst2|Q ; f    ; CLK        ;
+; N/A   ; None         ; 16.891 ns  ; Decoders:INST2|Contador:comb_4|FlipflopT:inst2|Q ; b    ; CLK        ;
+; N/A   ; None         ; 16.656 ns  ; Decoders:INST2|Contador:comb_4|FlipflopT:inst2|Q ; d    ; CLK        ;
+; N/A   ; None         ; 16.080 ns  ; Decoders:INST2|Contador:comb_4|FlipflopT:inst2|Q ; e    ; CLK        ;
+; N/A   ; None         ; 16.003 ns  ; Decoders:INST2|Contador:comb_4|FlipflopT:inst1|Q ; b    ; CLK        ;
+; N/A   ; None         ; 15.987 ns  ; Decoders:INST2|Contador:comb_4|FlipflopT:inst2|Q ; a    ; CLK        ;
+; N/A   ; None         ; 15.968 ns  ; MefCoffeeMachine:INST|FFD:D3|Q                   ; P    ; CLK        ;
+; N/A   ; None         ; 15.836 ns  ; Decoders:INST2|Contador:comb_4|FlipflopT:inst1|Q ; g    ; CLK        ;
+; N/A   ; None         ; 15.768 ns  ; Decoders:INST2|Contador:comb_4|FlipflopT:inst1|Q ; d    ; CLK        ;
+; N/A   ; None         ; 15.313 ns  ; Decoders:INST2|Contador:comb_4|FlipflopT:inst2|Q ; c    ; CLK        ;
+; N/A   ; None         ; 15.105 ns  ; Decoders:INST2|Contador:comb_4|FlipflopT:inst1|Q ; f    ; CLK        ;
+; N/A   ; None         ; 14.989 ns  ; MefCoffeeMachine:INST|FFD:D1|Q                   ; P    ; CLK        ;
+; N/A   ; None         ; 14.793 ns  ; MefCoffeeMachine:INST|FFD:D1|Q                   ; h    ; CLK        ;
+; N/A   ; None         ; 14.421 ns  ; MefCoffeeMachine:INST|FFD:D3|Q                   ; h    ; CLK        ;
+; N/A   ; None         ; 14.409 ns  ; MefCoffeeMachine:INST|FFD:D2|Q                   ; P    ; CLK        ;
+; N/A   ; None         ; 14.406 ns  ; MefCoffeeMachine:INST|FFD:D3|Q                   ; AQ   ; CLK        ;
+; N/A   ; None         ; 14.367 ns  ; MefCoffeeMachine:INST|FFD:D3|Q                   ; PP   ; CLK        ;
+; N/A   ; None         ; 14.311 ns  ; MefCoffeeMachine:INST|FFD:D2|Q                   ; h    ; CLK        ;
+; N/A   ; None         ; 14.252 ns  ; Decoders:INST2|Contador:comb_4|FlipflopT:inst2|Q ; dig2 ; CLK        ;
+; N/A   ; None         ; 14.246 ns  ; MefCoffeeMachine:INST|FFD:D0|Q                   ; h    ; CLK        ;
+; N/A   ; None         ; 14.220 ns  ; Decoders:INST2|Contador:comb_4|FlipflopT:inst1|Q ; e    ; CLK        ;
+; N/A   ; None         ; 13.603 ns  ; Decoders:INST2|Contador:comb_4|FlipflopT:inst1|Q ; a    ; CLK        ;
+; N/A   ; None         ; 13.546 ns  ; MefCoffeeMachine:INST|FFD:D0|Q                   ; P    ; CLK        ;
+; N/A   ; None         ; 13.480 ns  ; MefCoffeeMachine:INST|FFD:D1|Q                   ; AQ   ; CLK        ;
+; N/A   ; None         ; 13.438 ns  ; MefCoffeeMachine:INST|FFD:D1|Q                   ; PP   ; CLK        ;
+; N/A   ; None         ; 13.285 ns  ; Decoders:INST2|Contador:comb_4|FlipflopT:inst2|Q ; dig4 ; CLK        ;
+; N/A   ; None         ; 13.053 ns  ; Decoders:INST2|Contador:comb_4|FlipflopT:inst2|Q ; dig1 ; CLK        ;
+; N/A   ; None         ; 12.847 ns  ; MefCoffeeMachine:INST|FFD:D2|Q                   ; AQ   ; CLK        ;
+; N/A   ; None         ; 12.808 ns  ; MefCoffeeMachine:INST|FFD:D2|Q                   ; PP   ; CLK        ;
+; N/A   ; None         ; 12.408 ns  ; Decoders:INST2|Contador:comb_4|FlipflopT:inst1|Q ; dig2 ; CLK        ;
+; N/A   ; None         ; 12.043 ns  ; MefCoffeeMachine:INST|FFD:D0|Q                   ; AQ   ; CLK        ;
+; N/A   ; None         ; 12.004 ns  ; MefCoffeeMachine:INST|FFD:D0|Q                   ; PP   ; CLK        ;
+; N/A   ; None         ; 11.503 ns  ; Decoders:INST2|Contador:comb_4|FlipflopT:inst2|Q ; dig3 ; CLK        ;
+; N/A   ; None         ; 11.482 ns  ; Decoders:INST2|Contador:comb_4|FlipflopT:inst1|Q ; c    ; CLK        ;
+; N/A   ; None         ; 11.425 ns  ; Decoders:INST2|Contador:comb_4|FlipflopT:inst1|Q ; dig4 ; CLK        ;
+; N/A   ; None         ; 11.193 ns  ; Decoders:INST2|Contador:comb_4|FlipflopT:inst1|Q ; dig1 ; CLK        ;
+; N/A   ; None         ; 10.615 ns  ; Decoders:INST2|Contador:comb_4|FlipflopT:inst1|Q ; dig3 ; CLK        ;
 +-------+--------------+------------+--------------------------------------------------+------+------------+
 
 
@@ -250,79 +250,79 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------+-------------------+-----------------+------+----+
 ; Slack ; Required P2P Time ; Actual P2P Time ; From ; To ;
 +-------+-------------------+-----------------+------+----+
-; N/A   ; None              ; 21.205 ns       ; SR   ; f  ;
-; N/A   ; None              ; 21.095 ns       ; SR   ; b  ;
-; N/A   ; None              ; 21.088 ns       ; SP   ; f  ;
-; N/A   ; None              ; 20.991 ns       ; SN   ; f  ;
-; N/A   ; None              ; 20.978 ns       ; SP   ; b  ;
-; N/A   ; None              ; 20.881 ns       ; SN   ; b  ;
-; N/A   ; None              ; 20.859 ns       ; B1   ; f  ;
-; N/A   ; None              ; 20.749 ns       ; B1   ; b  ;
-; N/A   ; None              ; 20.556 ns       ; B0   ; f  ;
-; N/A   ; None              ; 20.449 ns       ; V1   ; f  ;
-; N/A   ; None              ; 20.446 ns       ; B0   ; b  ;
-; N/A   ; None              ; 20.347 ns       ; SR   ; e  ;
-; N/A   ; None              ; 20.339 ns       ; V1   ; b  ;
-; N/A   ; None              ; 20.248 ns       ; SR   ; g  ;
-; N/A   ; None              ; 20.230 ns       ; SP   ; e  ;
-; N/A   ; None              ; 20.220 ns       ; V0   ; f  ;
-; N/A   ; None              ; 20.133 ns       ; SN   ; e  ;
-; N/A   ; None              ; 20.131 ns       ; SP   ; g  ;
-; N/A   ; None              ; 20.121 ns       ; SR   ; a  ;
-; N/A   ; None              ; 20.110 ns       ; V0   ; b  ;
-; N/A   ; None              ; 20.034 ns       ; SN   ; g  ;
-; N/A   ; None              ; 20.004 ns       ; SP   ; a  ;
-; N/A   ; None              ; 20.001 ns       ; B1   ; e  ;
-; N/A   ; None              ; 19.925 ns       ; SR   ; d  ;
-; N/A   ; None              ; 19.907 ns       ; SN   ; a  ;
-; N/A   ; None              ; 19.902 ns       ; B1   ; g  ;
-; N/A   ; None              ; 19.832 ns       ; A    ; f  ;
-; N/A   ; None              ; 19.808 ns       ; SP   ; d  ;
-; N/A   ; None              ; 19.775 ns       ; B1   ; a  ;
-; N/A   ; None              ; 19.711 ns       ; SN   ; d  ;
-; N/A   ; None              ; 19.711 ns       ; A    ; b  ;
-; N/A   ; None              ; 19.698 ns       ; B0   ; e  ;
-; N/A   ; None              ; 19.599 ns       ; B0   ; g  ;
-; N/A   ; None              ; 19.591 ns       ; V1   ; e  ;
-; N/A   ; None              ; 19.579 ns       ; B1   ; d  ;
-; N/A   ; None              ; 19.492 ns       ; V1   ; g  ;
-; N/A   ; None              ; 19.472 ns       ; B0   ; a  ;
-; N/A   ; None              ; 19.396 ns       ; SR   ; c  ;
-; N/A   ; None              ; 19.365 ns       ; V1   ; a  ;
-; N/A   ; None              ; 19.362 ns       ; V0   ; e  ;
-; N/A   ; None              ; 19.279 ns       ; SP   ; c  ;
-; N/A   ; None              ; 19.276 ns       ; B0   ; d  ;
-; N/A   ; None              ; 19.263 ns       ; V0   ; g  ;
-; N/A   ; None              ; 19.182 ns       ; SN   ; c  ;
-; N/A   ; None              ; 19.169 ns       ; V1   ; d  ;
-; N/A   ; None              ; 19.136 ns       ; V0   ; a  ;
-; N/A   ; None              ; 19.050 ns       ; B1   ; c  ;
-; N/A   ; None              ; 18.940 ns       ; V0   ; d  ;
-; N/A   ; None              ; 18.864 ns       ; A    ; g  ;
-; N/A   ; None              ; 18.827 ns       ; A    ; e  ;
-; N/A   ; None              ; 18.748 ns       ; A    ; a  ;
-; N/A   ; None              ; 18.747 ns       ; B0   ; c  ;
-; N/A   ; None              ; 18.640 ns       ; V1   ; c  ;
-; N/A   ; None              ; 18.629 ns       ; A    ; d  ;
-; N/A   ; None              ; 18.411 ns       ; V0   ; c  ;
-; N/A   ; None              ; 17.846 ns       ; A    ; c  ;
-; N/A   ; None              ; 13.723 ns       ; B1   ; h  ;
-; N/A   ; None              ; 13.420 ns       ; B0   ; h  ;
-; N/A   ; None              ; 13.313 ns       ; V1   ; h  ;
-; N/A   ; None              ; 13.295 ns       ; A    ; h  ;
-; N/A   ; None              ; 13.084 ns       ; V0   ; h  ;
-; N/A   ; None              ; 12.792 ns       ; SR   ; AQ ;
-; N/A   ; None              ; 12.771 ns       ; SR   ; P  ;
-; N/A   ; None              ; 12.706 ns       ; SR   ; h  ;
-; N/A   ; None              ; 12.569 ns       ; SN   ; AQ ;
-; N/A   ; None              ; 12.548 ns       ; SN   ; P  ;
-; N/A   ; None              ; 12.313 ns       ; SN   ; h  ;
-; N/A   ; None              ; 12.227 ns       ; SP   ; AQ ;
-; N/A   ; None              ; 12.206 ns       ; SP   ; P  ;
-; N/A   ; None              ; 12.045 ns       ; SR   ; PP ;
-; N/A   ; None              ; 11.822 ns       ; SN   ; PP ;
-; N/A   ; None              ; 11.798 ns       ; SP   ; h  ;
-; N/A   ; None              ; 11.480 ns       ; SP   ; PP ;
+; N/A   ; None              ; 21.282 ns       ; SN   ; d  ;
+; N/A   ; None              ; 21.161 ns       ; SN   ; c  ;
+; N/A   ; None              ; 21.040 ns       ; SP   ; d  ;
+; N/A   ; None              ; 20.953 ns       ; SR   ; d  ;
+; N/A   ; None              ; 20.919 ns       ; SP   ; c  ;
+; N/A   ; None              ; 20.832 ns       ; SR   ; c  ;
+; N/A   ; None              ; 20.487 ns       ; SN   ; e  ;
+; N/A   ; None              ; 20.323 ns       ; SN   ; g  ;
+; N/A   ; None              ; 20.245 ns       ; SP   ; e  ;
+; N/A   ; None              ; 20.192 ns       ; SN   ; f  ;
+; N/A   ; None              ; 20.158 ns       ; SR   ; e  ;
+; N/A   ; None              ; 20.081 ns       ; SP   ; g  ;
+; N/A   ; None              ; 19.994 ns       ; SR   ; g  ;
+; N/A   ; None              ; 19.950 ns       ; SP   ; f  ;
+; N/A   ; None              ; 19.863 ns       ; SR   ; f  ;
+; N/A   ; None              ; 19.819 ns       ; B1   ; d  ;
+; N/A   ; None              ; 19.734 ns       ; V0   ; d  ;
+; N/A   ; None              ; 19.698 ns       ; B1   ; c  ;
+; N/A   ; None              ; 19.682 ns       ; SN   ; a  ;
+; N/A   ; None              ; 19.665 ns       ; SN   ; b  ;
+; N/A   ; None              ; 19.644 ns       ; V1   ; d  ;
+; N/A   ; None              ; 19.625 ns       ; B0   ; d  ;
+; N/A   ; None              ; 19.613 ns       ; V0   ; c  ;
+; N/A   ; None              ; 19.523 ns       ; V1   ; c  ;
+; N/A   ; None              ; 19.504 ns       ; B0   ; c  ;
+; N/A   ; None              ; 19.440 ns       ; SP   ; a  ;
+; N/A   ; None              ; 19.423 ns       ; SP   ; b  ;
+; N/A   ; None              ; 19.353 ns       ; SR   ; a  ;
+; N/A   ; None              ; 19.336 ns       ; SR   ; b  ;
+; N/A   ; None              ; 19.122 ns       ; A    ; d  ;
+; N/A   ; None              ; 19.024 ns       ; B1   ; e  ;
+; N/A   ; None              ; 18.939 ns       ; V0   ; e  ;
+; N/A   ; None              ; 18.860 ns       ; B1   ; g  ;
+; N/A   ; None              ; 18.849 ns       ; V1   ; e  ;
+; N/A   ; None              ; 18.830 ns       ; B0   ; e  ;
+; N/A   ; None              ; 18.796 ns       ; V0   ; g  ;
+; N/A   ; None              ; 18.729 ns       ; B1   ; f  ;
+; N/A   ; None              ; 18.685 ns       ; V1   ; g  ;
+; N/A   ; None              ; 18.666 ns       ; B0   ; g  ;
+; N/A   ; None              ; 18.644 ns       ; V0   ; f  ;
+; N/A   ; None              ; 18.591 ns       ; A    ; g  ;
+; N/A   ; None              ; 18.554 ns       ; V1   ; f  ;
+; N/A   ; None              ; 18.535 ns       ; B0   ; f  ;
+; N/A   ; None              ; 18.358 ns       ; A    ; c  ;
+; N/A   ; None              ; 18.219 ns       ; B1   ; a  ;
+; N/A   ; None              ; 18.202 ns       ; B1   ; b  ;
+; N/A   ; None              ; 18.134 ns       ; V0   ; a  ;
+; N/A   ; None              ; 18.117 ns       ; V0   ; b  ;
+; N/A   ; None              ; 18.044 ns       ; V1   ; a  ;
+; N/A   ; None              ; 18.027 ns       ; V1   ; b  ;
+; N/A   ; None              ; 18.025 ns       ; B0   ; a  ;
+; N/A   ; None              ; 18.008 ns       ; B0   ; b  ;
+; N/A   ; None              ; 17.684 ns       ; A    ; e  ;
+; N/A   ; None              ; 17.620 ns       ; A    ; f  ;
+; N/A   ; None              ; 17.502 ns       ; A    ; b  ;
+; N/A   ; None              ; 17.367 ns       ; A    ; a  ;
+; N/A   ; None              ; 14.136 ns       ; SN   ; h  ;
+; N/A   ; None              ; 13.154 ns       ; SR   ; h  ;
+; N/A   ; None              ; 12.987 ns       ; B1   ; h  ;
+; N/A   ; None              ; 12.902 ns       ; V0   ; h  ;
+; N/A   ; None              ; 12.812 ns       ; V1   ; h  ;
+; N/A   ; None              ; 12.793 ns       ; B0   ; h  ;
+; N/A   ; None              ; 11.901 ns       ; SR   ; AQ ;
+; N/A   ; None              ; 11.861 ns       ; SR   ; PP ;
+; N/A   ; None              ; 11.801 ns       ; SP   ; AQ ;
+; N/A   ; None              ; 11.778 ns       ; SR   ; P  ;
+; N/A   ; None              ; 11.761 ns       ; SP   ; PP ;
+; N/A   ; None              ; 11.678 ns       ; SP   ; P  ;
+; N/A   ; None              ; 11.669 ns       ; SP   ; h  ;
+; N/A   ; None              ; 11.472 ns       ; SN   ; AQ ;
+; N/A   ; None              ; 11.432 ns       ; SN   ; PP ;
+; N/A   ; None              ; 11.349 ns       ; SN   ; P  ;
+; N/A   ; None              ; 10.280 ns       ; A    ; h  ;
 +-------+-------------------+-----------------+------+----+
 
 
@@ -331,38 +331,38 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------+-------------+-----------+------+--------------------------------+----------+
 ; Minimum Slack ; Required th ; Actual th ; From ; To                             ; To Clock ;
 +---------------+-------------+-----------+------+--------------------------------+----------+
-; N/A           ; None        ; -2.299 ns ; A    ; MefCoffeeMachine:INST|FFD:D2|Q ; CLK      ;
-; N/A           ; None        ; -2.398 ns ; V0   ; MefCoffeeMachine:INST|FFD:D2|Q ; CLK      ;
-; N/A           ; None        ; -2.627 ns ; V1   ; MefCoffeeMachine:INST|FFD:D2|Q ; CLK      ;
-; N/A           ; None        ; -2.734 ns ; B0   ; MefCoffeeMachine:INST|FFD:D2|Q ; CLK      ;
-; N/A           ; None        ; -2.814 ns ; SR   ; MefCoffeeMachine:INST|FFD:D1|Q ; CLK      ;
-; N/A           ; None        ; -3.037 ns ; B1   ; MefCoffeeMachine:INST|FFD:D2|Q ; CLK      ;
-; N/A           ; None        ; -3.173 ns ; B1   ; MefCoffeeMachine:INST|FFD:D1|Q ; CLK      ;
-; N/A           ; None        ; -3.275 ns ; A    ; MefCoffeeMachine:INST|FFD:D0|Q ; CLK      ;
-; N/A           ; None        ; -3.285 ns ; SR   ; MefCoffeeMachine:INST|FFD:D0|Q ; CLK      ;
-; N/A           ; None        ; -3.345 ns ; B1   ; MefCoffeeMachine:INST|FFD:D0|Q ; CLK      ;
-; N/A           ; None        ; -3.544 ns ; SN   ; MefCoffeeMachine:INST|FFD:D0|Q ; CLK      ;
-; N/A           ; None        ; -3.662 ns ; A    ; MefCoffeeMachine:INST|FFD:D3|Q ; CLK      ;
-; N/A           ; None        ; -3.690 ns ; SN   ; MefCoffeeMachine:INST|FFD:D2|Q ; CLK      ;
-; N/A           ; None        ; -3.757 ns ; B0   ; MefCoffeeMachine:INST|FFD:D1|Q ; CLK      ;
-; N/A           ; None        ; -3.787 ns ; SP   ; MefCoffeeMachine:INST|FFD:D2|Q ; CLK      ;
-; N/A           ; None        ; -3.904 ns ; SR   ; MefCoffeeMachine:INST|FFD:D2|Q ; CLK      ;
-; N/A           ; None        ; -3.957 ns ; B0   ; MefCoffeeMachine:INST|FFD:D3|Q ; CLK      ;
-; N/A           ; None        ; -4.018 ns ; B1   ; MefCoffeeMachine:INST|FFD:D3|Q ; CLK      ;
-; N/A           ; None        ; -4.379 ns ; SN   ; MefCoffeeMachine:INST|FFD:D3|Q ; CLK      ;
-; N/A           ; None        ; -4.397 ns ; SP   ; MefCoffeeMachine:INST|FFD:D0|Q ; CLK      ;
-; N/A           ; None        ; -4.471 ns ; A    ; MefCoffeeMachine:INST|FFD:D1|Q ; CLK      ;
-; N/A           ; None        ; -4.476 ns ; SP   ; MefCoffeeMachine:INST|FFD:D3|Q ; CLK      ;
-; N/A           ; None        ; -4.497 ns ; V0   ; MefCoffeeMachine:INST|FFD:D3|Q ; CLK      ;
-; N/A           ; None        ; -4.586 ns ; V0   ; MefCoffeeMachine:INST|FFD:D0|Q ; CLK      ;
-; N/A           ; None        ; -4.593 ns ; SR   ; MefCoffeeMachine:INST|FFD:D3|Q ; CLK      ;
-; N/A           ; None        ; -4.726 ns ; V1   ; MefCoffeeMachine:INST|FFD:D3|Q ; CLK      ;
-; N/A           ; None        ; -4.815 ns ; V1   ; MefCoffeeMachine:INST|FFD:D0|Q ; CLK      ;
-; N/A           ; None        ; -4.865 ns ; SN   ; MefCoffeeMachine:INST|FFD:D1|Q ; CLK      ;
-; N/A           ; None        ; -4.903 ns ; SP   ; MefCoffeeMachine:INST|FFD:D1|Q ; CLK      ;
-; N/A           ; None        ; -4.922 ns ; B0   ; MefCoffeeMachine:INST|FFD:D0|Q ; CLK      ;
-; N/A           ; None        ; -5.306 ns ; V0   ; MefCoffeeMachine:INST|FFD:D1|Q ; CLK      ;
-; N/A           ; None        ; -5.535 ns ; V1   ; MefCoffeeMachine:INST|FFD:D1|Q ; CLK      ;
+; N/A           ; None        ; -2.162 ns ; B0   ; MefCoffeeMachine:INST|FFD:D1|Q ; CLK      ;
+; N/A           ; None        ; -2.557 ns ; A    ; MefCoffeeMachine:INST|FFD:D2|Q ; CLK      ;
+; N/A           ; None        ; -2.619 ns ; B1   ; MefCoffeeMachine:INST|FFD:D1|Q ; CLK      ;
+; N/A           ; None        ; -2.980 ns ; SR   ; MefCoffeeMachine:INST|FFD:D3|Q ; CLK      ;
+; N/A           ; None        ; -3.057 ns ; A    ; MefCoffeeMachine:INST|FFD:D0|Q ; CLK      ;
+; N/A           ; None        ; -3.067 ns ; SP   ; MefCoffeeMachine:INST|FFD:D3|Q ; CLK      ;
+; N/A           ; None        ; -3.083 ns ; SN   ; MefCoffeeMachine:INST|FFD:D0|Q ; CLK      ;
+; N/A           ; None        ; -3.309 ns ; SN   ; MefCoffeeMachine:INST|FFD:D3|Q ; CLK      ;
+; N/A           ; None        ; -3.368 ns ; SP   ; MefCoffeeMachine:INST|FFD:D0|Q ; CLK      ;
+; N/A           ; None        ; -3.468 ns ; B0   ; MefCoffeeMachine:INST|FFD:D2|Q ; CLK      ;
+; N/A           ; None        ; -3.480 ns ; B1   ; MefCoffeeMachine:INST|FFD:D0|Q ; CLK      ;
+; N/A           ; None        ; -3.487 ns ; V1   ; MefCoffeeMachine:INST|FFD:D2|Q ; CLK      ;
+; N/A           ; None        ; -3.511 ns ; SR   ; MefCoffeeMachine:INST|FFD:D1|Q ; CLK      ;
+; N/A           ; None        ; -3.577 ns ; V0   ; MefCoffeeMachine:INST|FFD:D2|Q ; CLK      ;
+; N/A           ; None        ; -3.662 ns ; B1   ; MefCoffeeMachine:INST|FFD:D2|Q ; CLK      ;
+; N/A           ; None        ; -3.679 ns ; SN   ; MefCoffeeMachine:INST|FFD:D1|Q ; CLK      ;
+; N/A           ; None        ; -3.722 ns ; SR   ; MefCoffeeMachine:INST|FFD:D0|Q ; CLK      ;
+; N/A           ; None        ; -3.819 ns ; B0   ; MefCoffeeMachine:INST|FFD:D3|Q ; CLK      ;
+; N/A           ; None        ; -3.826 ns ; A    ; MefCoffeeMachine:INST|FFD:D3|Q ; CLK      ;
+; N/A           ; None        ; -3.920 ns ; A    ; MefCoffeeMachine:INST|FFD:D1|Q ; CLK      ;
+; N/A           ; None        ; -4.052 ns ; V1   ; MefCoffeeMachine:INST|FFD:D3|Q ; CLK      ;
+; N/A           ; None        ; -4.118 ns ; SP   ; MefCoffeeMachine:INST|FFD:D1|Q ; CLK      ;
+; N/A           ; None        ; -4.142 ns ; V0   ; MefCoffeeMachine:INST|FFD:D3|Q ; CLK      ;
+; N/A           ; None        ; -4.146 ns ; V1   ; MefCoffeeMachine:INST|FFD:D1|Q ; CLK      ;
+; N/A           ; None        ; -4.227 ns ; B1   ; MefCoffeeMachine:INST|FFD:D3|Q ; CLK      ;
+; N/A           ; None        ; -4.236 ns ; V0   ; MefCoffeeMachine:INST|FFD:D1|Q ; CLK      ;
+; N/A           ; None        ; -4.351 ns ; SR   ; MefCoffeeMachine:INST|FFD:D2|Q ; CLK      ;
+; N/A           ; None        ; -4.438 ns ; SP   ; MefCoffeeMachine:INST|FFD:D2|Q ; CLK      ;
+; N/A           ; None        ; -4.680 ns ; SN   ; MefCoffeeMachine:INST|FFD:D2|Q ; CLK      ;
+; N/A           ; None        ; -4.690 ns ; B0   ; MefCoffeeMachine:INST|FFD:D0|Q ; CLK      ;
+; N/A           ; None        ; -4.709 ns ; V1   ; MefCoffeeMachine:INST|FFD:D0|Q ; CLK      ;
+; N/A           ; None        ; -4.799 ns ; V0   ; MefCoffeeMachine:INST|FFD:D0|Q ; CLK      ;
 +---------------+-------------+-----------+------+--------------------------------+----------+
 
 
@@ -372,7 +372,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II Classic Timing Analyzer
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Wed Jun 07 20:31:39 2023
+    Info: Processing started: Wed Jun 07 20:42:09 2023
 Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off MainCoffeeMachine -c MainCoffeeMachine
 Info: Started post-fitting delay annotation
 Info: Delay annotation completed successfully
@@ -380,91 +380,90 @@ Warning: Found pins functioning as undefined clocks and/or memory enables
     Info: Assuming node "CLK" is an undefined clock
 Warning: Found 1 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
     Info: Detected ripple clock "Decoders:INST2|Contador:comb_4|FlipflopT:inst1|Q" as buffer
-Info: Clock "CLK" has Internal fmax of 154.44 MHz between source register "MefCoffeeMachine:INST|FFD:D2|Q" and destination register "MefCoffeeMachine:INST|FFD:D3|Q" (period= 6.475 ns)
-    Info: + Longest register to register delay is 5.766 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X5_Y3_N5; Fanout = 11; REG Node = 'MefCoffeeMachine:INST|FFD:D2|Q'
-        Info: 2: + IC(2.105 ns) + CELL(0.200 ns) = 2.305 ns; Loc. = LC_X5_Y3_N2; Fanout = 3; COMB Node = 'MefCoffeeMachine:INST|w7~0'
-        Info: 3: + IC(2.278 ns) + CELL(1.183 ns) = 5.766 ns; Loc. = LC_X5_Y3_N7; Fanout = 14; REG Node = 'MefCoffeeMachine:INST|FFD:D3|Q'
-        Info: Total cell delay = 1.383 ns ( 23.99 % )
-        Info: Total interconnect delay = 4.383 ns ( 76.01 % )
+Info: Clock "CLK" has Internal fmax of 150.08 MHz between source register "MefCoffeeMachine:INST|FFD:D0|Q" and destination register "MefCoffeeMachine:INST|FFD:D2|Q" (period= 6.663 ns)
+    Info: + Longest register to register delay is 5.954 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X4_Y2_N1; Fanout = 20; REG Node = 'MefCoffeeMachine:INST|FFD:D0|Q'
+        Info: 2: + IC(2.170 ns) + CELL(0.511 ns) = 2.681 ns; Loc. = LC_X5_Y1_N0; Fanout = 2; COMB Node = 'MefCoffeeMachine:INST|WideAnd5~0'
+        Info: 3: + IC(2.469 ns) + CELL(0.804 ns) = 5.954 ns; Loc. = LC_X4_Y2_N6; Fanout = 11; REG Node = 'MefCoffeeMachine:INST|FFD:D2|Q'
+        Info: Total cell delay = 1.315 ns ( 22.09 % )
+        Info: Total interconnect delay = 4.639 ns ( 77.91 % )
     Info: - Smallest clock skew is 0.000 ns
         Info: + Shortest clock path from clock "CLK" to destination register is 3.348 ns
-            Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_14; Fanout = 5; CLK Node = 'CLK'
-            Info: 2: + IC(1.267 ns) + CELL(0.918 ns) = 3.348 ns; Loc. = LC_X5_Y3_N7; Fanout = 14; REG Node = 'MefCoffeeMachine:INST|FFD:D3|Q'
+            Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_12; Fanout = 5; CLK Node = 'CLK'
+            Info: 2: + IC(1.267 ns) + CELL(0.918 ns) = 3.348 ns; Loc. = LC_X4_Y2_N6; Fanout = 11; REG Node = 'MefCoffeeMachine:INST|FFD:D2|Q'
             Info: Total cell delay = 2.081 ns ( 62.16 % )
             Info: Total interconnect delay = 1.267 ns ( 37.84 % )
         Info: - Longest clock path from clock "CLK" to source register is 3.348 ns
-            Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_14; Fanout = 5; CLK Node = 'CLK'
-            Info: 2: + IC(1.267 ns) + CELL(0.918 ns) = 3.348 ns; Loc. = LC_X5_Y3_N5; Fanout = 11; REG Node = 'MefCoffeeMachine:INST|FFD:D2|Q'
+            Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_12; Fanout = 5; CLK Node = 'CLK'
+            Info: 2: + IC(1.267 ns) + CELL(0.918 ns) = 3.348 ns; Loc. = LC_X4_Y2_N1; Fanout = 20; REG Node = 'MefCoffeeMachine:INST|FFD:D0|Q'
             Info: Total cell delay = 2.081 ns ( 62.16 % )
             Info: Total interconnect delay = 1.267 ns ( 37.84 % )
     Info: + Micro clock to output delay of source is 0.376 ns
     Info: + Micro setup delay of destination is 0.333 ns
-Info: tsu for register "MefCoffeeMachine:INST|FFD:D1|Q" (data pin = "B1", clock pin = "CLK") is 6.499 ns
-    Info: + Longest pin to register delay is 9.514 ns
-        Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_21; Fanout = 7; PIN Node = 'B1'
-        Info: 2: + IC(2.841 ns) + CELL(0.511 ns) = 4.484 ns; Loc. = LC_X4_Y3_N6; Fanout = 17; COMB Node = 'WideOr0~0'
-        Info: 3: + IC(0.785 ns) + CELL(0.511 ns) = 5.780 ns; Loc. = LC_X4_Y3_N0; Fanout = 2; COMB Node = 'MefCoffeeMachine:INST|WideAnd8~0'
-        Info: 4: + IC(0.733 ns) + CELL(0.740 ns) = 7.253 ns; Loc. = LC_X4_Y3_N9; Fanout = 1; COMB Node = 'MefCoffeeMachine:INST|WideOr1'
-        Info: 5: + IC(0.747 ns) + CELL(0.200 ns) = 8.200 ns; Loc. = LC_X4_Y3_N8; Fanout = 1; COMB Node = 'MefCoffeeMachine:INST|WideOr2~2'
-        Info: 6: + IC(0.723 ns) + CELL(0.591 ns) = 9.514 ns; Loc. = LC_X4_Y3_N1; Fanout = 19; REG Node = 'MefCoffeeMachine:INST|FFD:D1|Q'
-        Info: Total cell delay = 3.685 ns ( 38.73 % )
-        Info: Total interconnect delay = 5.829 ns ( 61.27 % )
+Info: tsu for register "MefCoffeeMachine:INST|FFD:D1|Q" (data pin = "SR", clock pin = "CLK") is 5.867 ns
+    Info: + Longest pin to register delay is 8.882 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_33; Fanout = 10; PIN Node = 'SR'
+        Info: 2: + IC(2.209 ns) + CELL(0.740 ns) = 4.081 ns; Loc. = LC_X3_Y4_N5; Fanout = 6; COMB Node = 'MefCoffeeMachine:INST|WideAnd27~0'
+        Info: 3: + IC(1.847 ns) + CELL(0.200 ns) = 6.128 ns; Loc. = LC_X5_Y3_N2; Fanout = 1; COMB Node = 'MefCoffeeMachine:INST|WideOr2~0'
+        Info: 4: + IC(1.950 ns) + CELL(0.804 ns) = 8.882 ns; Loc. = LC_X5_Y1_N5; Fanout = 19; REG Node = 'MefCoffeeMachine:INST|FFD:D1|Q'
+        Info: Total cell delay = 2.876 ns ( 32.38 % )
+        Info: Total interconnect delay = 6.006 ns ( 67.62 % )
     Info: + Micro setup delay of destination is 0.333 ns
     Info: - Shortest clock path from clock "CLK" to destination register is 3.348 ns
-        Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_14; Fanout = 5; CLK Node = 'CLK'
-        Info: 2: + IC(1.267 ns) + CELL(0.918 ns) = 3.348 ns; Loc. = LC_X4_Y3_N1; Fanout = 19; REG Node = 'MefCoffeeMachine:INST|FFD:D1|Q'
+        Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_12; Fanout = 5; CLK Node = 'CLK'
+        Info: 2: + IC(1.267 ns) + CELL(0.918 ns) = 3.348 ns; Loc. = LC_X5_Y1_N5; Fanout = 19; REG Node = 'MefCoffeeMachine:INST|FFD:D1|Q'
         Info: Total cell delay = 2.081 ns ( 62.16 % )
         Info: Total interconnect delay = 1.267 ns ( 37.84 % )
-Info: tco from clock "CLK" to destination pin "f" through register "MefCoffeeMachine:INST|FFD:D2|Q" is 22.533 ns
+Info: tco from clock "CLK" to destination pin "d" through register "MefCoffeeMachine:INST|FFD:D2|Q" is 21.778 ns
     Info: + Longest clock path from clock "CLK" to source register is 3.348 ns
-        Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_14; Fanout = 5; CLK Node = 'CLK'
-        Info: 2: + IC(1.267 ns) + CELL(0.918 ns) = 3.348 ns; Loc. = LC_X5_Y3_N5; Fanout = 11; REG Node = 'MefCoffeeMachine:INST|FFD:D2|Q'
+        Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_12; Fanout = 5; CLK Node = 'CLK'
+        Info: 2: + IC(1.267 ns) + CELL(0.918 ns) = 3.348 ns; Loc. = LC_X4_Y2_N6; Fanout = 11; REG Node = 'MefCoffeeMachine:INST|FFD:D2|Q'
         Info: Total cell delay = 2.081 ns ( 62.16 % )
         Info: Total interconnect delay = 1.267 ns ( 37.84 % )
     Info: + Micro clock to output delay of source is 0.376 ns
-    Info: + Longest register to pin delay is 18.809 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X5_Y3_N5; Fanout = 11; REG Node = 'MefCoffeeMachine:INST|FFD:D2|Q'
-        Info: 2: + IC(2.105 ns) + CELL(0.200 ns) = 2.305 ns; Loc. = LC_X5_Y3_N2; Fanout = 3; COMB Node = 'MefCoffeeMachine:INST|w7~0'
-        Info: 3: + IC(1.247 ns) + CELL(0.511 ns) = 4.063 ns; Loc. = LC_X4_Y3_N4; Fanout = 2; COMB Node = 'MefCoffeeMachine:INST|WideAnd27~1'
-        Info: 4: + IC(0.534 ns) + CELL(0.200 ns) = 4.797 ns; Loc. = LC_X4_Y3_N5; Fanout = 2; COMB Node = 'MefCoffeeMachine:INST|WideAnd27~2'
-        Info: 5: + IC(1.817 ns) + CELL(0.200 ns) = 6.814 ns; Loc. = LC_X4_Y1_N7; Fanout = 5; COMB Node = 'MefCoffeeMachine:INST|WideAnd23~1'
-        Info: 6: + IC(1.983 ns) + CELL(0.511 ns) = 9.308 ns; Loc. = LC_X3_Y3_N5; Fanout = 3; COMB Node = 'Decoders:INST2|InterfaceESN:comb_11|WideAnd0~0'
-        Info: 7: + IC(1.948 ns) + CELL(0.200 ns) = 11.456 ns; Loc. = LC_X4_Y2_N0; Fanout = 2; COMB Node = 'Decoders:INST2|InterfaceESP:comb_10|WideAnd0'
-        Info: 8: + IC(1.757 ns) + CELL(0.200 ns) = 13.413 ns; Loc. = LC_X4_Y2_N5; Fanout = 1; COMB Node = 'Decoders:INST2|WideNor5~3'
-        Info: 9: + IC(0.776 ns) + CELL(0.511 ns) = 14.700 ns; Loc. = LC_X4_Y2_N7; Fanout = 1; COMB Node = 'Decoders:INST2|WideNor5~5'
-        Info: 10: + IC(1.787 ns) + CELL(2.322 ns) = 18.809 ns; Loc. = PIN_17; Fanout = 0; PIN Node = 'f'
-        Info: Total cell delay = 4.855 ns ( 25.81 % )
-        Info: Total interconnect delay = 13.954 ns ( 74.19 % )
-Info: Longest tpd from source pin "SR" to destination pin "f" is 21.205 ns
-    Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_27; Fanout = 10; PIN Node = 'SR'
-    Info: 2: + IC(2.829 ns) + CELL(0.740 ns) = 4.701 ns; Loc. = LC_X5_Y3_N2; Fanout = 3; COMB Node = 'MefCoffeeMachine:INST|w7~0'
-    Info: 3: + IC(1.247 ns) + CELL(0.511 ns) = 6.459 ns; Loc. = LC_X4_Y3_N4; Fanout = 2; COMB Node = 'MefCoffeeMachine:INST|WideAnd27~1'
-    Info: 4: + IC(0.534 ns) + CELL(0.200 ns) = 7.193 ns; Loc. = LC_X4_Y3_N5; Fanout = 2; COMB Node = 'MefCoffeeMachine:INST|WideAnd27~2'
-    Info: 5: + IC(1.817 ns) + CELL(0.200 ns) = 9.210 ns; Loc. = LC_X4_Y1_N7; Fanout = 5; COMB Node = 'MefCoffeeMachine:INST|WideAnd23~1'
-    Info: 6: + IC(1.983 ns) + CELL(0.511 ns) = 11.704 ns; Loc. = LC_X3_Y3_N5; Fanout = 3; COMB Node = 'Decoders:INST2|InterfaceESN:comb_11|WideAnd0~0'
-    Info: 7: + IC(1.948 ns) + CELL(0.200 ns) = 13.852 ns; Loc. = LC_X4_Y2_N0; Fanout = 2; COMB Node = 'Decoders:INST2|InterfaceESP:comb_10|WideAnd0'
-    Info: 8: + IC(1.757 ns) + CELL(0.200 ns) = 15.809 ns; Loc. = LC_X4_Y2_N5; Fanout = 1; COMB Node = 'Decoders:INST2|WideNor5~3'
-    Info: 9: + IC(0.776 ns) + CELL(0.511 ns) = 17.096 ns; Loc. = LC_X4_Y2_N7; Fanout = 1; COMB Node = 'Decoders:INST2|WideNor5~5'
-    Info: 10: + IC(1.787 ns) + CELL(2.322 ns) = 21.205 ns; Loc. = PIN_17; Fanout = 0; PIN Node = 'f'
-    Info: Total cell delay = 6.527 ns ( 30.78 % )
-    Info: Total interconnect delay = 14.678 ns ( 69.22 % )
-Info: th for register "MefCoffeeMachine:INST|FFD:D2|Q" (data pin = "A", clock pin = "CLK") is -2.299 ns
+    Info: + Longest register to pin delay is 18.054 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X4_Y2_N6; Fanout = 11; REG Node = 'MefCoffeeMachine:INST|FFD:D2|Q'
+        Info: 2: + IC(1.395 ns) + CELL(0.200 ns) = 1.595 ns; Loc. = LC_X4_Y2_N7; Fanout = 3; COMB Node = 'MefCoffeeMachine:INST|w7~0'
+        Info: 3: + IC(1.720 ns) + CELL(0.511 ns) = 3.826 ns; Loc. = LC_X5_Y1_N1; Fanout = 2; COMB Node = 'MefCoffeeMachine:INST|WideAnd27~1'
+        Info: 4: + IC(0.305 ns) + CELL(0.200 ns) = 4.331 ns; Loc. = LC_X5_Y1_N2; Fanout = 2; COMB Node = 'MefCoffeeMachine:INST|WideAnd27~2'
+        Info: 5: + IC(1.896 ns) + CELL(0.200 ns) = 6.427 ns; Loc. = LC_X6_Y3_N5; Fanout = 4; COMB Node = 'MefCoffeeMachine:INST|S2'
+        Info: 6: + IC(1.844 ns) + CELL(0.740 ns) = 9.011 ns; Loc. = LC_X5_Y4_N0; Fanout = 1; COMB Node = 'Decoders:INST2|InterfaceERDI:comb_12|WideAnd0~1'
+        Info: 7: + IC(0.305 ns) + CELL(0.200 ns) = 9.516 ns; Loc. = LC_X5_Y4_N1; Fanout = 6; COMB Node = 'Decoders:INST2|InterfaceERDI:comb_12|WideAnd0'
+        Info: 8: + IC(2.063 ns) + CELL(0.511 ns) = 12.090 ns; Loc. = LC_X6_Y3_N4; Fanout = 1; COMB Node = 'Decoders:INST2|WideNor3~3'
+        Info: 9: + IC(0.766 ns) + CELL(0.511 ns) = 13.367 ns; Loc. = LC_X6_Y3_N3; Fanout = 1; COMB Node = 'Decoders:INST2|WideNor3~4'
+        Info: 10: + IC(2.365 ns) + CELL(2.322 ns) = 18.054 ns; Loc. = PIN_98; Fanout = 0; PIN Node = 'd'
+        Info: Total cell delay = 5.395 ns ( 29.88 % )
+        Info: Total interconnect delay = 12.659 ns ( 70.12 % )
+Info: Longest tpd from source pin "SN" to destination pin "d" is 21.282 ns
+    Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_34; Fanout = 12; PIN Node = 'SN'
+    Info: 2: + IC(2.777 ns) + CELL(0.914 ns) = 4.823 ns; Loc. = LC_X4_Y2_N7; Fanout = 3; COMB Node = 'MefCoffeeMachine:INST|w7~0'
+    Info: 3: + IC(1.720 ns) + CELL(0.511 ns) = 7.054 ns; Loc. = LC_X5_Y1_N1; Fanout = 2; COMB Node = 'MefCoffeeMachine:INST|WideAnd27~1'
+    Info: 4: + IC(0.305 ns) + CELL(0.200 ns) = 7.559 ns; Loc. = LC_X5_Y1_N2; Fanout = 2; COMB Node = 'MefCoffeeMachine:INST|WideAnd27~2'
+    Info: 5: + IC(1.896 ns) + CELL(0.200 ns) = 9.655 ns; Loc. = LC_X6_Y3_N5; Fanout = 4; COMB Node = 'MefCoffeeMachine:INST|S2'
+    Info: 6: + IC(1.844 ns) + CELL(0.740 ns) = 12.239 ns; Loc. = LC_X5_Y4_N0; Fanout = 1; COMB Node = 'Decoders:INST2|InterfaceERDI:comb_12|WideAnd0~1'
+    Info: 7: + IC(0.305 ns) + CELL(0.200 ns) = 12.744 ns; Loc. = LC_X5_Y4_N1; Fanout = 6; COMB Node = 'Decoders:INST2|InterfaceERDI:comb_12|WideAnd0'
+    Info: 8: + IC(2.063 ns) + CELL(0.511 ns) = 15.318 ns; Loc. = LC_X6_Y3_N4; Fanout = 1; COMB Node = 'Decoders:INST2|WideNor3~3'
+    Info: 9: + IC(0.766 ns) + CELL(0.511 ns) = 16.595 ns; Loc. = LC_X6_Y3_N3; Fanout = 1; COMB Node = 'Decoders:INST2|WideNor3~4'
+    Info: 10: + IC(2.365 ns) + CELL(2.322 ns) = 21.282 ns; Loc. = PIN_98; Fanout = 0; PIN Node = 'd'
+    Info: Total cell delay = 7.241 ns ( 34.02 % )
+    Info: Total interconnect delay = 14.041 ns ( 65.98 % )
+Info: th for register "MefCoffeeMachine:INST|FFD:D1|Q" (data pin = "B0", clock pin = "CLK") is -2.162 ns
     Info: + Longest clock path from clock "CLK" to destination register is 3.348 ns
-        Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_14; Fanout = 5; CLK Node = 'CLK'
-        Info: 2: + IC(1.267 ns) + CELL(0.918 ns) = 3.348 ns; Loc. = LC_X5_Y3_N5; Fanout = 11; REG Node = 'MefCoffeeMachine:INST|FFD:D2|Q'
+        Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_12; Fanout = 5; CLK Node = 'CLK'
+        Info: 2: + IC(1.267 ns) + CELL(0.918 ns) = 3.348 ns; Loc. = LC_X5_Y1_N5; Fanout = 19; REG Node = 'MefCoffeeMachine:INST|FFD:D1|Q'
         Info: Total cell delay = 2.081 ns ( 62.16 % )
         Info: Total interconnect delay = 1.267 ns ( 37.84 % )
     Info: + Micro hold delay of destination is 0.221 ns
-    Info: - Shortest pin to register delay is 5.868 ns
-        Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_41; Fanout = 6; PIN Node = 'A'
-        Info: 2: + IC(2.910 ns) + CELL(0.511 ns) = 4.553 ns; Loc. = LC_X5_Y3_N3; Fanout = 1; COMB Node = 'MefCoffeeMachine:INST|WideAnd5~1'
-        Info: 3: + IC(0.724 ns) + CELL(0.591 ns) = 5.868 ns; Loc. = LC_X5_Y3_N5; Fanout = 11; REG Node = 'MefCoffeeMachine:INST|FFD:D2|Q'
-        Info: Total cell delay = 2.234 ns ( 38.07 % )
-        Info: Total interconnect delay = 3.634 ns ( 61.93 % )
+    Info: - Shortest pin to register delay is 5.731 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_36; Fanout = 7; PIN Node = 'B0'
+        Info: 2: + IC(2.229 ns) + CELL(0.740 ns) = 4.101 ns; Loc. = LC_X5_Y1_N3; Fanout = 1; COMB Node = 'MefCoffeeMachine:INST|WideOr1'
+        Info: 3: + IC(0.305 ns) + CELL(0.200 ns) = 4.606 ns; Loc. = LC_X5_Y1_N4; Fanout = 1; COMB Node = 'MefCoffeeMachine:INST|WideOr2~2'
+        Info: 4: + IC(0.534 ns) + CELL(0.591 ns) = 5.731 ns; Loc. = LC_X5_Y1_N5; Fanout = 19; REG Node = 'MefCoffeeMachine:INST|FFD:D1|Q'
+        Info: Total cell delay = 2.663 ns ( 46.47 % )
+        Info: Total interconnect delay = 3.068 ns ( 53.53 % )
 Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 2 warnings
     Info: Peak virtual memory: 176 megabytes
-    Info: Processing ended: Wed Jun 07 20:31:39 2023
+    Info: Processing ended: Wed Jun 07 20:42:09 2023
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 

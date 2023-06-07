@@ -456,42 +456,6 @@ Decoders:INST2|InterfaceERDI:comb_12
 
 # end
 # entity
-MainCoffeeMachine
-# storage
-db|MainCoffeeMachine.(0).cnf
-db|MainCoffeeMachine.(0).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-MainCoffeeMachine.v
-fe2f4bf472eaedcf72d5a2c3cc35de4
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-|
-}
-# macro_sequence
-
-# end
-# entity
 Decoders
 # storage
 db|MainCoffeeMachine.(3).cnf
@@ -523,6 +487,42 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 }
 # hierarchies {
 Decoders:INST2
+}
+# macro_sequence
+
+# end
+# entity
+MainCoffeeMachine
+# storage
+db|MainCoffeeMachine.(0).cnf
+db|MainCoffeeMachine.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+MainCoffeeMachine.v
+acd7b0eba97ba4d1a0d421ac81ea25
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+|
 }
 # macro_sequence
 
