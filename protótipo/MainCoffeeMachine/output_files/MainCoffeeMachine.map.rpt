@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MainCoffeeMachine
-Wed Jun 07 18:55:18 2023
+Wed Jun 07 19:34:35 2023
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -44,12 +44,12 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                               ;
 +-----------------------------+----------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Wed Jun 07 18:55:18 2023        ;
+; Analysis & Synthesis Status ; Successful - Wed Jun 07 19:34:35 2023        ;
 ; Quartus II Version          ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name               ; MainCoffeeMachine                            ;
 ; Top-level Entity Name       ; MainCoffeeMachine                            ;
 ; Family                      ; MAX II                                       ;
-; Total logic elements        ; 55                                           ;
+; Total logic elements        ; 102                                          ;
 ; Total pins                  ; 28                                           ;
 ; Total virtual pins          ; 0                                            ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                                ;
@@ -150,20 +150,20 @@ applicable agreement for further details.
 +---------------------------------------------+--------------------------------+
 ; Resource                                    ; Usage                          ;
 +---------------------------------------------+--------------------------------+
-; Total logic elements                        ; 55                             ;
-;     -- Combinational with no register       ; 49                             ;
+; Total logic elements                        ; 102                            ;
+;     -- Combinational with no register       ; 96                             ;
 ;     -- Register only                        ; 0                              ;
 ;     -- Combinational with a register        ; 6                              ;
 ;                                             ;                                ;
 ; Logic element usage by number of LUT inputs ;                                ;
-;     -- 4 input functions                    ; 37                             ;
-;     -- 3 input functions                    ; 8                              ;
-;     -- 2 input functions                    ; 8                              ;
+;     -- 4 input functions                    ; 71                             ;
+;     -- 3 input functions                    ; 13                             ;
+;     -- 2 input functions                    ; 16                             ;
 ;     -- 1 input functions                    ; 2                              ;
 ;     -- 0 input functions                    ; 0                              ;
 ;                                             ;                                ;
 ; Logic elements by mode                      ;                                ;
-;     -- normal mode                          ; 55                             ;
+;     -- normal mode                          ; 102                            ;
 ;     -- arithmetic mode                      ; 0                              ;
 ;     -- qfbk mode                            ; 0                              ;
 ;     -- register cascade mode                ; 0                              ;
@@ -173,28 +173,35 @@ applicable agreement for further details.
 ; Total registers                             ; 6                              ;
 ; I/O pins                                    ; 28                             ;
 ; Maximum fan-out node                        ; MefCoffeeMachine:INST|FFD:D1|Q ;
-; Maximum fan-out                             ; 21                             ;
-; Total fan-out                               ; 210                            ;
-; Average fan-out                             ; 2.53                           ;
+; Maximum fan-out                             ; 20                             ;
+; Total fan-out                               ; 382                            ;
+; Average fan-out                             ; 2.94                           ;
 +---------------------------------------------+--------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                               ; Library Name ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------+--------------+
-; |MainCoffeeMachine         ; 55 (0)      ; 6            ; 0          ; 28   ; 0            ; 49 (0)       ; 0 (0)             ; 6 (0)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine                                                ; work         ;
-;    |Decoders:INST2|        ; 3 (1)       ; 2            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|Decoders:INST2                                 ; work         ;
-;       |Contador:comb_4|    ; 2 (0)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|Decoders:INST2|Contador:comb_4                 ; work         ;
-;          |FlipflopT:inst1| ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|Decoders:INST2|Contador:comb_4|FlipflopT:inst1 ; work         ;
-;          |FlipflopT:inst2| ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|Decoders:INST2|Contador:comb_4|FlipflopT:inst2 ; work         ;
-;    |MefCoffeeMachine:INST| ; 52 (48)     ; 4            ; 0          ; 0    ; 0            ; 48 (48)      ; 0 (0)             ; 4 (0)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|MefCoffeeMachine:INST                          ; work         ;
-;       |FFD:D0|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|MefCoffeeMachine:INST|FFD:D0                   ; work         ;
-;       |FFD:D1|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|MefCoffeeMachine:INST|FFD:D1                   ; work         ;
-;       |FFD:D2|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|MefCoffeeMachine:INST|FFD:D2                   ; work         ;
-;       |FFD:D3|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|MefCoffeeMachine:INST|FFD:D3                   ; work         ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                   ;
++-------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node    ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                               ; Library Name ;
++-------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------+--------------+
+; |MainCoffeeMachine            ; 102 (0)     ; 6            ; 0          ; 28   ; 0            ; 96 (0)       ; 0 (0)             ; 6 (0)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine                                                ; work         ;
+;    |Decoders:INST2|           ; 47 (33)     ; 2            ; 0          ; 0    ; 0            ; 45 (33)      ; 0 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|Decoders:INST2                                 ; work         ;
+;       |Contador:comb_4|       ; 2 (0)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|Decoders:INST2|Contador:comb_4                 ; work         ;
+;          |FlipflopT:inst1|    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|Decoders:INST2|Contador:comb_4|FlipflopT:inst1 ; work         ;
+;          |FlipflopT:inst2|    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|Decoders:INST2|Contador:comb_4|FlipflopT:inst2 ; work         ;
+;       |InterfaceERDI:comb_12| ; 4 (4)       ; 0            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|Decoders:INST2|InterfaceERDI:comb_12           ; work         ;
+;       |InterfaceESN:comb_11|  ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|Decoders:INST2|InterfaceESN:comb_11            ; work         ;
+;       |InterfaceESP:comb_10|  ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|Decoders:INST2|InterfaceESP:comb_10            ; work         ;
+;       |InterfaceESR:comb_9|   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|Decoders:INST2|InterfaceESR:comb_9             ; work         ;
+;       |InterfaceS1:comb_6|    ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|Decoders:INST2|InterfaceS1:comb_6              ; work         ;
+;       |InterfaceS2:comb_7|    ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|Decoders:INST2|InterfaceS2:comb_7              ; work         ;
+;       |InterfaceS3:comb_8|    ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|Decoders:INST2|InterfaceS3:comb_8              ; work         ;
+;    |MefCoffeeMachine:INST|    ; 55 (51)     ; 4            ; 0          ; 0    ; 0            ; 51 (51)      ; 0 (0)             ; 4 (0)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|MefCoffeeMachine:INST                          ; work         ;
+;       |FFD:D0|                ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|MefCoffeeMachine:INST|FFD:D0                   ; work         ;
+;       |FFD:D1|                ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|MefCoffeeMachine:INST|FFD:D1                   ; work         ;
+;       |FFD:D2|                ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|MefCoffeeMachine:INST|FFD:D2                   ; work         ;
+;       |FFD:D3|                ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|MefCoffeeMachine:INST|FFD:D3                   ; work         ;
++-------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -259,7 +266,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Wed Jun 07 18:55:17 2023
+    Info: Processing started: Wed Jun 07 19:34:33 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MainCoffeeMachine -c MainCoffeeMachine
 Info: Found 1 design units, including 1 entities, in source file MainCoffeeMachine.v
     Info: Found entity 1: MainCoffeeMachine
@@ -294,33 +301,33 @@ Info: Found 1 design units, including 1 entities, in source file Demux.v
     Info: Found entity 1: Demux
 Info: Found 1 design units, including 1 entities, in source file FlipflopT.v
     Info: Found entity 1: FlipflopT
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(111): created implicit net for "s27"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(112): created implicit net for "s28"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(113): created implicit net for "s29"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(114): created implicit net for "s30"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(115): created implicit net for "s31"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(116): created implicit net for "s32"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(117): created implicit net for "s33"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(118): created implicit net for "s34"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(120): created implicit net for "s36"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(121): created implicit net for "s37"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(123): created implicit net for "s39"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(124): created implicit net for "s40"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(126): created implicit net for "s42"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(127): created implicit net for "s43"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(128): created implicit net for "s44"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(129): created implicit net for "s45"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(130): created implicit net for "s46"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(131): created implicit net for "s47"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(132): created implicit net for "s48"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(133): created implicit net for "s49"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(134): created implicit net for "s50"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(135): created implicit net for "s51"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(136): created implicit net for "s52"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(137): created implicit net for "s53"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(138): created implicit net for "s54"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(139): created implicit net for "s55"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(140): created implicit net for "s56"
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(118): created implicit net for "s27"
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(119): created implicit net for "s28"
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(120): created implicit net for "s29"
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(121): created implicit net for "s30"
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(122): created implicit net for "s31"
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(123): created implicit net for "s32"
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(124): created implicit net for "s33"
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(125): created implicit net for "s34"
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(128): created implicit net for "s36"
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(129): created implicit net for "s37"
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(132): created implicit net for "s39"
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(133): created implicit net for "s40"
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(136): created implicit net for "s42"
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(137): created implicit net for "s43"
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(138): created implicit net for "s44"
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(139): created implicit net for "s45"
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(140): created implicit net for "s46"
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(141): created implicit net for "s47"
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(142): created implicit net for "s48"
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(143): created implicit net for "s49"
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(144): created implicit net for "s50"
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(145): created implicit net for "s51"
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(146): created implicit net for "s52"
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(147): created implicit net for "s53"
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(148): created implicit net for "s54"
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(149): created implicit net for "s55"
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(150): created implicit net for "s56"
 Warning (10236): Verilog HDL Implicit Net warning at Contador.v(7): created implicit net for "Q3"
 Critical Warning (10846): Verilog HDL Instantiation warning at Decoders.v(24): instance has no name
 Critical Warning (10846): Verilog HDL Instantiation warning at Decoders.v(26): instance has no name
@@ -339,257 +346,252 @@ Warning (10034): Output port "h" at Decoders.v(13) has no driver
 Info: Elaborating entity "Contador" for hierarchy "Decoders:INST2|Contador:comb_4"
 Info: Elaborating entity "FlipflopT" for hierarchy "Decoders:INST2|Contador:comb_4|FlipflopT:inst1"
 Info: Elaborating entity "InterfaceS0" for hierarchy "Decoders:INST2|InterfaceS0:comb_5"
-Warning (10739): Verilog HDL warning at InterfaceS0.v(18): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS0.v(19): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS0.v(20): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceS0.v(21): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS0.v(25): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS0.v(26): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS0.v(27): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS0.v(22): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS0.v(23): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS0.v(24): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceS0.v(28): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS0.v(32): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS0.v(33): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS0.v(34): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS0.v(29): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS0.v(30): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS0.v(31): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceS0.v(35): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS0.v(39): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS0.v(40): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS0.v(41): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS0.v(36): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS0.v(37): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS0.v(38): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceS0.v(42): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS0.v(46): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS0.v(47): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS0.v(48): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS0.v(43): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS0.v(44): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS0.v(45): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceS0.v(49): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS0.v(53): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS0.v(54): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS0.v(55): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS0.v(50): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS0.v(51): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS0.v(52): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceS0.v(56): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS0.v(60): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS0.v(61): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS0.v(62): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS0.v(57): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS0.v(58): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS0.v(59): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceS0.v(63): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS0.v(64): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS0.v(65): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS0.v(66): actual bit length 32 differs from formal bit length 1
 Info: Elaborating entity "InterfaceS1" for hierarchy "Decoders:INST2|InterfaceS1:comb_6"
-Warning (10739): Verilog HDL warning at InterfaceS1.v(18): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS1.v(19): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS1.v(20): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceS1.v(21): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS1.v(25): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS1.v(26): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS1.v(27): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS1.v(22): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS1.v(23): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS1.v(24): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceS1.v(28): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS1.v(32): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS1.v(33): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS1.v(34): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS1.v(29): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS1.v(30): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS1.v(31): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceS1.v(35): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS1.v(39): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS1.v(40): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS1.v(41): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS1.v(36): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS1.v(37): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS1.v(38): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceS1.v(42): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS1.v(46): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS1.v(47): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS1.v(48): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS1.v(43): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS1.v(44): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS1.v(45): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceS1.v(49): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS1.v(53): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS1.v(54): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS1.v(55): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS1.v(50): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS1.v(51): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS1.v(52): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceS1.v(56): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS1.v(60): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS1.v(61): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS1.v(62): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS1.v(57): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS1.v(58): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS1.v(59): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceS1.v(63): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS1.v(64): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS1.v(65): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS1.v(66): actual bit length 32 differs from formal bit length 1
 Info: Elaborating entity "InterfaceS2" for hierarchy "Decoders:INST2|InterfaceS2:comb_7"
-Warning (10739): Verilog HDL warning at InterfaceS2.v(18): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS2.v(19): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS2.v(20): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceS2.v(21): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS2.v(25): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS2.v(26): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS2.v(27): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS2.v(22): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS2.v(23): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS2.v(24): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceS2.v(28): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS2.v(32): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS2.v(33): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS2.v(34): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS2.v(29): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS2.v(30): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS2.v(31): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceS2.v(35): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS2.v(39): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS2.v(40): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS2.v(41): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS2.v(36): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS2.v(37): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS2.v(38): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceS2.v(42): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS2.v(46): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS2.v(47): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS2.v(48): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS2.v(43): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS2.v(44): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS2.v(45): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceS2.v(49): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS2.v(53): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS2.v(54): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS2.v(55): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS2.v(50): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS2.v(51): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS2.v(52): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceS2.v(56): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS2.v(60): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS2.v(61): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS2.v(62): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS2.v(57): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS2.v(58): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS2.v(59): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceS2.v(63): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS2.v(64): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS2.v(65): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS2.v(66): actual bit length 32 differs from formal bit length 1
 Info: Elaborating entity "InterfaceS3" for hierarchy "Decoders:INST2|InterfaceS3:comb_8"
-Warning (10739): Verilog HDL warning at InterfaceS3.v(18): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS3.v(19): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceS3.v(20): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceS3.v(21): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS3.v(25): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS3.v(26): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS3.v(22): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS3.v(23): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceS3.v(27): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceS3.v(28): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS3.v(32): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS3.v(33): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS3.v(29): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS3.v(30): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceS3.v(34): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceS3.v(35): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS3.v(39): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS3.v(40): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS3.v(36): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS3.v(37): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceS3.v(41): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceS3.v(42): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS3.v(46): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS3.v(47): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS3.v(43): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS3.v(44): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceS3.v(48): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceS3.v(49): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS3.v(53): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS3.v(54): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS3.v(50): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS3.v(51): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceS3.v(55): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceS3.v(56): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS3.v(60): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceS3.v(61): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS3.v(57): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS3.v(58): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceS3.v(62): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceS3.v(63): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS3.v(64): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceS3.v(65): actual bit length 32 differs from formal bit length 1
 Info: Elaborating entity "InterfaceESR" for hierarchy "Decoders:INST2|InterfaceESR:comb_9"
-Warning (10739): Verilog HDL warning at InterfaceESR.v(18): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESR.v(19): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceESR.v(20): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceESR.v(21): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESR.v(25): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESR.v(26): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESR.v(22): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESR.v(23): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceESR.v(27): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceESR.v(28): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESR.v(32): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESR.v(33): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESR.v(29): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESR.v(30): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceESR.v(34): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceESR.v(35): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESR.v(39): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESR.v(40): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESR.v(36): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESR.v(37): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceESR.v(41): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceESR.v(42): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESR.v(46): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESR.v(47): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESR.v(43): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESR.v(44): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceESR.v(48): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceESR.v(49): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESR.v(53): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESR.v(54): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESR.v(50): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESR.v(51): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceESR.v(55): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceESR.v(56): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESR.v(60): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESR.v(61): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESR.v(57): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESR.v(58): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceESR.v(62): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceESR.v(63): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESR.v(64): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESR.v(65): actual bit length 32 differs from formal bit length 1
 Info: Elaborating entity "InterfaceESP" for hierarchy "Decoders:INST2|InterfaceESP:comb_10"
-Warning (10739): Verilog HDL warning at InterfaceESP.v(18): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESP.v(19): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESP.v(20): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceESP.v(21): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESP.v(25): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESP.v(26): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESP.v(27): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESP.v(22): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESP.v(23): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESP.v(24): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceESP.v(28): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESP.v(32): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESP.v(33): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESP.v(34): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESP.v(29): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESP.v(30): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESP.v(31): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceESP.v(35): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESP.v(39): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESP.v(40): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESP.v(41): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESP.v(36): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESP.v(37): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESP.v(38): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceESP.v(42): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESP.v(46): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESP.v(47): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESP.v(48): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESP.v(43): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESP.v(44): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESP.v(45): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceESP.v(49): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESP.v(53): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESP.v(54): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESP.v(55): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESP.v(50): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESP.v(51): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESP.v(52): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceESP.v(56): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESP.v(60): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESP.v(61): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESP.v(62): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESP.v(57): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESP.v(58): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESP.v(59): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceESP.v(63): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESP.v(64): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESP.v(65): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESP.v(66): actual bit length 32 differs from formal bit length 1
 Info: Elaborating entity "InterfaceESN" for hierarchy "Decoders:INST2|InterfaceESN:comb_11"
-Warning (10739): Verilog HDL warning at InterfaceESN.v(18): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESN.v(19): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESN.v(20): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceESN.v(21): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESN.v(25): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESN.v(26): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESN.v(27): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESN.v(22): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESN.v(23): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESN.v(24): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceESN.v(28): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESN.v(32): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESN.v(33): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESN.v(34): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESN.v(29): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESN.v(30): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESN.v(31): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceESN.v(35): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESN.v(39): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESN.v(40): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESN.v(41): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESN.v(36): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESN.v(37): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESN.v(38): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceESN.v(42): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESN.v(46): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESN.v(47): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESN.v(48): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESN.v(43): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESN.v(44): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESN.v(45): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceESN.v(49): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESN.v(53): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESN.v(54): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESN.v(55): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESN.v(50): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESN.v(51): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESN.v(52): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceESN.v(56): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESN.v(60): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESN.v(61): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceESN.v(62): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESN.v(57): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESN.v(58): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESN.v(59): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceESN.v(63): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESN.v(64): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESN.v(65): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceESN.v(66): actual bit length 32 differs from formal bit length 1
 Info: Elaborating entity "InterfaceERDI" for hierarchy "Decoders:INST2|InterfaceERDI:comb_12"
-Warning (10739): Verilog HDL warning at InterfaceERDI.v(17): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceERDI.v(18): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceERDI.v(19): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceERDI.v(20): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceERDI.v(24): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceERDI.v(25): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceERDI.v(26): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceERDI.v(21): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceERDI.v(22): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceERDI.v(23): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceERDI.v(27): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceERDI.v(31): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceERDI.v(32): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceERDI.v(33): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceERDI.v(28): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceERDI.v(29): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceERDI.v(30): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceERDI.v(34): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceERDI.v(38): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceERDI.v(39): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceERDI.v(40): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceERDI.v(35): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceERDI.v(36): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceERDI.v(37): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceERDI.v(41): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceERDI.v(45): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceERDI.v(46): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceERDI.v(47): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceERDI.v(42): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceERDI.v(43): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceERDI.v(44): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceERDI.v(48): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceERDI.v(52): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceERDI.v(53): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceERDI.v(54): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceERDI.v(49): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceERDI.v(50): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceERDI.v(51): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceERDI.v(55): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceERDI.v(59): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceERDI.v(60): actual bit length 32 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at InterfaceERDI.v(61): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceERDI.v(56): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceERDI.v(57): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceERDI.v(58): actual bit length 32 differs from formal bit length 1
 Warning (10739): Verilog HDL warning at InterfaceERDI.v(62): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceERDI.v(63): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceERDI.v(64): actual bit length 32 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at InterfaceERDI.v(65): actual bit length 32 differs from formal bit length 1
 Warning: 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning: Output pins are stuck at VCC or GND
-    Warning (13410): Pin "a" is stuck at VCC
-    Warning (13410): Pin "d" is stuck at VCC
-    Warning (13410): Pin "e" is stuck at VCC
-    Warning (13410): Pin "f" is stuck at VCC
-    Warning (13410): Pin "g" is stuck at VCC
     Warning (13410): Pin "h" is stuck at GND
 Info: 1 registers lost all their fanouts during netlist optimizations. The first 1 are displayed below.
     Info: Register "Decoders:INST2|Contador:comb_4|FlipflopT:inst3|Q" lost all its fanouts during netlist optimizations.
-Info: Implemented 83 device resources after synthesis - the final resource count might be different
+Info: Implemented 130 device resources after synthesis - the final resource count might be different
     Info: Implemented 8 input pins
     Info: Implemented 20 output pins
-    Info: Implemented 55 logic cells
+    Info: Implemented 102 logic cells
 Info: Generated suppressed messages file C:/Users/usuario/Desktop/Douglas/coffee-machine/protótipo/MainCoffeeMachine/output_files/MainCoffeeMachine.map.smsg
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 271 warnings
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 266 warnings
     Info: Peak virtual memory: 225 megabytes
-    Info: Processing ended: Wed Jun 07 18:55:18 2023
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Processing ended: Wed Jun 07 19:34:35 2023
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 
 +------------------------------------------+

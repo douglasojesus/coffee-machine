@@ -1,5 +1,5 @@
 Fitter report for MainCoffeeMachine
-Wed Jun 07 18:55:21 2023
+Wed Jun 07 19:34:36 2023
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -56,14 +56,14 @@ applicable agreement for further details.
 +----------------------------------------------------------------------+
 ; Fitter Summary                                                       ;
 +-----------------------+----------------------------------------------+
-; Fitter Status         ; Successful - Wed Jun 07 18:55:21 2023        ;
+; Fitter Status         ; Successful - Wed Jun 07 19:34:36 2023        ;
 ; Quartus II Version    ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name         ; MainCoffeeMachine                            ;
 ; Top-level Entity Name ; MainCoffeeMachine                            ;
 ; Family                ; MAX II                                       ;
 ; Device                ; EPM240T100C5                                 ;
 ; Timing Models         ; Final                                        ;
-; Total logic elements  ; 55 / 240 ( 23 % )                            ;
+; Total logic elements  ; 102 / 240 ( 43 % )                           ;
 ; Total pins            ; 28 / 80 ( 35 % )                             ;
 ; Total virtual pins    ; 0                                            ;
 ; UFM blocks            ; 0 / 1 ( 0 % )                                ;
@@ -140,20 +140,20 @@ The pin-out file can be found in C:/Users/usuario/Desktop/Douglas/coffee-machine
 +---------------------------------------------+--------------------------------+
 ; Resource                                    ; Usage                          ;
 +---------------------------------------------+--------------------------------+
-; Total logic elements                        ; 55 / 240 ( 23 % )              ;
-;     -- Combinational with no register       ; 49                             ;
+; Total logic elements                        ; 102 / 240 ( 43 % )             ;
+;     -- Combinational with no register       ; 96                             ;
 ;     -- Register only                        ; 0                              ;
 ;     -- Combinational with a register        ; 6                              ;
 ;                                             ;                                ;
 ; Logic element usage by number of LUT inputs ;                                ;
-;     -- 4 input functions                    ; 37                             ;
-;     -- 3 input functions                    ; 8                              ;
-;     -- 2 input functions                    ; 8                              ;
+;     -- 4 input functions                    ; 71                             ;
+;     -- 3 input functions                    ; 13                             ;
+;     -- 2 input functions                    ; 16                             ;
 ;     -- 1 input functions                    ; 2                              ;
 ;     -- 0 input functions                    ; 0                              ;
 ;                                             ;                                ;
 ; Logic elements by mode                      ;                                ;
-;     -- normal mode                          ; 55                             ;
+;     -- normal mode                          ; 102                            ;
 ;     -- arithmetic mode                      ; 0                              ;
 ;     -- qfbk mode                            ; 0                              ;
 ;     -- register cascade mode                ; 0                              ;
@@ -161,7 +161,7 @@ The pin-out file can be found in C:/Users/usuario/Desktop/Douglas/coffee-machine
 ;     -- asynchronous clear/load mode         ; 0                              ;
 ;                                             ;                                ;
 ; Total registers                             ; 6 / 240 ( 3 % )                ;
-; Total LABs                                  ; 7 / 24 ( 29 % )                ;
+; Total LABs                                  ; 12 / 24 ( 50 % )               ;
 ; Logic elements in carry chains              ; 0                              ;
 ; User inserted logic elements                ; 0                              ;
 ; Virtual pins                                ; 0                              ;
@@ -171,14 +171,14 @@ The pin-out file can be found in C:/Users/usuario/Desktop/Douglas/coffee-machine
 ; UFM blocks                                  ; 0 / 1 ( 0 % )                  ;
 ; Global clocks                               ; 1 / 4 ( 25 % )                 ;
 ; JTAGs                                       ; 0 / 1 ( 0 % )                  ;
-; Average interconnect usage (total/H/V)      ; 10% / 13% / 7%                 ;
-; Peak interconnect usage (total/H/V)         ; 10% / 13% / 7%                 ;
+; Average interconnect usage (total/H/V)      ; 22% / 24% / 19%                ;
+; Peak interconnect usage (total/H/V)         ; 22% / 24% / 19%                ;
 ; Maximum fan-out node                        ; MefCoffeeMachine:INST|FFD:D1|Q ;
-; Maximum fan-out                             ; 21                             ;
+; Maximum fan-out                             ; 20                             ;
 ; Highest non-global fan-out signal           ; MefCoffeeMachine:INST|FFD:D1|Q ;
-; Highest non-global fan-out                  ; 21                             ;
-; Total fan-out                               ; 210                            ;
-; Average fan-out                             ; 2.53                           ;
+; Highest non-global fan-out                  ; 20                             ;
+; Total fan-out                               ; 382                            ;
+; Average fan-out                             ; 2.94                           ;
 +---------------------------------------------+--------------------------------+
 
 
@@ -187,14 +187,14 @@ The pin-out file can be found in C:/Users/usuario/Desktop/Douglas/coffee-machine
 +------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+
 ; Name ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Location assigned by ;
 +------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+
-; A    ; 58    ; 2        ; 8            ; 2            ; 2           ; 4                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ;
-; B0   ; 42    ; 1        ; 5            ; 0            ; 0           ; 4                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ;
-; B1   ; 48    ; 1        ; 6            ; 0            ; 0           ; 6                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ;
+; A    ; 54    ; 2        ; 8            ; 1            ; 2           ; 5                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ;
+; B0   ; 48    ; 1        ; 6            ; 0            ; 0           ; 6                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ;
+; B1   ; 15    ; 1        ; 1            ; 2            ; 1           ; 8                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ;
 ; CLK  ; 14    ; 1        ; 1            ; 2            ; 0           ; 5                     ; 0                  ; yes    ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ;
-; SN   ; 54    ; 2        ; 8            ; 1            ; 2           ; 11                    ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ;
-; SP   ; 21    ; 1        ; 1            ; 1            ; 3           ; 9                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ;
-; SR   ; 35    ; 1        ; 3            ; 0            ; 0           ; 11                    ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ;
-; VL   ; 34    ; 1        ; 3            ; 0            ; 1           ; 5                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ;
+; SN   ; 47    ; 1        ; 6            ; 0            ; 1           ; 18                    ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ;
+; SP   ; 37    ; 1        ; 4            ; 0            ; 1           ; 16                    ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ;
+; SR   ; 43    ; 1        ; 6            ; 0            ; 3           ; 18                    ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ;
+; VL   ; 34    ; 1        ; 3            ; 0            ; 1           ; 19                    ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ;
 +------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+
 
 
@@ -203,26 +203,26 @@ The pin-out file can be found in C:/Users/usuario/Desktop/Douglas/coffee-machine
 +------+-------+----------+--------------+--------------+-------------+-----------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+
 ; Name ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Slow Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Fast Output Connection ; Location assigned by ; Load  ;
 +------+-------+----------+--------------+--------------+-------------+-----------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+
-; AQ   ; 17    ; 1        ; 1            ; 2            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ;
-; E0   ; 8     ; 1        ; 1            ; 3            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ;
-; E1   ; 12    ; 1        ; 1            ; 3            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ;
-; E2   ; 39    ; 1        ; 5            ; 0            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ;
-; E3   ; 57    ; 2        ; 8            ; 2            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ;
-; M    ; 19    ; 1        ; 1            ; 1            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ;
-; P    ; 7     ; 1        ; 1            ; 3            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ;
-; PP   ; 6     ; 1        ; 1            ; 3            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ;
-; S0   ; 15    ; 1        ; 1            ; 2            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ;
-; S1   ; 16    ; 1        ; 1            ; 2            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ;
-; S2   ; 20    ; 1        ; 1            ; 1            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ;
-; S3   ; 88    ; 2        ; 5            ; 5            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ;
-; a    ; 4     ; 1        ; 1            ; 4            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ;
-; b    ; 66    ; 2        ; 8            ; 3            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ;
-; c    ; 29    ; 1        ; 2            ; 0            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ;
-; d    ; 91    ; 2        ; 4            ; 5            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ;
-; e    ; 37    ; 1        ; 4            ; 0            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ;
-; f    ; 28    ; 1        ; 2            ; 0            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ;
-; g    ; 26    ; 1        ; 2            ; 0            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ;
-; h    ; 52    ; 2        ; 8            ; 1            ; 4           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ;
+; AQ   ; 83    ; 2        ; 6            ; 5            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ;
+; E0   ; 21    ; 1        ; 1            ; 1            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ;
+; E1   ; 35    ; 1        ; 3            ; 0            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ;
+; E2   ; 44    ; 1        ; 6            ; 0            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ;
+; E3   ; 68    ; 2        ; 8            ; 3            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ;
+; M    ; 1     ; 2        ; 2            ; 5            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ;
+; P    ; 8     ; 1        ; 1            ; 3            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ;
+; PP   ; 39    ; 1        ; 5            ; 0            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ;
+; S0   ; 20    ; 1        ; 1            ; 1            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ;
+; S1   ; 4     ; 1        ; 1            ; 4            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ;
+; S2   ; 17    ; 1        ; 1            ; 2            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ;
+; S3   ; 38    ; 1        ; 4            ; 0            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ;
+; a    ; 12    ; 1        ; 1            ; 3            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ;
+; b    ; 7     ; 1        ; 1            ; 3            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ;
+; c    ; 2     ; 1        ; 1            ; 4            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ;
+; d    ; 41    ; 1        ; 5            ; 0            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ;
+; e    ; 36    ; 1        ; 4            ; 0            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ;
+; f    ; 33    ; 1        ; 3            ; 0            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ;
+; g    ; 30    ; 1        ; 3            ; 0            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ;
+; h    ; 6     ; 1        ; 1            ; 3            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ;
 +------+-------+----------+--------------+--------------+-------------+-----------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+
 
 
@@ -231,8 +231,8 @@ The pin-out file can be found in C:/Users/usuario/Desktop/Douglas/coffee-machine
 +----------+------------------+---------------+--------------+
 ; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ;
 +----------+------------------+---------------+--------------+
-; 1        ; 21 / 38 ( 55 % ) ; 3.3V          ; --           ;
-; 2        ; 7 / 42 ( 17 % )  ; 3.3V          ; --           ;
+; 1        ; 24 / 38 ( 63 % ) ; 3.3V          ; --           ;
+; 2        ; 4 / 42 ( 10 % )  ; 3.3V          ; --           ;
 +----------+------------------+---------------+--------------+
 
 
@@ -241,64 +241,64 @@ The pin-out file can be found in C:/Users/usuario/Desktop/Douglas/coffee-machine
 +----------+------------+----------+----------------+--------+--------------+-----------+------------+-----------------+----------+--------------+
 ; Location ; Pad Number ; I/O Bank ; Pin Name/Usage ; Dir.   ; I/O Standard ; Voltage   ; I/O Type   ; User Assignment ; Bus Hold ; Weak Pull Up ;
 +----------+------------+----------+----------------+--------+--------------+-----------+------------+-----------------+----------+--------------+
-; 1        ; 83         ; 2        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
-; 2        ; 0          ; 1        ; GND*           ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 1        ; 83         ; 2        ; M              ; output ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
+; 2        ; 0          ; 1        ; c              ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; N               ; no       ; Off          ;
 ; 3        ; 1          ; 1        ; GND*           ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
-; 4        ; 2          ; 1        ; a              ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; N               ; no       ; Off          ;
+; 4        ; 2          ; 1        ; S1             ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; N               ; no       ; Off          ;
 ; 5        ; 3          ; 1        ; GND*           ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
-; 6        ; 4          ; 1        ; PP             ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; N               ; no       ; Off          ;
-; 7        ; 5          ; 1        ; P              ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; N               ; no       ; Off          ;
-; 8        ; 6          ; 1        ; E0             ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; N               ; no       ; Off          ;
+; 6        ; 4          ; 1        ; h              ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; N               ; no       ; Off          ;
+; 7        ; 5          ; 1        ; b              ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; N               ; no       ; Off          ;
+; 8        ; 6          ; 1        ; P              ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; N               ; no       ; Off          ;
 ; 9        ;            ; 1        ; VCCIO1         ; power  ;              ; 3.3V      ; --         ;                 ; --       ; --           ;
 ; 10       ;            ;          ; GNDIO          ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
 ; 11       ;            ;          ; GNDINT         ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
-; 12       ; 7          ; 1        ; E1             ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; N               ; no       ; Off          ;
+; 12       ; 7          ; 1        ; a              ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; N               ; no       ; Off          ;
 ; 13       ;            ;          ; VCCINT         ; power  ;              ; 2.5V/3.3V ; --         ;                 ; --       ; --           ;
 ; 14       ; 8          ; 1        ; CLK            ; input  ; 3.3-V LVTTL  ;           ; Row I/O    ; N               ; no       ; Off          ;
-; 15       ; 9          ; 1        ; S0             ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; N               ; no       ; Off          ;
-; 16       ; 10         ; 1        ; S1             ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; N               ; no       ; Off          ;
-; 17       ; 11         ; 1        ; AQ             ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; N               ; no       ; Off          ;
+; 15       ; 9          ; 1        ; B1             ; input  ; 3.3-V LVTTL  ;           ; Row I/O    ; N               ; no       ; Off          ;
+; 16       ; 10         ; 1        ; GND*           ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 17       ; 11         ; 1        ; S2             ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; N               ; no       ; Off          ;
 ; 18       ; 12         ; 1        ; GND*           ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
-; 19       ; 13         ; 1        ; M              ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; N               ; no       ; Off          ;
-; 20       ; 14         ; 1        ; S2             ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; N               ; no       ; Off          ;
-; 21       ; 15         ; 1        ; SP             ; input  ; 3.3-V LVTTL  ;           ; Row I/O    ; N               ; no       ; Off          ;
+; 19       ; 13         ; 1        ; GND*           ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 20       ; 14         ; 1        ; S0             ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; N               ; no       ; Off          ;
+; 21       ; 15         ; 1        ; E0             ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; N               ; no       ; Off          ;
 ; 22       ; 16         ; 1        ; #TMS           ; input  ;              ;           ; --         ;                 ; --       ; --           ;
 ; 23       ; 17         ; 1        ; #TDI           ; input  ;              ;           ; --         ;                 ; --       ; --           ;
 ; 24       ; 18         ; 1        ; #TCK           ; input  ;              ;           ; --         ;                 ; --       ; --           ;
 ; 25       ; 19         ; 1        ; #TDO           ; output ;              ;           ; --         ;                 ; --       ; --           ;
-; 26       ; 20         ; 1        ; g              ; output ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
+; 26       ; 20         ; 1        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 27       ; 21         ; 1        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
-; 28       ; 22         ; 1        ; f              ; output ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
-; 29       ; 23         ; 1        ; c              ; output ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
-; 30       ; 24         ; 1        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 28       ; 22         ; 1        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 29       ; 23         ; 1        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 30       ; 24         ; 1        ; g              ; output ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
 ; 31       ;            ; 1        ; VCCIO1         ; power  ;              ; 3.3V      ; --         ;                 ; --       ; --           ;
 ; 32       ;            ;          ; GNDIO          ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
-; 33       ; 25         ; 1        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 33       ; 25         ; 1        ; f              ; output ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
 ; 34       ; 26         ; 1        ; VL             ; input  ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
-; 35       ; 27         ; 1        ; SR             ; input  ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
-; 36       ; 28         ; 1        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
-; 37       ; 29         ; 1        ; e              ; output ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
-; 38       ; 30         ; 1        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
-; 39       ; 31         ; 1        ; E2             ; output ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
+; 35       ; 27         ; 1        ; E1             ; output ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
+; 36       ; 28         ; 1        ; e              ; output ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
+; 37       ; 29         ; 1        ; SP             ; input  ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
+; 38       ; 30         ; 1        ; S3             ; output ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
+; 39       ; 31         ; 1        ; PP             ; output ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
 ; 40       ; 32         ; 1        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
-; 41       ; 33         ; 1        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
-; 42       ; 34         ; 1        ; B0             ; input  ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
-; 43       ; 35         ; 1        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
-; 44       ; 36         ; 1        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 41       ; 33         ; 1        ; d              ; output ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
+; 42       ; 34         ; 1        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 43       ; 35         ; 1        ; SR             ; input  ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
+; 44       ; 36         ; 1        ; E2             ; output ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
 ; 45       ;            ; 1        ; VCCIO1         ; power  ;              ; 3.3V      ; --         ;                 ; --       ; --           ;
 ; 46       ;            ;          ; GNDIO          ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
-; 47       ; 37         ; 1        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
-; 48       ; 38         ; 1        ; B1             ; input  ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
+; 47       ; 37         ; 1        ; SN             ; input  ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
+; 48       ; 38         ; 1        ; B0             ; input  ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
 ; 49       ; 39         ; 1        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 50       ; 40         ; 1        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 51       ; 41         ; 1        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
-; 52       ; 42         ; 2        ; h              ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; N               ; no       ; Off          ;
+; 52       ; 42         ; 2        ; GND*           ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
 ; 53       ; 43         ; 2        ; GND*           ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
-; 54       ; 44         ; 2        ; SN             ; input  ; 3.3-V LVTTL  ;           ; Row I/O    ; N               ; no       ; Off          ;
+; 54       ; 44         ; 2        ; A              ; input  ; 3.3-V LVTTL  ;           ; Row I/O    ; N               ; no       ; Off          ;
 ; 55       ; 45         ; 2        ; GND*           ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
 ; 56       ; 46         ; 2        ; GND*           ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
-; 57       ; 47         ; 2        ; E3             ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; N               ; no       ; Off          ;
-; 58       ; 48         ; 2        ; A              ; input  ; 3.3-V LVTTL  ;           ; Row I/O    ; N               ; no       ; Off          ;
+; 57       ; 47         ; 2        ; GND*           ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 58       ; 48         ; 2        ; GND*           ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
 ; 59       ;            ; 2        ; VCCIO2         ; power  ;              ; 3.3V      ; --         ;                 ; --       ; --           ;
 ; 60       ;            ;          ; GNDIO          ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
 ; 61       ; 49         ; 2        ; GND*           ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
@@ -306,9 +306,9 @@ The pin-out file can be found in C:/Users/usuario/Desktop/Douglas/coffee-machine
 ; 63       ;            ;          ; VCCINT         ; power  ;              ; 2.5V/3.3V ; --         ;                 ; --       ; --           ;
 ; 64       ; 51         ; 2        ; GND*           ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
 ; 65       ;            ;          ; GNDINT         ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
-; 66       ; 52         ; 2        ; b              ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; N               ; no       ; Off          ;
+; 66       ; 52         ; 2        ; GND*           ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
 ; 67       ; 53         ; 2        ; GND*           ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
-; 68       ; 54         ; 2        ; GND*           ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 68       ; 54         ; 2        ; E3             ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; N               ; no       ; Off          ;
 ; 69       ; 55         ; 2        ; GND*           ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
 ; 70       ; 56         ; 2        ; GND*           ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
 ; 71       ; 57         ; 2        ; GND*           ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
@@ -323,15 +323,15 @@ The pin-out file can be found in C:/Users/usuario/Desktop/Douglas/coffee-machine
 ; 80       ;            ; 2        ; VCCIO2         ; power  ;              ; 3.3V      ; --         ;                 ; --       ; --           ;
 ; 81       ; 65         ; 2        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 82       ; 66         ; 2        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
-; 83       ; 67         ; 2        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 83       ; 67         ; 2        ; AQ             ; output ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
 ; 84       ; 68         ; 2        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 85       ; 69         ; 2        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 86       ; 70         ; 2        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 87       ; 71         ; 2        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
-; 88       ; 72         ; 2        ; S3             ; output ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
+; 88       ; 72         ; 2        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 89       ; 73         ; 2        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 90       ; 74         ; 2        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
-; 91       ; 75         ; 2        ; d              ; output ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
+; 91       ; 75         ; 2        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 92       ; 76         ; 2        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 93       ;            ;          ; GNDIO          ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
 ; 94       ;            ; 2        ; VCCIO2         ; power  ;              ; 3.3V      ; --         ;                 ; --       ; --           ;
@@ -361,22 +361,29 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 Note: User assignments will override these defaults. The user specified values are listed in the Output Pins and Bidir Pins tables.
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                              ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                               ; Library Name ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------+--------------+
-; |MainCoffeeMachine         ; 55 (0)      ; 6            ; 0          ; 28   ; 0            ; 49 (0)       ; 0 (0)             ; 6 (0)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine                                                ; work         ;
-;    |Decoders:INST2|        ; 3 (1)       ; 2            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|Decoders:INST2                                 ; work         ;
-;       |Contador:comb_4|    ; 2 (0)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|Decoders:INST2|Contador:comb_4                 ; work         ;
-;          |FlipflopT:inst1| ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|Decoders:INST2|Contador:comb_4|FlipflopT:inst1 ; work         ;
-;          |FlipflopT:inst2| ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|Decoders:INST2|Contador:comb_4|FlipflopT:inst2 ; work         ;
-;    |MefCoffeeMachine:INST| ; 52 (48)     ; 4            ; 0          ; 0    ; 0            ; 48 (48)      ; 0 (0)             ; 4 (0)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|MefCoffeeMachine:INST                          ; work         ;
-;       |FFD:D0|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|MefCoffeeMachine:INST|FFD:D0                   ; work         ;
-;       |FFD:D1|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|MefCoffeeMachine:INST|FFD:D1                   ; work         ;
-;       |FFD:D2|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|MefCoffeeMachine:INST|FFD:D2                   ; work         ;
-;       |FFD:D3|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|MefCoffeeMachine:INST|FFD:D3                   ; work         ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                 ;
++-------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node    ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                               ; Library Name ;
++-------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------+--------------+
+; |MainCoffeeMachine            ; 102 (0)     ; 6            ; 0          ; 28   ; 0            ; 96 (0)       ; 0 (0)             ; 6 (0)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine                                                ; work         ;
+;    |Decoders:INST2|           ; 47 (33)     ; 2            ; 0          ; 0    ; 0            ; 45 (33)      ; 0 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|Decoders:INST2                                 ; work         ;
+;       |Contador:comb_4|       ; 2 (0)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|Decoders:INST2|Contador:comb_4                 ; work         ;
+;          |FlipflopT:inst1|    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|Decoders:INST2|Contador:comb_4|FlipflopT:inst1 ; work         ;
+;          |FlipflopT:inst2|    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|Decoders:INST2|Contador:comb_4|FlipflopT:inst2 ; work         ;
+;       |InterfaceERDI:comb_12| ; 4 (4)       ; 0            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|Decoders:INST2|InterfaceERDI:comb_12           ; work         ;
+;       |InterfaceESN:comb_11|  ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|Decoders:INST2|InterfaceESN:comb_11            ; work         ;
+;       |InterfaceESP:comb_10|  ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|Decoders:INST2|InterfaceESP:comb_10            ; work         ;
+;       |InterfaceESR:comb_9|   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|Decoders:INST2|InterfaceESR:comb_9             ; work         ;
+;       |InterfaceS1:comb_6|    ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|Decoders:INST2|InterfaceS1:comb_6              ; work         ;
+;       |InterfaceS2:comb_7|    ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|Decoders:INST2|InterfaceS2:comb_7              ; work         ;
+;       |InterfaceS3:comb_8|    ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|Decoders:INST2|InterfaceS3:comb_8              ; work         ;
+;    |MefCoffeeMachine:INST|    ; 55 (51)     ; 4            ; 0          ; 0    ; 0            ; 51 (51)      ; 0 (0)             ; 4 (0)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|MefCoffeeMachine:INST                          ; work         ;
+;       |FFD:D0|                ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|MefCoffeeMachine:INST|FFD:D0                   ; work         ;
+;       |FFD:D1|                ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|MefCoffeeMachine:INST|FFD:D1                   ; work         ;
+;       |FFD:D2|                ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|MefCoffeeMachine:INST|FFD:D2                   ; work         ;
+;       |FFD:D3|                ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|MefCoffeeMachine:INST|FFD:D3                   ; work         ;
++-------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -422,7 +429,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                                             ; Location    ; Fan-Out ; Usage ; Global ; Global Resource Used ; Global Line Name ;
 +--------------------------------------------------+-------------+---------+-------+--------+----------------------+------------------+
 ; CLK                                              ; PIN_14      ; 5       ; Clock ; yes    ; Global Clock         ; GCLK1            ;
-; Decoders:INST2|Contador:comb_4|FlipflopT:inst1|Q ; LC_X7_Y4_N8 ; 4       ; Clock ; no     ; --                   ; --               ;
+; Decoders:INST2|Contador:comb_4|FlipflopT:inst1|Q ; LC_X5_Y4_N1 ; 13      ; Clock ; no     ; --                   ; --               ;
 +--------------------------------------------------+-------------+---------+-------+--------+----------------------+------------------+
 
 
@@ -440,56 +447,56 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------+---------+
 ; Name                                             ; Fan-Out ;
 +--------------------------------------------------+---------+
-; MefCoffeeMachine:INST|FFD:D1|Q                   ; 21      ;
-; MefCoffeeMachine:INST|FFD:D0|Q                   ; 19      ;
-; MefCoffeeMachine:INST|FFD:D3|Q                   ; 18      ;
-; MefCoffeeMachine:INST|FFD:D2|Q                   ; 18      ;
-; SN                                               ; 11      ;
-; SR                                               ; 11      ;
-; SP                                               ; 9       ;
-; B1                                               ; 6       ;
-; MefCoffeeMachine:INST|WideAnd21~3                ; 6       ;
-; VL                                               ; 5       ;
-; MefCoffeeMachine:INST|WideAnd8~0                 ; 5       ;
-; B0                                               ; 4       ;
-; A                                                ; 4       ;
-; Decoders:INST2|Contador:comb_4|FlipflopT:inst1|Q ; 4       ;
+; MefCoffeeMachine:INST|FFD:D0|Q                   ; 20      ;
+; MefCoffeeMachine:INST|FFD:D1|Q                   ; 20      ;
+; VL                                               ; 19      ;
+; SN                                               ; 18      ;
+; SR                                               ; 18      ;
+; MefCoffeeMachine:INST|FFD:D3|Q                   ; 17      ;
+; SP                                               ; 16      ;
+; Decoders:INST2|Contador:comb_4|FlipflopT:inst2|Q ; 15      ;
+; MefCoffeeMachine:INST|FFD:D2|Q                   ; 14      ;
+; Decoders:INST2|Contador:comb_4|FlipflopT:inst1|Q ; 13      ;
+; Decoders:INST2|InterfaceERDI:comb_12|WideAnd0~0  ; 10      ;
+; B1                                               ; 8       ;
+; MefCoffeeMachine:INST|WideAnd29~1                ; 8       ;
+; MefCoffeeMachine:INST|WideAnd23~2                ; 8       ;
+; B0                                               ; 6       ;
+; Decoders:INST2|InterfaceERDI:comb_12|WideAnd0    ; 6       ;
+; MefCoffeeMachine:INST|WideAnd25~1                ; 6       ;
+; MefCoffeeMachine:INST|WideAnd27~0                ; 6       ;
+; A                                                ; 5       ;
+; Decoders:INST2|InterfaceS2:comb_7|WideAnd0       ; 5       ;
+; Decoders:INST2|InterfaceS3:comb_8|WideAnd0       ; 5       ;
+; Decoders:INST2|WideOr6~0                         ; 4       ;
+; Decoders:INST2|InterfaceESN:comb_11|WideAnd0~0   ; 4       ;
+; Decoders:INST2|InterfaceS1:comb_6|WideAnd0       ; 4       ;
+; MefCoffeeMachine:INST|WideAnd8~0                 ; 4       ;
+; Decoders:INST2|WideOr2~1                         ; 3       ;
+; Decoders:INST2|InterfaceS3:comb_8|WideAnd0~0     ; 3       ;
+; Decoders:INST2|InterfaceESP:comb_10|WideAnd0     ; 3       ;
 ; MefCoffeeMachine:INST|P~1                        ; 3       ;
-; MefCoffeeMachine:INST|WideOr0~0                  ; 3       ;
-; MefCoffeeMachine:INST|WideAnd19~3                ; 3       ;
-; MefCoffeeMachine:INST|WideAnd21~0                ; 3       ;
-; Decoders:INST2|Contador:comb_4|FlipflopT:inst2|Q ; 2       ;
-; MefCoffeeMachine:INST|s52~0                      ; 2       ;
-; MefCoffeeMachine:INST|P~0                        ; 2       ;
+; MefCoffeeMachine:INST|WideAnd26                  ; 3       ;
+; MefCoffeeMachine:INST|WideAnd27~1                ; 3       ;
+; MefCoffeeMachine:INST|WideAnd26~0                ; 3       ;
+; MefCoffeeMachine:INST|WideOr0~0                  ; 2       ;
 ; MefCoffeeMachine:INST|w7~0                       ; 2       ;
+; Decoders:INST2|WideOr5~1                         ; 2       ;
+; Decoders:INST2|WideOr0~4                         ; 2       ;
+; Decoders:INST2|WideOr6~2                         ; 2       ;
+; Decoders:INST2|InterfaceESN:comb_11|WideAnd0     ; 2       ;
+; Decoders:INST2|InterfaceESR:comb_9|WideAnd0      ; 2       ;
+; Decoders:INST2|WideOr1~1                         ; 2       ;
+; Decoders:INST2|WideOr6~1                         ; 2       ;
+; Decoders:INST2|InterfaceERDI:comb_12|WideAnd0~1  ; 2       ;
+; MefCoffeeMachine:INST|WideAnd27                  ; 2       ;
+; MefCoffeeMachine:INST|WideOr5~0                  ; 2       ;
+; MefCoffeeMachine:INST|P~0                        ; 2       ;
+; MefCoffeeMachine:INST|WideAnd25~0                ; 2       ;
+; MefCoffeeMachine:INST|WideAnd23~1                ; 2       ;
+; MefCoffeeMachine:INST|WideAnd43~4                ; 2       ;
 ; MefCoffeeMachine:INST|WideAnd23~0                ; 2       ;
-; MefCoffeeMachine:INST|WideAnd21~1                ; 2       ;
-; MefCoffeeMachine:INST|WideAnd17~0                ; 2       ;
-; MefCoffeeMachine:INST|WideAnd16~0                ; 2       ;
-; MefCoffeeMachine:INST|WideAnd29~5                ; 1       ;
-; MefCoffeeMachine:INST|WideAnd19~4                ; 1       ;
-; MefCoffeeMachine:INST|WideOr3~3                  ; 1       ;
-; MefCoffeeMachine:INST|WideOr3~2                  ; 1       ;
-; MefCoffeeMachine:INST|WideOr3~1                  ; 1       ;
-; MefCoffeeMachine:INST|WideOr3~0                  ; 1       ;
-; MefCoffeeMachine:INST|AQ~1                       ; 1       ;
-; MefCoffeeMachine:INST|WideOr2~2                  ; 1       ;
-; MefCoffeeMachine:INST|WideOr2~1                  ; 1       ;
-; MefCoffeeMachine:INST|WideOr2~0                  ; 1       ;
-; MefCoffeeMachine:INST|w7~1                       ; 1       ;
-; MefCoffeeMachine:INST|WideAnd5~2                 ; 1       ;
-; Decoders:INST2|WideOr1~0                         ; 1       ;
-; MefCoffeeMachine:INST|WideOr6~6                  ; 1       ;
-; MefCoffeeMachine:INST|WideOr6~5                  ; 1       ;
-; MefCoffeeMachine:INST|WideOr6~4                  ; 1       ;
-; MefCoffeeMachine:INST|WideOr6~3                  ; 1       ;
-; MefCoffeeMachine:INST|WideOr6~2                  ; 1       ;
-; MefCoffeeMachine:INST|WideOr6~1                  ; 1       ;
-; MefCoffeeMachine:INST|WideOr6~0                  ; 1       ;
-; MefCoffeeMachine:INST|WideAnd36~0                ; 1       ;
-; MefCoffeeMachine:INST|AQ~0                       ; 1       ;
-; MefCoffeeMachine:INST|P~3                        ; 1       ;
-; MefCoffeeMachine:INST|P~2                        ; 1       ;
+; MefCoffeeMachine:INST|WideAnd21~0                ; 2       ;
 +--------------------------------------------------+---------+
 
 
@@ -498,105 +505,106 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------+--------------------+
 ; Interconnect Resource Type ; Usage              ;
 +----------------------------+--------------------+
-; C4s                        ; 50 / 784 ( 6 % )   ;
-; Direct links               ; 11 / 888 ( 1 % )   ;
+; C4s                        ; 116 / 784 ( 15 % ) ;
+; Direct links               ; 16 / 888 ( 2 % )   ;
 ; Global clocks              ; 1 / 4 ( 25 % )     ;
-; LAB clocks                 ; 5 / 32 ( 16 % )    ;
+; LAB clocks                 ; 2 / 32 ( 6 % )     ;
 ; LUT chains                 ; 13 / 216 ( 6 % )   ;
-; Local interconnects        ; 115 / 888 ( 13 % ) ;
-; R4s                        ; 78 / 704 ( 11 % )  ;
+; Local interconnects        ; 206 / 888 ( 23 % ) ;
+; R4s                        ; 137 / 704 ( 19 % ) ;
 +----------------------------+--------------------+
 
 
-+--------------------------------------------------------------------------+
-; LAB Logic Elements                                                       ;
-+--------------------------------------------+-----------------------------+
-; Number of Logic Elements  (Average = 7.86) ; Number of LABs  (Total = 7) ;
-+--------------------------------------------+-----------------------------+
-; 1                                          ; 0                           ;
-; 2                                          ; 1                           ;
-; 3                                          ; 1                           ;
-; 4                                          ; 0                           ;
-; 5                                          ; 0                           ;
-; 6                                          ; 0                           ;
-; 7                                          ; 0                           ;
-; 8                                          ; 0                           ;
-; 9                                          ; 0                           ;
-; 10                                         ; 5                           ;
-+--------------------------------------------+-----------------------------+
-
-
-+------------------------------------------------------------------+
-; LAB-wide Signals                                                 ;
-+------------------------------------+-----------------------------+
-; LAB-wide Signals  (Average = 0.71) ; Number of LABs  (Total = 7) ;
-+------------------------------------+-----------------------------+
-; 1 Clock                            ; 5                           ;
-+------------------------------------+-----------------------------+
-
-
 +---------------------------------------------------------------------------+
-; LAB Signals Sourced                                                       ;
-+---------------------------------------------+-----------------------------+
-; Number of Signals Sourced  (Average = 7.86) ; Number of LABs  (Total = 7) ;
-+---------------------------------------------+-----------------------------+
-; 0                                           ; 0                           ;
-; 1                                           ; 0                           ;
-; 2                                           ; 1                           ;
-; 3                                           ; 1                           ;
-; 4                                           ; 0                           ;
-; 5                                           ; 0                           ;
-; 6                                           ; 0                           ;
-; 7                                           ; 0                           ;
-; 8                                           ; 0                           ;
-; 9                                           ; 0                           ;
-; 10                                          ; 5                           ;
-+---------------------------------------------+-----------------------------+
+; LAB Logic Elements                                                        ;
++--------------------------------------------+------------------------------+
+; Number of Logic Elements  (Average = 8.50) ; Number of LABs  (Total = 12) ;
++--------------------------------------------+------------------------------+
+; 1                                          ; 2                            ;
+; 2                                          ; 0                            ;
+; 3                                          ; 0                            ;
+; 4                                          ; 0                            ;
+; 5                                          ; 0                            ;
+; 6                                          ; 0                            ;
+; 7                                          ; 0                            ;
+; 8                                          ; 0                            ;
+; 9                                          ; 0                            ;
+; 10                                         ; 10                           ;
++--------------------------------------------+------------------------------+
 
 
-+-------------------------------------------------------------------------------+
-; LAB Signals Sourced Out                                                       ;
-+-------------------------------------------------+-----------------------------+
-; Number of Signals Sourced Out  (Average = 4.71) ; Number of LABs  (Total = 7) ;
-+-------------------------------------------------+-----------------------------+
-; 0                                               ; 0                           ;
-; 1                                               ; 1                           ;
-; 2                                               ; 1                           ;
-; 3                                               ; 1                           ;
-; 4                                               ; 0                           ;
-; 5                                               ; 1                           ;
-; 6                                               ; 1                           ;
-; 7                                               ; 1                           ;
-; 8                                               ; 0                           ;
-; 9                                               ; 1                           ;
-+-------------------------------------------------+-----------------------------+
++-------------------------------------------------------------------+
+; LAB-wide Signals                                                  ;
++------------------------------------+------------------------------+
+; LAB-wide Signals  (Average = 0.25) ; Number of LABs  (Total = 12) ;
++------------------------------------+------------------------------+
+; 1 Clock                            ; 3                            ;
++------------------------------------+------------------------------+
 
 
 +----------------------------------------------------------------------------+
-; LAB Distinct Inputs                                                        ;
-+----------------------------------------------+-----------------------------+
-; Number of Distinct Inputs  (Average = 11.29) ; Number of LABs  (Total = 7) ;
-+----------------------------------------------+-----------------------------+
-; 0                                            ; 0                           ;
-; 1                                            ; 1                           ;
-; 2                                            ; 0                           ;
-; 3                                            ; 0                           ;
-; 4                                            ; 0                           ;
-; 5                                            ; 0                           ;
-; 6                                            ; 0                           ;
-; 7                                            ; 1                           ;
-; 8                                            ; 0                           ;
-; 9                                            ; 0                           ;
-; 10                                           ; 0                           ;
-; 11                                           ; 1                           ;
-; 12                                           ; 0                           ;
-; 13                                           ; 2                           ;
-; 14                                           ; 0                           ;
-; 15                                           ; 0                           ;
-; 16                                           ; 1                           ;
-; 17                                           ; 0                           ;
-; 18                                           ; 1                           ;
-+----------------------------------------------+-----------------------------+
+; LAB Signals Sourced                                                        ;
++---------------------------------------------+------------------------------+
+; Number of Signals Sourced  (Average = 8.50) ; Number of LABs  (Total = 12) ;
++---------------------------------------------+------------------------------+
+; 0                                           ; 0                            ;
+; 1                                           ; 2                            ;
+; 2                                           ; 0                            ;
+; 3                                           ; 0                            ;
+; 4                                           ; 0                            ;
+; 5                                           ; 0                            ;
+; 6                                           ; 0                            ;
+; 7                                           ; 0                            ;
+; 8                                           ; 0                            ;
+; 9                                           ; 0                            ;
+; 10                                          ; 10                           ;
++---------------------------------------------+------------------------------+
+
+
++--------------------------------------------------------------------------------+
+; LAB Signals Sourced Out                                                        ;
++-------------------------------------------------+------------------------------+
+; Number of Signals Sourced Out  (Average = 5.58) ; Number of LABs  (Total = 12) ;
++-------------------------------------------------+------------------------------+
+; 0                                               ; 0                            ;
+; 1                                               ; 2                            ;
+; 2                                               ; 0                            ;
+; 3                                               ; 0                            ;
+; 4                                               ; 2                            ;
+; 5                                               ; 2                            ;
+; 6                                               ; 2                            ;
+; 7                                               ; 0                            ;
+; 8                                               ; 2                            ;
+; 9                                               ; 1                            ;
+; 10                                              ; 1                            ;
++-------------------------------------------------+------------------------------+
+
+
++-----------------------------------------------------------------------------+
+; LAB Distinct Inputs                                                         ;
++----------------------------------------------+------------------------------+
+; Number of Distinct Inputs  (Average = 12.33) ; Number of LABs  (Total = 12) ;
++----------------------------------------------+------------------------------+
+; 0                                            ; 0                            ;
+; 1                                            ; 0                            ;
+; 2                                            ; 1                            ;
+; 3                                            ; 1                            ;
+; 4                                            ; 0                            ;
+; 5                                            ; 0                            ;
+; 6                                            ; 0                            ;
+; 7                                            ; 0                            ;
+; 8                                            ; 0                            ;
+; 9                                            ; 1                            ;
+; 10                                           ; 0                            ;
+; 11                                           ; 0                            ;
+; 12                                           ; 0                            ;
+; 13                                           ; 3                            ;
+; 14                                           ; 2                            ;
+; 15                                           ; 1                            ;
+; 16                                           ; 0                            ;
+; 17                                           ; 2                            ;
+; 18                                           ; 1                            ;
++----------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------------+
@@ -627,7 +635,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Fitter
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Wed Jun 07 18:55:20 2023
+    Info: Processing started: Wed Jun 07 19:34:36 2023
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off MainCoffeeMachine -c MainCoffeeMachine
 Info: Selected device EPM240T100C5 for design "MainCoffeeMachine"
 Info: Low junction temperature is 0 degrees C
@@ -694,39 +702,39 @@ Info: I/O bank details before I/O pin placement
     Info: Statistics of I/O banks
         Info: I/O bank number 1 does not use VREF pins and has undetermined VCCIO pins. 1 total pin(s) used --  37 pins available
         Info: I/O bank number 2 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  42 pins available
-Info: Fitter preparation operations ending: elapsed time is 00:00:01
+Info: Fitter preparation operations ending: elapsed time is 00:00:00
 Info: Fitter placement preparation operations beginning
 Info: Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info: Fitter placement operations beginning
 Info: Fitter placement was successful
 Info: Fitter placement operations ending: elapsed time is 00:00:00
-Info: Estimated most critical path is register to pin delay of 10.421 ns
-    Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LAB_X6_Y2; Fanout = 18; REG Node = 'MefCoffeeMachine:INST|FFD:D2|Q'
-    Info: 2: + IC(1.939 ns) + CELL(0.511 ns) = 2.450 ns; Loc. = LAB_X5_Y1; Fanout = 2; COMB Node = 'MefCoffeeMachine:INST|WideAnd23~0'
-    Info: 3: + IC(1.763 ns) + CELL(0.511 ns) = 4.724 ns; Loc. = LAB_X6_Y2; Fanout = 1; COMB Node = 'MefCoffeeMachine:INST|WideAnd23~1'
-    Info: 4: + IC(0.266 ns) + CELL(0.914 ns) = 5.904 ns; Loc. = LAB_X6_Y2; Fanout = 1; COMB Node = 'MefCoffeeMachine:INST|WideAnd23~2'
-    Info: 5: + IC(2.195 ns) + CELL(2.322 ns) = 10.421 ns; Loc. = PIN_15; Fanout = 0; PIN Node = 'S0'
-    Info: Total cell delay = 4.258 ns ( 40.86 % )
-    Info: Total interconnect delay = 6.163 ns ( 59.14 % )
+Info: Estimated most critical path is register to pin delay of 17.284 ns
+    Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LAB_X4_Y1; Fanout = 20; REG Node = 'MefCoffeeMachine:INST|FFD:D0|Q'
+    Info: 2: + IC(1.156 ns) + CELL(0.200 ns) = 1.356 ns; Loc. = LAB_X4_Y1; Fanout = 2; COMB Node = 'MefCoffeeMachine:INST|WideAnd43~4'
+    Info: 3: + IC(1.534 ns) + CELL(0.740 ns) = 3.630 ns; Loc. = LAB_X5_Y2; Fanout = 3; COMB Node = 'MefCoffeeMachine:INST|WideAnd27~1'
+    Info: 4: + IC(0.266 ns) + CELL(0.914 ns) = 4.810 ns; Loc. = LAB_X5_Y2; Fanout = 2; COMB Node = 'MefCoffeeMachine:INST|WideAnd23~1'
+    Info: 5: + IC(0.669 ns) + CELL(0.511 ns) = 5.990 ns; Loc. = LAB_X5_Y2; Fanout = 6; COMB Node = 'MefCoffeeMachine:INST|WideAnd25~1'
+    Info: 6: + IC(2.103 ns) + CELL(0.200 ns) = 8.293 ns; Loc. = LAB_X5_Y4; Fanout = 4; COMB Node = 'Decoders:INST2|InterfaceESN:comb_11|WideAnd0~0'
+    Info: 7: + IC(0.841 ns) + CELL(0.740 ns) = 9.874 ns; Loc. = LAB_X4_Y4; Fanout = 3; COMB Node = 'Decoders:INST2|InterfaceESP:comb_10|WideAnd0'
+    Info: 8: + IC(1.763 ns) + CELL(0.511 ns) = 12.148 ns; Loc. = LAB_X5_Y3; Fanout = 1; COMB Node = 'Decoders:INST2|WideOr1~0'
+    Info: 9: + IC(0.440 ns) + CELL(0.740 ns) = 13.328 ns; Loc. = LAB_X5_Y3; Fanout = 1; COMB Node = 'Decoders:INST2|WideOr1~4'
+    Info: 10: + IC(1.634 ns) + CELL(2.322 ns) = 17.284 ns; Loc. = PIN_7; Fanout = 0; PIN Node = 'b'
+    Info: Total cell delay = 6.878 ns ( 39.79 % )
+    Info: Total interconnect delay = 10.406 ns ( 60.21 % )
 Info: Fitter routing operations beginning
-Info: Average interconnect usage is 8% of the available device resources
-    Info: Peak interconnect usage is 8% of the available device resources in the region that extends from location X0_Y0 to location X8_Y5
+Info: Average interconnect usage is 15% of the available device resources
+    Info: Peak interconnect usage is 15% of the available device resources in the region that extends from location X0_Y0 to location X8_Y5
 Info: Fitter routing operations ending: elapsed time is 00:00:00
 Info: The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info: Optimizations that may affect the design's routability were skipped
     Info: Optimizations that may affect the design's timing were skipped
-Warning: Following 6 pins have nothing, GND, or VCC driving datain port -- changes to this connectivity may change fitting results
-    Info: Pin a has VCC driving its datain port
-    Info: Pin d has VCC driving its datain port
-    Info: Pin e has VCC driving its datain port
-    Info: Pin f has VCC driving its datain port
-    Info: Pin g has VCC driving its datain port
+Warning: Following 1 pins have nothing, GND, or VCC driving datain port -- changes to this connectivity may change fitting results
     Info: Pin h has GND driving its datain port
 Warning: The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info: Quartus II Fitter was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 238 megabytes
-    Info: Processing ended: Wed Jun 07 18:55:21 2023
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 240 megabytes
+    Info: Processing ended: Wed Jun 07 19:34:36 2023
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 
