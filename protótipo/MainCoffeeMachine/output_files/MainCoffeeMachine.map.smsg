@@ -1,4 +1,4 @@
-Info (10281): Verilog HDL Declaration information at MainCoffeeMachine.v(5): object "A" differs only in case from object "a" in the same scope
+Info (10281): Verilog HDL Declaration information at MainCoffeeMachine.v(12): object "A" differs only in case from object "a" in the same scope
 Info (10281): Verilog HDL Declaration information at MefCoffeeMachine.v(5): object "S1" differs only in case from object "s1" in the same scope
 Info (10281): Verilog HDL Declaration information at MefCoffeeMachine.v(5): object "S2" differs only in case from object "s2" in the same scope
 Info (10281): Verilog HDL Declaration information at MefCoffeeMachine.v(5): object "S3" differs only in case from object "s3" in the same scope

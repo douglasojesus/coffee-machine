@@ -4,21 +4,19 @@ SR => SR~0.IN2
 SP => SP~0.IN2
 SN => SN~0.IN2
 A => A~0.IN1
-VL => VL~0.IN2
+V0 => WideAnd3.IN2
+V0 => WideAnd2.IN2
+V0 => WideAnd0.IN2
+V0 => WideAnd1.IN2
+V1 => WideAnd3.IN3
+V1 => WideAnd1.IN3
+V1 => WideAnd0.IN3
+V1 => WideAnd2.IN3
 B0 => B0~0.IN1
 B1 => B1~0.IN1
-E0 <= MefCoffeeMachine:INST.port8
-E1 <= MefCoffeeMachine:INST.port9
-E2 <= MefCoffeeMachine:INST.port10
-E3 <= MefCoffeeMachine:INST.port11
-S0 <= S0~0.DB_MAX_OUTPUT_PORT_TYPE
-S1 <= S1~0.DB_MAX_OUTPUT_PORT_TYPE
-S2 <= S2~0.DB_MAX_OUTPUT_PORT_TYPE
-S3 <= S3~0.DB_MAX_OUTPUT_PORT_TYPE
 P <= MefCoffeeMachine:INST.port16
 AQ <= MefCoffeeMachine:INST.port17
 PP <= MefCoffeeMachine:INST.port18
-M <= M~0.DB_MAX_OUTPUT_PORT_TYPE
 a <= Decoders:INST2.port10
 b <= Decoders:INST2.port11
 c <= Decoders:INST2.port12
@@ -27,6 +25,10 @@ e <= Decoders:INST2.port14
 f <= Decoders:INST2.port15
 g <= Decoders:INST2.port16
 h <= Decoders:INST2.port17
+dig1 <= Decoders:INST2.port18
+dig2 <= Decoders:INST2.port19
+dig3 <= Decoders:INST2.port20
+dig4 <= Decoders:INST2.port21
 
 
 |MainCoffeeMachine|MefCoffeeMachine:INST
@@ -187,7 +189,7 @@ SR => SR~0.IN8
 SP => SP~0.IN8
 SN => SN~0.IN8
 VL => VL~0.IN8
-M => ~NO_FANOUT~
+M => comb~4.DATAIN
 a <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 b <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 c <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
@@ -195,7 +197,11 @@ d <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
 e <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
 f <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
 g <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
-h <= <GND>
+h <= comb~4.DB_MAX_OUTPUT_PORT_TYPE
+dig1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+dig2 <= comb~1.DB_MAX_OUTPUT_PORT_TYPE
+dig3 <= comb~2.DB_MAX_OUTPUT_PORT_TYPE
+dig4 <= comb~3.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |MainCoffeeMachine|Decoders:INST2|Contador:comb_4

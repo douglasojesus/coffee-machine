@@ -5,8 +5,8 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 6.492 ns
-From           : SP
+Actual Time    : 6.499 ns
+From           : B1
 To             : MefCoffeeMachine:INST|FFD:D1|Q
 From Clock     : --
 To Clock       : CLK
@@ -15,9 +15,9 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 24.710 ns
-From           : MefCoffeeMachine:INST|FFD:D3|Q
-To             : g
+Actual Time    : 22.533 ns
+From           : MefCoffeeMachine:INST|FFD:D2|Q
+To             : f
 From Clock     : CLK
 To Clock       : --
 Failed Paths   : 0
@@ -25,9 +25,9 @@ Failed Paths   : 0
 Type           : Worst-case tpd
 Slack          : N/A
 Required Time  : None
-Actual Time    : 21.579 ns
-From           : SP
-To             : g
+Actual Time    : 21.205 ns
+From           : SR
+To             : f
 From Clock     : --
 To Clock       : --
 Failed Paths   : 0
@@ -35,8 +35,8 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : -2.290 ns
-From           : VL
+Actual Time    : -2.299 ns
+From           : A
 To             : MefCoffeeMachine:INST|FFD:D2|Q
 From Clock     : --
 To Clock       : CLK
@@ -45,9 +45,9 @@ Failed Paths   : 0
 Type           : Clock Setup: 'CLK'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 121.26 MHz ( period = 8.247 ns )
-From           : MefCoffeeMachine:INST|FFD:D1|Q
-To             : MefCoffeeMachine:INST|FFD:D0|Q
+Actual Time    : 154.44 MHz ( period = 6.475 ns )
+From           : MefCoffeeMachine:INST|FFD:D2|Q
+To             : MefCoffeeMachine:INST|FFD:D3|Q
 From Clock     : CLK
 To Clock       : CLK
 Failed Paths   : 0
