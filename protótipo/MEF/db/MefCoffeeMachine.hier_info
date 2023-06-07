@@ -1,0 +1,23 @@
+|MefCoffeeMachine
+CLK => ~NO_FANOUT~
+SR => ~NO_FANOUT~
+SP => ~NO_FANOUT~
+SN => ~NO_FANOUT~
+A => ~NO_FANOUT~
+VL => ~NO_FANOUT~
+B0 => ~NO_FANOUT~
+B1 => ~NO_FANOUT~
+E0 <= <GND>
+E1 <= <GND>
+E2 <= <GND>
+E3 <= <GND>
+S0 <= <GND>
+S1 <= <GND>
+S2 <= <GND>
+S3 <= <GND>
+P <= <GND>
+AQ <= <GND>
+PP <= <GND>
+M <= <GND>
+
+
