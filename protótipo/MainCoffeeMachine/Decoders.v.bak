@@ -13,18 +13,25 @@ module Decoders(CLK, S0, S1, S2, S3, SR, SP, SN, VL, M, a, b, c, d, e, f, g, h);
 	output a, b, c, d, e, f, g, h;
 	
 	wire saida1Contador, saida2Contador;
+	wire A1, A2, A3, A4, A5, A6, A7, A8,
+			B1, B2, B3, B4, B5, B6, B7, B8,
+			C1, C2, C3, C4, C5, C6, C7, C8,
+			D1, D2, D3, D4, D5, D6, D7, D8,
+			E1, E2, E3, E4, E5, E6, E7, E8,
+			F1, F2, F3, F4, F5, F6, F7, F8,
+			G1, G2, G3, G4, G5, G6, G7, G7
 	
-	contador(CLK, saida1Contador, saida2Contador);
+	Contador(CLK, saida1Contador, saida2Contador);
 	
-	interfaceS0 (saida1Contador, saida2Contador, a, b, c, d, e, f, g);
-	interfaceS1 (saida1Contador, saida2Contador, a, b, c, d, e, f, g);
-	interfaceS2 (saida1Contador, saida2Contador, a, b, c, d, e, f, g);
-	interfaceS3 (saida1Contador, saida2Contador, a, b, c, d, e, f, g);
-	interfaceESR (saida1Contador, saida2Contador, a, b, c, d, e, f, g);
-	interfaceESP (saida1Contador, saida2Contador, a, b, c, d, e, f, g);
-	interfaceESN (saida1Contador, saida2Contador, a, b, c, d, e, f, g);
-	interfaceERDI (saida1Contador, saida2Contador, a, b, c, d, e, f, g);
+	InterfaceS0 (saida1Contador, saida2Contador, a, b, c, d, e, f, g);
+	InterfaceS1 (saida1Contador, saida2Contador, a, b, c, d, e, f, g);
+	InterfaceS2 (saida1Contador, saida2Contador, a, b, c, d, e, f, g);
+	InterfaceS3 (saida1Contador, saida2Contador, a, b, c, d, e, f, g);
+	InterfaceESR (saida1Contador, saida2Contador, a, b, c, d, e, f, g);
+	InterfaceESP (saida1Contador, saida2Contador, a, b, c, d, e, f, g);
+	InterfaceESN (saida1Contador, saida2Contador, a, b, c, d, e, f, g);
+	InterfaceERDI (saida1Contador, saida2Contador, a, b, c, d, e, f, g);
 	
-
-
+	
+	
 endmodule

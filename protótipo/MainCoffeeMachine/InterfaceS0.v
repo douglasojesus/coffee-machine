@@ -3,7 +3,6 @@ module InterfaceS0 (saida1Contador, saida2Contador, a, b, c, d, e, f, g);
 	input saida1Contador, saida2Contador;
 	output a, b, c, d, e, f, g;
 
-
 	wire saida1a, saida2a, saida3a, saida4a,
 	saida1b, saida2b, saida3b, saida4b,
 	saida1c, saida2c, saida3c, saida4c,

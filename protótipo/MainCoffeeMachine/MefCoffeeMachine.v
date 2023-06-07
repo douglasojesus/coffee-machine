@@ -83,29 +83,36 @@ E0, E1, E2, E3, S0, S1, S2, S3, P, AQ, PP, M);
 	end*/
 
 	and (E0, ~Q3, ~Q2, ~Q1, ~SR); //E0
+	
 	or (s2, SR, Q1);
 	and (E1, s2, ~Q3, ~Q2, ~Q0, ~SP); //E1
 	and (s4, Q1, Q0);
 	and (s5, ~Q1, ~Q0, SR, SP);
 	or (s6, s5, s4);
-	and (E2, s6, ~Q3, ~Q2, ~SN); //E2			
+	and (E2, s6, ~Q3, ~Q2, ~SN); //E2	
+			
 	and (s8, SR, SP, SN, A);
 	or (s9, s8, Q2);
-	and (E3, s9, ~Q3, ~Q1, ~Q0, ~VL); //E3				
+	and (E3, s9, ~Q3, ~Q1, ~Q0, ~VL); //E3	
+				
 	and (s11, Q2, Q0);
 	and (s12, ~Q2, ~Q0, SR, SP, SN, A, VL, ~B0, ~B1);
 	or (s13, s11, s12);
-	and (S0, s13, ~Q3, ~Q1); //S0				
+	and (S0, s13, ~Q3, ~Q1); //S0	
+				
 	and (s15, Q2, Q1);
 	and (s16, ~Q2, ~Q1, SR, SP, SN, A, VL, ~B0, B1);
 	or (s17, s15, s16);
-	and (S1, s17, ~Q3, ~Q0); //S1				
+	and (S1, s17, ~Q3, ~Q0); //S1	
+				
 	and (s19, ~Q3, Q2, Q1, Q0);
 	and (s20, ~Q3, ~Q2, ~Q1, ~Q0, SR, SP, SN, A, VL, B0, ~B1);
-	or (S2, s20, s19); //S2				
+	or (S2, s20, s19); //S2	
+				
 	and (s22, SR, SP, SN, A, VL, B0, B1);
 	or (s23, s22, Q3);
 	and (S3, s23, ~Q2, ~Q1, ~Q0); //S3
+	
 	and (s25, ~Q1, Q0);
 	and (s26, Q1, ~Q0);
 	or (s27, s25, s26);
@@ -117,12 +124,15 @@ E0, E1, E2, E3, S0, S1, S2, S3, P, AQ, PP, M);
 	or (s33, Q0, Q1);
 	and (s34, s33, ~Q3, Q2);
 	or (P, s34, s32); //P
+	
 	and (s36, Q3, ~Q2, Q1, Q0);
 	and (s37, s27, Q3, ~Q2, SR, SP, SN); 
-	or (AQ, s37, s36); //AQ			
+	or (AQ, s37, s36); //AQ		
+		
 	and (s39, SR, SP, SN);
 	or (s40, s39, Q0);
 	and (PP, s40, Q3, ~Q2, Q1); //PP
+	
 	and (s42, Q3, ~Q2, Q1, Q0); 
 	and (s43, SP, SR, ~SN);
 	and (s44, SP, ~SR, SN);
@@ -139,6 +149,7 @@ E0, E1, E2, E3, S0, S1, S2, S3, P, AQ, PP, M);
 	or (s55, s54, Q0);
 	and (s56, s55, ~Q3, ~Q2, ~Q1, SR); 
 	or (M, s42, s47, s48, s49, s53, s56); //M
+	
 	//////////////////////////////BODY
 	
 
