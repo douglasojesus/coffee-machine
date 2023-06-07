@@ -1,0 +1,588 @@
+Analysis & Synthesis report for MainCoffeeMachine
+Wed Jun  7 17:24:53 2023
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Port Connectivity Checks: "Decoders:INST2|Contador:comb_3|FlipflopT:inst3"
+  7. Port Connectivity Checks: "Decoders:INST2|Contador:comb_3|FlipflopT:inst2"
+  8. Port Connectivity Checks: "Decoders:INST2|Contador:comb_3|FlipflopT:inst1"
+  9. Analysis & Synthesis Messages
+ 10. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                              ;
++-----------------------------+---------------------------------------------+
+; Analysis & Synthesis Status ; Failed - Wed Jun  7 17:24:53 2023           ;
+; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name               ; MainCoffeeMachine                           ;
+; Top-level Entity Name       ; MainCoffeeMachine                           ;
+; Family                      ; MAX II                                      ;
++-----------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EPM240T100C5       ;                    ;
+; Top-level entity name                                            ; MainCoffeeMachine  ; MainCoffeeMachine  ;
+; Family name                                                      ; MAX II             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 6           ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                               ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                 ; Library ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------+---------+
+; MainCoffeeMachine.v              ; yes             ; User Verilog HDL File  ; /home/aluno/Documentos/MainCoffeeMachine/MainCoffeeMachine.v ;         ;
+; MefCoffeeMachine.v               ; yes             ; User Verilog HDL File  ; /home/aluno/Documentos/MainCoffeeMachine/MefCoffeeMachine.v  ;         ;
+; FFD.v                            ; yes             ; User Verilog HDL File  ; /home/aluno/Documentos/MainCoffeeMachine/FFD.v               ;         ;
+; Decoders.v                       ; yes             ; User Verilog HDL File  ; /home/aluno/Documentos/MainCoffeeMachine/Decoders.v          ;         ;
+; Contador.v                       ; yes             ; User Verilog HDL File  ; /home/aluno/Documentos/MainCoffeeMachine/Contador.v          ;         ;
+; InterfaceS0.v                    ; yes             ; User Verilog HDL File  ; /home/aluno/Documentos/MainCoffeeMachine/InterfaceS0.v       ;         ;
+; InterfaceS1.v                    ; yes             ; User Verilog HDL File  ; /home/aluno/Documentos/MainCoffeeMachine/InterfaceS1.v       ;         ;
+; InterfaceS2.v                    ; yes             ; User Verilog HDL File  ; /home/aluno/Documentos/MainCoffeeMachine/InterfaceS2.v       ;         ;
+; InterfaceS3.v                    ; yes             ; User Verilog HDL File  ; /home/aluno/Documentos/MainCoffeeMachine/InterfaceS3.v       ;         ;
+; InterfaceERDI.v                  ; yes             ; User Verilog HDL File  ; /home/aluno/Documentos/MainCoffeeMachine/InterfaceERDI.v     ;         ;
+; InterfaceESN.v                   ; yes             ; User Verilog HDL File  ; /home/aluno/Documentos/MainCoffeeMachine/InterfaceESN.v      ;         ;
+; InterfaceESP.v                   ; yes             ; User Verilog HDL File  ; /home/aluno/Documentos/MainCoffeeMachine/InterfaceESP.v      ;         ;
+; InterfaceESR.v                   ; yes             ; User Verilog HDL File  ; /home/aluno/Documentos/MainCoffeeMachine/InterfaceESR.v      ;         ;
+; FlipflopT.v                      ; yes             ; User Verilog HDL File  ; /home/aluno/Documentos/MainCoffeeMachine/FlipflopT.v         ;         ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Decoders:INST2|Contador:comb_3|FlipflopT:inst3"                                                                                                                                    ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; T     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; T[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Decoders:INST2|Contador:comb_3|FlipflopT:inst2"                                                                                                                                    ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; T     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; T[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Decoders:INST2|Contador:comb_3|FlipflopT:inst1"                                                                                                                                    ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; T     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; T[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Wed Jun  7 17:24:47 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MainCoffeeMachine -c MainCoffeeMachine
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file MainCoffeeMachine.v
+    Info (12023): Found entity 1: MainCoffeeMachine File: /home/aluno/Documentos/MainCoffeeMachine/MainCoffeeMachine.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file MefCoffeeMachine.v
+    Info (12023): Found entity 1: MefCoffeeMachine File: /home/aluno/Documentos/MainCoffeeMachine/MefCoffeeMachine.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file FFD.v
+    Info (12023): Found entity 1: FFD File: /home/aluno/Documentos/MainCoffeeMachine/FFD.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Decoders.v
+    Info (12023): Found entity 1: Decoders File: /home/aluno/Documentos/MainCoffeeMachine/Decoders.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Contador.v
+    Info (12023): Found entity 1: Contador File: /home/aluno/Documentos/MainCoffeeMachine/Contador.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file InterfaceS0.v
+    Info (12023): Found entity 1: InterfaceS0 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS0.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file InterfaceS1.v
+    Info (12023): Found entity 1: InterfaceS1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS1.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file InterfaceS2.v
+    Info (12023): Found entity 1: InterfaceS2 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS2.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file InterfaceS3.v
+    Info (12023): Found entity 1: InterfaceS3 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS3.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file InterfaceERDI.v
+    Info (12023): Found entity 1: InterfaceERDI File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceERDI.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file InterfaceESN.v
+    Info (12023): Found entity 1: InterfaceESN File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESN.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file InterfaceESP.v
+    Info (12023): Found entity 1: InterfaceESP File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESP.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file InterfaceESR.v
+    Info (12023): Found entity 1: InterfaceESR File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESR.v Line: 1
+Warning (12090): Entity "Mux" obtained from "Mux.v" instead of from Quartus Prime megafunction library File: /home/aluno/Documentos/MainCoffeeMachine/Mux.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Mux.v
+    Info (12023): Found entity 1: Mux File: /home/aluno/Documentos/MainCoffeeMachine/Mux.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Demux.v
+    Info (12023): Found entity 1: Demux File: /home/aluno/Documentos/MainCoffeeMachine/Demux.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file FlipflopT.v
+    Info (12023): Found entity 1: FlipflopT File: /home/aluno/Documentos/MainCoffeeMachine/FlipflopT.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(111): created implicit net for "s27" File: /home/aluno/Documentos/MainCoffeeMachine/MefCoffeeMachine.v Line: 111
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(112): created implicit net for "s28" File: /home/aluno/Documentos/MainCoffeeMachine/MefCoffeeMachine.v Line: 112
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(113): created implicit net for "s29" File: /home/aluno/Documentos/MainCoffeeMachine/MefCoffeeMachine.v Line: 113
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(114): created implicit net for "s30" File: /home/aluno/Documentos/MainCoffeeMachine/MefCoffeeMachine.v Line: 114
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(115): created implicit net for "s31" File: /home/aluno/Documentos/MainCoffeeMachine/MefCoffeeMachine.v Line: 115
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(116): created implicit net for "s32" File: /home/aluno/Documentos/MainCoffeeMachine/MefCoffeeMachine.v Line: 116
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(117): created implicit net for "s33" File: /home/aluno/Documentos/MainCoffeeMachine/MefCoffeeMachine.v Line: 117
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(118): created implicit net for "s34" File: /home/aluno/Documentos/MainCoffeeMachine/MefCoffeeMachine.v Line: 118
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(120): created implicit net for "s36" File: /home/aluno/Documentos/MainCoffeeMachine/MefCoffeeMachine.v Line: 120
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(121): created implicit net for "s37" File: /home/aluno/Documentos/MainCoffeeMachine/MefCoffeeMachine.v Line: 121
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(123): created implicit net for "s39" File: /home/aluno/Documentos/MainCoffeeMachine/MefCoffeeMachine.v Line: 123
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(124): created implicit net for "s40" File: /home/aluno/Documentos/MainCoffeeMachine/MefCoffeeMachine.v Line: 124
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(126): created implicit net for "s42" File: /home/aluno/Documentos/MainCoffeeMachine/MefCoffeeMachine.v Line: 126
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(127): created implicit net for "s43" File: /home/aluno/Documentos/MainCoffeeMachine/MefCoffeeMachine.v Line: 127
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(128): created implicit net for "s44" File: /home/aluno/Documentos/MainCoffeeMachine/MefCoffeeMachine.v Line: 128
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(129): created implicit net for "s45" File: /home/aluno/Documentos/MainCoffeeMachine/MefCoffeeMachine.v Line: 129
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(130): created implicit net for "s46" File: /home/aluno/Documentos/MainCoffeeMachine/MefCoffeeMachine.v Line: 130
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(131): created implicit net for "s47" File: /home/aluno/Documentos/MainCoffeeMachine/MefCoffeeMachine.v Line: 131
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(132): created implicit net for "s48" File: /home/aluno/Documentos/MainCoffeeMachine/MefCoffeeMachine.v Line: 132
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(133): created implicit net for "s49" File: /home/aluno/Documentos/MainCoffeeMachine/MefCoffeeMachine.v Line: 133
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(134): created implicit net for "s50" File: /home/aluno/Documentos/MainCoffeeMachine/MefCoffeeMachine.v Line: 134
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(135): created implicit net for "s51" File: /home/aluno/Documentos/MainCoffeeMachine/MefCoffeeMachine.v Line: 135
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(136): created implicit net for "s52" File: /home/aluno/Documentos/MainCoffeeMachine/MefCoffeeMachine.v Line: 136
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(137): created implicit net for "s53" File: /home/aluno/Documentos/MainCoffeeMachine/MefCoffeeMachine.v Line: 137
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(138): created implicit net for "s54" File: /home/aluno/Documentos/MainCoffeeMachine/MefCoffeeMachine.v Line: 138
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(139): created implicit net for "s55" File: /home/aluno/Documentos/MainCoffeeMachine/MefCoffeeMachine.v Line: 139
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(140): created implicit net for "s56" File: /home/aluno/Documentos/MainCoffeeMachine/MefCoffeeMachine.v Line: 140
+Warning (10236): Verilog HDL Implicit Net warning at Contador.v(7): created implicit net for "Q3" File: /home/aluno/Documentos/MainCoffeeMachine/Contador.v Line: 7
+Critical Warning (10846): Verilog HDL Instantiation warning at Decoders.v(17): instance has no name File: /home/aluno/Documentos/MainCoffeeMachine/Decoders.v Line: 17
+Critical Warning (10846): Verilog HDL Instantiation warning at Decoders.v(19): instance has no name File: /home/aluno/Documentos/MainCoffeeMachine/Decoders.v Line: 19
+Critical Warning (10846): Verilog HDL Instantiation warning at Decoders.v(20): instance has no name File: /home/aluno/Documentos/MainCoffeeMachine/Decoders.v Line: 20
+Critical Warning (10846): Verilog HDL Instantiation warning at Decoders.v(21): instance has no name File: /home/aluno/Documentos/MainCoffeeMachine/Decoders.v Line: 21
+Critical Warning (10846): Verilog HDL Instantiation warning at Decoders.v(22): instance has no name File: /home/aluno/Documentos/MainCoffeeMachine/Decoders.v Line: 22
+Critical Warning (10846): Verilog HDL Instantiation warning at Decoders.v(23): instance has no name File: /home/aluno/Documentos/MainCoffeeMachine/Decoders.v Line: 23
+Critical Warning (10846): Verilog HDL Instantiation warning at Decoders.v(24): instance has no name File: /home/aluno/Documentos/MainCoffeeMachine/Decoders.v Line: 24
+Critical Warning (10846): Verilog HDL Instantiation warning at Decoders.v(25): instance has no name File: /home/aluno/Documentos/MainCoffeeMachine/Decoders.v Line: 25
+Critical Warning (10846): Verilog HDL Instantiation warning at Decoders.v(26): instance has no name File: /home/aluno/Documentos/MainCoffeeMachine/Decoders.v Line: 26
+Info (12127): Elaborating entity "MainCoffeeMachine" for the top level hierarchy
+Info (12128): Elaborating entity "MefCoffeeMachine" for hierarchy "MefCoffeeMachine:INST" File: /home/aluno/Documentos/MainCoffeeMachine/MainCoffeeMachine.v Line: 12
+Info (12128): Elaborating entity "FFD" for hierarchy "MefCoffeeMachine:INST|FFD:D3" File: /home/aluno/Documentos/MainCoffeeMachine/MefCoffeeMachine.v Line: 72
+Info (12128): Elaborating entity "Decoders" for hierarchy "Decoders:INST2" File: /home/aluno/Documentos/MainCoffeeMachine/MainCoffeeMachine.v Line: 13
+Warning (10034): Output port "h" at Decoders.v(13) has no driver File: /home/aluno/Documentos/MainCoffeeMachine/Decoders.v Line: 13
+Info (12128): Elaborating entity "Contador" for hierarchy "Decoders:INST2|Contador:comb_3" File: /home/aluno/Documentos/MainCoffeeMachine/Decoders.v Line: 17
+Info (12128): Elaborating entity "FlipflopT" for hierarchy "Decoders:INST2|Contador:comb_3|FlipflopT:inst1" File: /home/aluno/Documentos/MainCoffeeMachine/Contador.v Line: 9
+Info (12128): Elaborating entity "InterfaceS0" for hierarchy "Decoders:INST2|InterfaceS0:comb_4" File: /home/aluno/Documentos/MainCoffeeMachine/Decoders.v Line: 19
+Warning (10739): Verilog HDL warning at InterfaceS0.v(18): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS0.v Line: 18
+Warning (10739): Verilog HDL warning at InterfaceS0.v(19): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS0.v Line: 19
+Warning (10739): Verilog HDL warning at InterfaceS0.v(20): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS0.v Line: 20
+Warning (10739): Verilog HDL warning at InterfaceS0.v(21): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS0.v Line: 21
+Warning (10739): Verilog HDL warning at InterfaceS0.v(25): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS0.v Line: 25
+Warning (10739): Verilog HDL warning at InterfaceS0.v(26): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS0.v Line: 26
+Warning (10739): Verilog HDL warning at InterfaceS0.v(27): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS0.v Line: 27
+Warning (10739): Verilog HDL warning at InterfaceS0.v(28): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS0.v Line: 28
+Warning (10739): Verilog HDL warning at InterfaceS0.v(32): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS0.v Line: 32
+Warning (10739): Verilog HDL warning at InterfaceS0.v(33): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS0.v Line: 33
+Warning (10739): Verilog HDL warning at InterfaceS0.v(34): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS0.v Line: 34
+Warning (10739): Verilog HDL warning at InterfaceS0.v(35): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS0.v Line: 35
+Warning (10739): Verilog HDL warning at InterfaceS0.v(39): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS0.v Line: 39
+Warning (10739): Verilog HDL warning at InterfaceS0.v(40): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS0.v Line: 40
+Warning (10739): Verilog HDL warning at InterfaceS0.v(41): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS0.v Line: 41
+Warning (10739): Verilog HDL warning at InterfaceS0.v(42): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS0.v Line: 42
+Warning (10739): Verilog HDL warning at InterfaceS0.v(46): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS0.v Line: 46
+Warning (10739): Verilog HDL warning at InterfaceS0.v(47): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS0.v Line: 47
+Warning (10739): Verilog HDL warning at InterfaceS0.v(48): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS0.v Line: 48
+Warning (10739): Verilog HDL warning at InterfaceS0.v(49): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS0.v Line: 49
+Warning (10739): Verilog HDL warning at InterfaceS0.v(53): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS0.v Line: 53
+Warning (10739): Verilog HDL warning at InterfaceS0.v(54): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS0.v Line: 54
+Warning (10739): Verilog HDL warning at InterfaceS0.v(55): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS0.v Line: 55
+Warning (10739): Verilog HDL warning at InterfaceS0.v(56): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS0.v Line: 56
+Warning (10739): Verilog HDL warning at InterfaceS0.v(60): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS0.v Line: 60
+Warning (10739): Verilog HDL warning at InterfaceS0.v(61): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS0.v Line: 61
+Warning (10739): Verilog HDL warning at InterfaceS0.v(62): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS0.v Line: 62
+Warning (10739): Verilog HDL warning at InterfaceS0.v(63): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS0.v Line: 63
+Info (12128): Elaborating entity "InterfaceS1" for hierarchy "Decoders:INST2|InterfaceS1:comb_5" File: /home/aluno/Documentos/MainCoffeeMachine/Decoders.v Line: 20
+Warning (10739): Verilog HDL warning at InterfaceS1.v(18): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS1.v Line: 18
+Warning (10739): Verilog HDL warning at InterfaceS1.v(19): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS1.v Line: 19
+Warning (10739): Verilog HDL warning at InterfaceS1.v(20): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS1.v Line: 20
+Warning (10739): Verilog HDL warning at InterfaceS1.v(21): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS1.v Line: 21
+Warning (10739): Verilog HDL warning at InterfaceS1.v(25): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS1.v Line: 25
+Warning (10739): Verilog HDL warning at InterfaceS1.v(26): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS1.v Line: 26
+Warning (10739): Verilog HDL warning at InterfaceS1.v(27): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS1.v Line: 27
+Warning (10739): Verilog HDL warning at InterfaceS1.v(28): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS1.v Line: 28
+Warning (10739): Verilog HDL warning at InterfaceS1.v(32): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS1.v Line: 32
+Warning (10739): Verilog HDL warning at InterfaceS1.v(33): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS1.v Line: 33
+Warning (10739): Verilog HDL warning at InterfaceS1.v(34): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS1.v Line: 34
+Warning (10739): Verilog HDL warning at InterfaceS1.v(35): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS1.v Line: 35
+Warning (10739): Verilog HDL warning at InterfaceS1.v(39): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS1.v Line: 39
+Warning (10739): Verilog HDL warning at InterfaceS1.v(40): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS1.v Line: 40
+Warning (10739): Verilog HDL warning at InterfaceS1.v(41): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS1.v Line: 41
+Warning (10739): Verilog HDL warning at InterfaceS1.v(42): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS1.v Line: 42
+Warning (10739): Verilog HDL warning at InterfaceS1.v(46): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS1.v Line: 46
+Warning (10739): Verilog HDL warning at InterfaceS1.v(47): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS1.v Line: 47
+Warning (10739): Verilog HDL warning at InterfaceS1.v(48): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS1.v Line: 48
+Warning (10739): Verilog HDL warning at InterfaceS1.v(49): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS1.v Line: 49
+Warning (10739): Verilog HDL warning at InterfaceS1.v(53): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS1.v Line: 53
+Warning (10739): Verilog HDL warning at InterfaceS1.v(54): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS1.v Line: 54
+Warning (10739): Verilog HDL warning at InterfaceS1.v(55): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS1.v Line: 55
+Warning (10739): Verilog HDL warning at InterfaceS1.v(56): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS1.v Line: 56
+Warning (10739): Verilog HDL warning at InterfaceS1.v(60): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS1.v Line: 60
+Warning (10739): Verilog HDL warning at InterfaceS1.v(61): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS1.v Line: 61
+Warning (10739): Verilog HDL warning at InterfaceS1.v(62): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS1.v Line: 62
+Warning (10739): Verilog HDL warning at InterfaceS1.v(63): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS1.v Line: 63
+Info (12128): Elaborating entity "InterfaceS2" for hierarchy "Decoders:INST2|InterfaceS2:comb_6" File: /home/aluno/Documentos/MainCoffeeMachine/Decoders.v Line: 21
+Warning (10739): Verilog HDL warning at InterfaceS2.v(18): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS2.v Line: 18
+Warning (10739): Verilog HDL warning at InterfaceS2.v(19): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS2.v Line: 19
+Warning (10739): Verilog HDL warning at InterfaceS2.v(20): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS2.v Line: 20
+Warning (10739): Verilog HDL warning at InterfaceS2.v(21): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS2.v Line: 21
+Warning (10739): Verilog HDL warning at InterfaceS2.v(25): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS2.v Line: 25
+Warning (10739): Verilog HDL warning at InterfaceS2.v(26): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS2.v Line: 26
+Warning (10739): Verilog HDL warning at InterfaceS2.v(27): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS2.v Line: 27
+Warning (10739): Verilog HDL warning at InterfaceS2.v(28): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS2.v Line: 28
+Warning (10739): Verilog HDL warning at InterfaceS2.v(32): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS2.v Line: 32
+Warning (10739): Verilog HDL warning at InterfaceS2.v(33): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS2.v Line: 33
+Warning (10739): Verilog HDL warning at InterfaceS2.v(34): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS2.v Line: 34
+Warning (10739): Verilog HDL warning at InterfaceS2.v(35): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS2.v Line: 35
+Warning (10739): Verilog HDL warning at InterfaceS2.v(39): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS2.v Line: 39
+Warning (10739): Verilog HDL warning at InterfaceS2.v(40): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS2.v Line: 40
+Warning (10739): Verilog HDL warning at InterfaceS2.v(41): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS2.v Line: 41
+Warning (10739): Verilog HDL warning at InterfaceS2.v(42): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS2.v Line: 42
+Warning (10739): Verilog HDL warning at InterfaceS2.v(46): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS2.v Line: 46
+Warning (10739): Verilog HDL warning at InterfaceS2.v(47): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS2.v Line: 47
+Warning (10739): Verilog HDL warning at InterfaceS2.v(48): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS2.v Line: 48
+Warning (10739): Verilog HDL warning at InterfaceS2.v(49): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS2.v Line: 49
+Warning (10739): Verilog HDL warning at InterfaceS2.v(53): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS2.v Line: 53
+Warning (10739): Verilog HDL warning at InterfaceS2.v(54): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS2.v Line: 54
+Warning (10739): Verilog HDL warning at InterfaceS2.v(55): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS2.v Line: 55
+Warning (10739): Verilog HDL warning at InterfaceS2.v(56): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS2.v Line: 56
+Warning (10739): Verilog HDL warning at InterfaceS2.v(60): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS2.v Line: 60
+Warning (10739): Verilog HDL warning at InterfaceS2.v(61): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS2.v Line: 61
+Warning (10739): Verilog HDL warning at InterfaceS2.v(62): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS2.v Line: 62
+Warning (10739): Verilog HDL warning at InterfaceS2.v(63): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS2.v Line: 63
+Info (12128): Elaborating entity "InterfaceS3" for hierarchy "Decoders:INST2|InterfaceS3:comb_7" File: /home/aluno/Documentos/MainCoffeeMachine/Decoders.v Line: 22
+Warning (10739): Verilog HDL warning at InterfaceS3.v(18): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS3.v Line: 18
+Warning (10739): Verilog HDL warning at InterfaceS3.v(19): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS3.v Line: 19
+Warning (10739): Verilog HDL warning at InterfaceS3.v(20): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS3.v Line: 20
+Warning (10739): Verilog HDL warning at InterfaceS3.v(21): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS3.v Line: 21
+Warning (10739): Verilog HDL warning at InterfaceS3.v(25): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS3.v Line: 25
+Warning (10739): Verilog HDL warning at InterfaceS3.v(26): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS3.v Line: 26
+Warning (10739): Verilog HDL warning at InterfaceS3.v(27): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS3.v Line: 27
+Warning (10739): Verilog HDL warning at InterfaceS3.v(28): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS3.v Line: 28
+Warning (10739): Verilog HDL warning at InterfaceS3.v(32): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS3.v Line: 32
+Warning (10739): Verilog HDL warning at InterfaceS3.v(33): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS3.v Line: 33
+Warning (10739): Verilog HDL warning at InterfaceS3.v(34): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS3.v Line: 34
+Warning (10739): Verilog HDL warning at InterfaceS3.v(35): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS3.v Line: 35
+Warning (10739): Verilog HDL warning at InterfaceS3.v(39): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS3.v Line: 39
+Warning (10739): Verilog HDL warning at InterfaceS3.v(40): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS3.v Line: 40
+Warning (10739): Verilog HDL warning at InterfaceS3.v(41): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS3.v Line: 41
+Warning (10739): Verilog HDL warning at InterfaceS3.v(42): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS3.v Line: 42
+Warning (10739): Verilog HDL warning at InterfaceS3.v(46): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS3.v Line: 46
+Warning (10739): Verilog HDL warning at InterfaceS3.v(47): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS3.v Line: 47
+Warning (10739): Verilog HDL warning at InterfaceS3.v(48): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS3.v Line: 48
+Warning (10739): Verilog HDL warning at InterfaceS3.v(49): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS3.v Line: 49
+Warning (10739): Verilog HDL warning at InterfaceS3.v(53): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS3.v Line: 53
+Warning (10739): Verilog HDL warning at InterfaceS3.v(54): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS3.v Line: 54
+Warning (10739): Verilog HDL warning at InterfaceS3.v(55): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS3.v Line: 55
+Warning (10739): Verilog HDL warning at InterfaceS3.v(56): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS3.v Line: 56
+Warning (10739): Verilog HDL warning at InterfaceS3.v(60): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS3.v Line: 60
+Warning (10739): Verilog HDL warning at InterfaceS3.v(61): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS3.v Line: 61
+Warning (10739): Verilog HDL warning at InterfaceS3.v(62): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS3.v Line: 62
+Warning (10739): Verilog HDL warning at InterfaceS3.v(63): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS3.v Line: 63
+Info (12128): Elaborating entity "InterfaceESR" for hierarchy "Decoders:INST2|InterfaceESR:comb_8" File: /home/aluno/Documentos/MainCoffeeMachine/Decoders.v Line: 23
+Warning (10739): Verilog HDL warning at InterfaceESR.v(18): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESR.v Line: 18
+Warning (10739): Verilog HDL warning at InterfaceESR.v(19): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESR.v Line: 19
+Warning (10739): Verilog HDL warning at InterfaceESR.v(20): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESR.v Line: 20
+Warning (10739): Verilog HDL warning at InterfaceESR.v(21): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESR.v Line: 21
+Warning (10739): Verilog HDL warning at InterfaceESR.v(25): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESR.v Line: 25
+Warning (10739): Verilog HDL warning at InterfaceESR.v(26): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESR.v Line: 26
+Warning (10739): Verilog HDL warning at InterfaceESR.v(27): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESR.v Line: 27
+Warning (10739): Verilog HDL warning at InterfaceESR.v(28): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESR.v Line: 28
+Warning (10739): Verilog HDL warning at InterfaceESR.v(32): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESR.v Line: 32
+Warning (10739): Verilog HDL warning at InterfaceESR.v(33): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESR.v Line: 33
+Warning (10739): Verilog HDL warning at InterfaceESR.v(34): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESR.v Line: 34
+Warning (10739): Verilog HDL warning at InterfaceESR.v(35): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESR.v Line: 35
+Warning (10739): Verilog HDL warning at InterfaceESR.v(39): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESR.v Line: 39
+Warning (10739): Verilog HDL warning at InterfaceESR.v(40): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESR.v Line: 40
+Warning (10739): Verilog HDL warning at InterfaceESR.v(41): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESR.v Line: 41
+Warning (10739): Verilog HDL warning at InterfaceESR.v(42): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESR.v Line: 42
+Warning (10739): Verilog HDL warning at InterfaceESR.v(46): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESR.v Line: 46
+Warning (10739): Verilog HDL warning at InterfaceESR.v(47): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESR.v Line: 47
+Warning (10739): Verilog HDL warning at InterfaceESR.v(48): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESR.v Line: 48
+Warning (10739): Verilog HDL warning at InterfaceESR.v(49): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESR.v Line: 49
+Warning (10739): Verilog HDL warning at InterfaceESR.v(53): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESR.v Line: 53
+Warning (10739): Verilog HDL warning at InterfaceESR.v(54): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESR.v Line: 54
+Warning (10739): Verilog HDL warning at InterfaceESR.v(55): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESR.v Line: 55
+Warning (10739): Verilog HDL warning at InterfaceESR.v(56): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESR.v Line: 56
+Warning (10739): Verilog HDL warning at InterfaceESR.v(60): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESR.v Line: 60
+Warning (10739): Verilog HDL warning at InterfaceESR.v(61): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESR.v Line: 61
+Warning (10739): Verilog HDL warning at InterfaceESR.v(62): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESR.v Line: 62
+Warning (10739): Verilog HDL warning at InterfaceESR.v(63): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESR.v Line: 63
+Info (12128): Elaborating entity "InterfaceESP" for hierarchy "Decoders:INST2|InterfaceESP:comb_9" File: /home/aluno/Documentos/MainCoffeeMachine/Decoders.v Line: 24
+Warning (10739): Verilog HDL warning at InterfaceESP.v(18): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESP.v Line: 18
+Warning (10739): Verilog HDL warning at InterfaceESP.v(19): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESP.v Line: 19
+Warning (10739): Verilog HDL warning at InterfaceESP.v(20): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESP.v Line: 20
+Warning (10739): Verilog HDL warning at InterfaceESP.v(21): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESP.v Line: 21
+Warning (10739): Verilog HDL warning at InterfaceESP.v(25): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESP.v Line: 25
+Warning (10739): Verilog HDL warning at InterfaceESP.v(26): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESP.v Line: 26
+Warning (10739): Verilog HDL warning at InterfaceESP.v(27): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESP.v Line: 27
+Warning (10739): Verilog HDL warning at InterfaceESP.v(28): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESP.v Line: 28
+Warning (10739): Verilog HDL warning at InterfaceESP.v(32): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESP.v Line: 32
+Warning (10739): Verilog HDL warning at InterfaceESP.v(33): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESP.v Line: 33
+Warning (10739): Verilog HDL warning at InterfaceESP.v(34): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESP.v Line: 34
+Warning (10739): Verilog HDL warning at InterfaceESP.v(35): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESP.v Line: 35
+Warning (10739): Verilog HDL warning at InterfaceESP.v(39): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESP.v Line: 39
+Warning (10739): Verilog HDL warning at InterfaceESP.v(40): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESP.v Line: 40
+Warning (10739): Verilog HDL warning at InterfaceESP.v(41): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESP.v Line: 41
+Warning (10739): Verilog HDL warning at InterfaceESP.v(42): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESP.v Line: 42
+Warning (10739): Verilog HDL warning at InterfaceESP.v(46): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESP.v Line: 46
+Warning (10739): Verilog HDL warning at InterfaceESP.v(47): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESP.v Line: 47
+Warning (10739): Verilog HDL warning at InterfaceESP.v(48): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESP.v Line: 48
+Warning (10739): Verilog HDL warning at InterfaceESP.v(49): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESP.v Line: 49
+Warning (10739): Verilog HDL warning at InterfaceESP.v(53): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESP.v Line: 53
+Warning (10739): Verilog HDL warning at InterfaceESP.v(54): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESP.v Line: 54
+Warning (10739): Verilog HDL warning at InterfaceESP.v(55): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESP.v Line: 55
+Warning (10739): Verilog HDL warning at InterfaceESP.v(56): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESP.v Line: 56
+Warning (10739): Verilog HDL warning at InterfaceESP.v(60): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESP.v Line: 60
+Warning (10739): Verilog HDL warning at InterfaceESP.v(61): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESP.v Line: 61
+Warning (10739): Verilog HDL warning at InterfaceESP.v(62): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESP.v Line: 62
+Warning (10739): Verilog HDL warning at InterfaceESP.v(63): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESP.v Line: 63
+Info (12128): Elaborating entity "InterfaceESN" for hierarchy "Decoders:INST2|InterfaceESN:comb_10" File: /home/aluno/Documentos/MainCoffeeMachine/Decoders.v Line: 25
+Warning (10739): Verilog HDL warning at InterfaceESN.v(18): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESN.v Line: 18
+Warning (10739): Verilog HDL warning at InterfaceESN.v(19): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESN.v Line: 19
+Warning (10739): Verilog HDL warning at InterfaceESN.v(20): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESN.v Line: 20
+Warning (10739): Verilog HDL warning at InterfaceESN.v(21): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESN.v Line: 21
+Warning (10739): Verilog HDL warning at InterfaceESN.v(25): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESN.v Line: 25
+Warning (10739): Verilog HDL warning at InterfaceESN.v(26): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESN.v Line: 26
+Warning (10739): Verilog HDL warning at InterfaceESN.v(27): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESN.v Line: 27
+Warning (10739): Verilog HDL warning at InterfaceESN.v(28): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESN.v Line: 28
+Warning (10739): Verilog HDL warning at InterfaceESN.v(32): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESN.v Line: 32
+Warning (10739): Verilog HDL warning at InterfaceESN.v(33): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESN.v Line: 33
+Warning (10739): Verilog HDL warning at InterfaceESN.v(34): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESN.v Line: 34
+Warning (10739): Verilog HDL warning at InterfaceESN.v(35): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESN.v Line: 35
+Warning (10739): Verilog HDL warning at InterfaceESN.v(39): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESN.v Line: 39
+Warning (10739): Verilog HDL warning at InterfaceESN.v(40): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESN.v Line: 40
+Warning (10739): Verilog HDL warning at InterfaceESN.v(41): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESN.v Line: 41
+Warning (10739): Verilog HDL warning at InterfaceESN.v(42): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESN.v Line: 42
+Warning (10739): Verilog HDL warning at InterfaceESN.v(46): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESN.v Line: 46
+Warning (10739): Verilog HDL warning at InterfaceESN.v(47): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESN.v Line: 47
+Warning (10739): Verilog HDL warning at InterfaceESN.v(48): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESN.v Line: 48
+Warning (10739): Verilog HDL warning at InterfaceESN.v(49): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESN.v Line: 49
+Warning (10739): Verilog HDL warning at InterfaceESN.v(53): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESN.v Line: 53
+Warning (10739): Verilog HDL warning at InterfaceESN.v(54): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESN.v Line: 54
+Warning (10739): Verilog HDL warning at InterfaceESN.v(55): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESN.v Line: 55
+Warning (10739): Verilog HDL warning at InterfaceESN.v(56): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESN.v Line: 56
+Warning (10739): Verilog HDL warning at InterfaceESN.v(60): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESN.v Line: 60
+Warning (10739): Verilog HDL warning at InterfaceESN.v(61): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESN.v Line: 61
+Warning (10739): Verilog HDL warning at InterfaceESN.v(62): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESN.v Line: 62
+Warning (10739): Verilog HDL warning at InterfaceESN.v(63): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESN.v Line: 63
+Info (12128): Elaborating entity "InterfaceERDI" for hierarchy "Decoders:INST2|InterfaceERDI:comb_11" File: /home/aluno/Documentos/MainCoffeeMachine/Decoders.v Line: 26
+Warning (10739): Verilog HDL warning at InterfaceERDI.v(17): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceERDI.v Line: 17
+Warning (10739): Verilog HDL warning at InterfaceERDI.v(18): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceERDI.v Line: 18
+Warning (10739): Verilog HDL warning at InterfaceERDI.v(19): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceERDI.v Line: 19
+Warning (10739): Verilog HDL warning at InterfaceERDI.v(20): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceERDI.v Line: 20
+Warning (10739): Verilog HDL warning at InterfaceERDI.v(24): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceERDI.v Line: 24
+Warning (10739): Verilog HDL warning at InterfaceERDI.v(25): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceERDI.v Line: 25
+Warning (10739): Verilog HDL warning at InterfaceERDI.v(26): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceERDI.v Line: 26
+Warning (10739): Verilog HDL warning at InterfaceERDI.v(27): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceERDI.v Line: 27
+Warning (10739): Verilog HDL warning at InterfaceERDI.v(31): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceERDI.v Line: 31
+Warning (10739): Verilog HDL warning at InterfaceERDI.v(32): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceERDI.v Line: 32
+Warning (10739): Verilog HDL warning at InterfaceERDI.v(33): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceERDI.v Line: 33
+Warning (10739): Verilog HDL warning at InterfaceERDI.v(34): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceERDI.v Line: 34
+Warning (10739): Verilog HDL warning at InterfaceERDI.v(38): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceERDI.v Line: 38
+Warning (10739): Verilog HDL warning at InterfaceERDI.v(39): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceERDI.v Line: 39
+Warning (10739): Verilog HDL warning at InterfaceERDI.v(40): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceERDI.v Line: 40
+Warning (10739): Verilog HDL warning at InterfaceERDI.v(41): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceERDI.v Line: 41
+Warning (10739): Verilog HDL warning at InterfaceERDI.v(45): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceERDI.v Line: 45
+Warning (10739): Verilog HDL warning at InterfaceERDI.v(46): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceERDI.v Line: 46
+Warning (10739): Verilog HDL warning at InterfaceERDI.v(47): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceERDI.v Line: 47
+Warning (10739): Verilog HDL warning at InterfaceERDI.v(48): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceERDI.v Line: 48
+Warning (10739): Verilog HDL warning at InterfaceERDI.v(52): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceERDI.v Line: 52
+Warning (10739): Verilog HDL warning at InterfaceERDI.v(53): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceERDI.v Line: 53
+Warning (10739): Verilog HDL warning at InterfaceERDI.v(54): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceERDI.v Line: 54
+Warning (10739): Verilog HDL warning at InterfaceERDI.v(55): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceERDI.v Line: 55
+Warning (10739): Verilog HDL warning at InterfaceERDI.v(59): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceERDI.v Line: 59
+Warning (10739): Verilog HDL warning at InterfaceERDI.v(60): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceERDI.v Line: 60
+Warning (10739): Verilog HDL warning at InterfaceERDI.v(61): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceERDI.v Line: 61
+Warning (10739): Verilog HDL warning at InterfaceERDI.v(62): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceERDI.v Line: 62
+Error (12014): Net "Decoders:INST2|a", which fans out to "Decoders:INST2|a", cannot be assigned more than one value File: /home/aluno/Documentos/MainCoffeeMachine/Decoders.v Line: 13
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceS0:comb_4|a" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS0.v Line: 4
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceS1:comb_5|a" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS1.v Line: 4
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceS2:comb_6|a" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS2.v Line: 4
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceS3:comb_7|a" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS3.v Line: 4
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceESR:comb_8|a" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESR.v Line: 4
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceESP:comb_9|a" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESP.v Line: 4
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceESN:comb_10|a" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESN.v Line: 4
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceERDI:comb_11|a" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceERDI.v Line: 4
+Error (12014): Net "Decoders:INST2|b", which fans out to "Decoders:INST2|b", cannot be assigned more than one value File: /home/aluno/Documentos/MainCoffeeMachine/Decoders.v Line: 13
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceS0:comb_4|b" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS0.v Line: 4
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceS1:comb_5|b" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS1.v Line: 4
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceS2:comb_6|b" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS2.v Line: 4
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceS3:comb_7|b" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS3.v Line: 4
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceESR:comb_8|b" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESR.v Line: 4
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceESP:comb_9|b" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESP.v Line: 4
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceESN:comb_10|b" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESN.v Line: 4
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceERDI:comb_11|b" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceERDI.v Line: 4
+Error (12014): Net "Decoders:INST2|c", which fans out to "Decoders:INST2|c", cannot be assigned more than one value File: /home/aluno/Documentos/MainCoffeeMachine/Decoders.v Line: 13
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceS0:comb_4|c" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS0.v Line: 4
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceS1:comb_5|c" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS1.v Line: 4
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceS2:comb_6|c" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS2.v Line: 4
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceS3:comb_7|c" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS3.v Line: 4
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceESR:comb_8|c" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESR.v Line: 4
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceESP:comb_9|c" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESP.v Line: 4
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceESN:comb_10|c" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESN.v Line: 4
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceERDI:comb_11|c" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceERDI.v Line: 4
+Error (12014): Net "Decoders:INST2|d", which fans out to "Decoders:INST2|d", cannot be assigned more than one value File: /home/aluno/Documentos/MainCoffeeMachine/Decoders.v Line: 13
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceS0:comb_4|d" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS0.v Line: 4
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceS1:comb_5|d" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS1.v Line: 4
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceS2:comb_6|d" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS2.v Line: 4
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceS3:comb_7|d" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS3.v Line: 4
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceESR:comb_8|d" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESR.v Line: 4
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceESP:comb_9|d" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESP.v Line: 4
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceESN:comb_10|d" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESN.v Line: 4
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceERDI:comb_11|d" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceERDI.v Line: 4
+Error (12014): Net "Decoders:INST2|e", which fans out to "Decoders:INST2|e", cannot be assigned more than one value File: /home/aluno/Documentos/MainCoffeeMachine/Decoders.v Line: 13
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceS0:comb_4|e" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS0.v Line: 4
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceS1:comb_5|e" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS1.v Line: 4
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceS2:comb_6|e" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS2.v Line: 4
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceS3:comb_7|e" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS3.v Line: 4
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceESR:comb_8|e" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESR.v Line: 4
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceESP:comb_9|e" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESP.v Line: 4
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceESN:comb_10|e" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESN.v Line: 4
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceERDI:comb_11|e" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceERDI.v Line: 4
+Error (12014): Net "Decoders:INST2|f", which fans out to "Decoders:INST2|f", cannot be assigned more than one value File: /home/aluno/Documentos/MainCoffeeMachine/Decoders.v Line: 13
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceS0:comb_4|f" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS0.v Line: 4
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceS1:comb_5|f" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS1.v Line: 4
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceS2:comb_6|f" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS2.v Line: 4
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceS3:comb_7|f" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS3.v Line: 4
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceESR:comb_8|f" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESR.v Line: 4
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceESP:comb_9|f" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESP.v Line: 4
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceESN:comb_10|f" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESN.v Line: 4
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceERDI:comb_11|f" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceERDI.v Line: 4
+Error (12014): Net "Decoders:INST2|g", which fans out to "Decoders:INST2|g", cannot be assigned more than one value File: /home/aluno/Documentos/MainCoffeeMachine/Decoders.v Line: 13
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceS0:comb_4|g" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS0.v Line: 4
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceS1:comb_5|g" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS1.v Line: 4
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceS2:comb_6|g" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS2.v Line: 4
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceS3:comb_7|g" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceS3.v Line: 4
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceESR:comb_8|g" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESR.v Line: 4
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceESP:comb_9|g" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESP.v Line: 4
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceESN:comb_10|g" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceESN.v Line: 4
+    Error (12015): Net is fed by "Decoders:INST2|InterfaceERDI:comb_11|g" File: /home/aluno/Documentos/MainCoffeeMachine/InterfaceERDI.v Line: 4
+Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (144001): Generated suppressed messages file /home/aluno/Documentos/MainCoffeeMachine/output_files/MainCoffeeMachine.map.smsg
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 63 errors, 265 warnings
+    Error: Peak virtual memory: 331 megabytes
+    Error: Processing ended: Wed Jun  7 17:24:53 2023
+    Error: Elapsed time: 00:00:06
+    Error: Total CPU time (on all processors): 00:00:11
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in /home/aluno/Documentos/MainCoffeeMachine/output_files/MainCoffeeMachine.map.smsg.
+
+
