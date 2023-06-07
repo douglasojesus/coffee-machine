@@ -39,13 +39,14 @@ module Decoders(CLK, S0, S1, S2, S3, SR, SP, SN, VL, M, a, b, c, d, e, f, g, h, 
 	and(dig3, saida1Contador, ~saida2Contador);
 	and(dig4, saida1Contador, saida2Contador);
 	
-	or (a, A1, A2, A3, A4, A5, A6, A7, A8);
-	or (b, B1, B2, B3, B4, B5, B6, B7, B8);
-	or (c, C1, C2, C3, C4, C5, C6, C7, C8);
-	or (d, D1, D2, D3, D4, D5, D6, D7, D8);
-	or (e, E1, E2, E3, E4, E5, E6, E7, E8);
-	or (f, F1, F2, F3, F4, F5, F6, F7, F8);
-	or (g, G1, G2, G3, G4, G5, G6, G7, G8);
+	//Portas nor porque os leds do display de 7 segmentos são acionados em nível lógico baixo
+	nor (a, A1, A2, A3, A4, A5, A6, A7, A8);
+	nor (b, B1, B2, B3, B4, B5, B6, B7, B8);
+	nor (c, C1, C2, C3, C4, C5, C6, C7, C8);
+	nor (d, D1, D2, D3, D4, D5, D6, D7, D8);
+	nor (e, E1, E2, E3, E4, E5, E6, E7, E8);
+	nor (f, F1, F2, F3, F4, F5, F6, F7, F8);
+	nor (g, G1, G2, G3, G4, G5, G6, G7, G8);
 	
 	buf (h, M);
 	

@@ -1,5 +1,5 @@
 Fitter report for MainCoffeeMachine
-Wed Jun 07 20:23:38 2023
+Wed Jun 07 20:31:37 2023
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -56,7 +56,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------+
 ; Fitter Summary                                                       ;
 +-----------------------+----------------------------------------------+
-; Fitter Status         ; Successful - Wed Jun 07 20:23:38 2023        ;
+; Fitter Status         ; Successful - Wed Jun 07 20:31:37 2023        ;
 ; Quartus II Version    ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name         ; MainCoffeeMachine                            ;
 ; Top-level Entity Name ; MainCoffeeMachine                            ;
@@ -462,10 +462,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; MefCoffeeMachine:INST|WideAnd25~1                ; 5       ;
 ; Decoders:INST2|dig3~1                            ; 4       ;
 ; Decoders:INST2|InterfaceS2:comb_7|WideAnd0       ; 4       ;
-; Decoders:INST2|WideOr6~0                         ; 4       ;
+; Decoders:INST2|WideNor6~0                        ; 4       ;
 ; MefCoffeeMachine:INST|S2                         ; 4       ;
-; Decoders:INST2|WideOr0~4                         ; 3       ;
-; Decoders:INST2|WideOr2~0                         ; 3       ;
+; Decoders:INST2|WideNor0~4                        ; 3       ;
+; Decoders:INST2|WideNor2~0                        ; 3       ;
 ; Decoders:INST2|InterfaceS1:comb_6|WideAnd0       ; 3       ;
 ; Decoders:INST2|InterfaceESN:comb_11|WideAnd0~0   ; 3       ;
 ; MefCoffeeMachine:INST|WideAnd26~0                ; 3       ;
@@ -478,11 +478,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; MefCoffeeMachine:INST|w7~1                       ; 2       ;
 ; MefCoffeeMachine:INST|WideOr5~0                  ; 2       ;
 ; Decoders:INST2|dig3~2                            ; 2       ;
-; Decoders:INST2|WideOr6~1                         ; 2       ;
-; Decoders:INST2|WideOr3~1                         ; 2       ;
+; Decoders:INST2|WideNor6~1                        ; 2       ;
+; Decoders:INST2|WideNor3~1                        ; 2       ;
 ; Decoders:INST2|InterfaceESP:comb_10|WideAnd0     ; 2       ;
 ; Decoders:INST2|dig3~0                            ; 2       ;
-; Decoders:INST2|WideOr0~0                         ; 2       ;
+; Decoders:INST2|WideNor0~0                        ; 2       ;
 ; MefCoffeeMachine:INST|WideAnd27~2                ; 2       ;
 ; Decoders:INST2|InterfaceERDI:comb_12|WideAnd0~0  ; 2       ;
 ; MefCoffeeMachine:INST|WideAnd27~1                ; 2       ;
@@ -628,7 +628,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Fitter
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Wed Jun 07 20:23:38 2023
+    Info: Processing started: Wed Jun 07 20:31:37 2023
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off MainCoffeeMachine -c MainCoffeeMachine
 Info: Selected device EPM240T100C5 for design "MainCoffeeMachine"
 Info: Low junction temperature is 0 degrees C
@@ -705,9 +705,9 @@ Info: Estimated most critical path is register to pin delay of 19.108 ns
     Info: 5: + IC(1.792 ns) + CELL(0.511 ns) = 6.420 ns; Loc. = LAB_X4_Y1; Fanout = 4; COMB Node = 'MefCoffeeMachine:INST|S2'
     Info: 6: + IC(2.103 ns) + CELL(0.200 ns) = 8.723 ns; Loc. = LAB_X3_Y3; Fanout = 1; COMB Node = 'Decoders:INST2|InterfaceERDI:comb_12|WideAnd0~1'
     Info: 7: + IC(0.266 ns) + CELL(0.914 ns) = 9.903 ns; Loc. = LAB_X3_Y3; Fanout = 6; COMB Node = 'Decoders:INST2|InterfaceERDI:comb_12|WideAnd0'
-    Info: 8: + IC(1.763 ns) + CELL(0.511 ns) = 12.177 ns; Loc. = LAB_X4_Y2; Fanout = 1; COMB Node = 'Decoders:INST2|WideOr1~1'
-    Info: 9: + IC(0.266 ns) + CELL(0.914 ns) = 13.357 ns; Loc. = LAB_X4_Y2; Fanout = 1; COMB Node = 'Decoders:INST2|WideOr1~2'
-    Info: 10: + IC(0.669 ns) + CELL(0.511 ns) = 14.537 ns; Loc. = LAB_X4_Y2; Fanout = 1; COMB Node = 'Decoders:INST2|WideOr1~3'
+    Info: 8: + IC(1.763 ns) + CELL(0.511 ns) = 12.177 ns; Loc. = LAB_X4_Y2; Fanout = 1; COMB Node = 'Decoders:INST2|WideNor1~1'
+    Info: 9: + IC(0.266 ns) + CELL(0.914 ns) = 13.357 ns; Loc. = LAB_X4_Y2; Fanout = 1; COMB Node = 'Decoders:INST2|WideNor1~2'
+    Info: 10: + IC(0.669 ns) + CELL(0.511 ns) = 14.537 ns; Loc. = LAB_X4_Y2; Fanout = 1; COMB Node = 'Decoders:INST2|WideNor1~3'
     Info: 11: + IC(2.249 ns) + CELL(2.322 ns) = 19.108 ns; Loc. = PIN_68; Fanout = 0; PIN Node = 'b'
     Info: Total cell delay = 7.508 ns ( 39.29 % )
     Info: Total interconnect delay = 11.600 ns ( 60.71 % )
@@ -721,8 +721,8 @@ Info: The Fitter performed an Auto Fit compilation.  Optimizations were skipped 
 Warning: The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info: Quartus II Fitter was successful. 0 errors, 3 warnings
     Info: Peak virtual memory: 239 megabytes
-    Info: Processing ended: Wed Jun 07 20:23:38 2023
+    Info: Processing ended: Wed Jun 07 20:31:37 2023
     Info: Elapsed time: 00:00:00
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
 
 
