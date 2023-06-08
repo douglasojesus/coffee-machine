@@ -131,12 +131,13 @@ A saída S1 tem a seguinte expressão: \~w3.\~w2.\~w1.\~w0.SR.SP.SN.A.VL.\~B0.B1
 A saída S2 tem a seguinte expressão: \~w3.\~w2.\~w1.\~w0.SR.SP.SN.A.VL.B0.\~B1 + \~w3.w2.w1.w0								
 A saída S3 tem a seguinte expressão: \~w3.\~w2.\~w1.\~w0.SR.SP.SN.A.VL.B0.B1 + w3.\~w2.\~w1.\~w0	
 
-A saída P tem a seguinte expressão:	w3.\~w2.\~w1.w0.SR.SP.SN + w3.\~w2.w1.\~w0.SR.SP.SN + w3.\~w2.w1.w0								
+A saída P tem a seguinte expressão:	\~w3.w2.\~w1.w0 + \~w3.w2.w1.\~w0 + \~w3.w2.w1.w0 + w3.\~w2.\~w1.\~w0 + w3.\~w2.\~w1.w0.SR.SP.SN + w3.\~w2.w1.\~w0.SR.SP.SN + w3.\~w2.w1.w0
 
-A saída AQ tem a seguinte expressão: w3.\~w2.w1.\~w0.SR.SP.SN + w3.\~w2.w1.w0								
+A saída AQ tem a seguinte expressão: w3.\~w2.\~w1.w0.SR.SP.SN + w3.\~w2.w1.w0 + w3.\~w2.w1.\\ \~w0.SR.SP.SN		
 
-A saída PP tem a seguinte expressão: w3.\~w2.w1.w0								
-A saída M tem a seguinte expressão:	\~w3.\~w2.\~w1.\~w0.SR.SP.SN.\~A + \~w3.\~w2.\~w1.w0.SR + \~w3.\~w2.w1.\~w0.SP + \~w3.\~w2.w1.w0.SN + \~w3.w2.\~w1.\~w0.VL + w3.\~w2.\~w1.w0.SR.SP.\~SN + w3.\~w2.\~w1.w0.SR.\~SP.SN + w3.\~w2.\~w1.w0.\~SR.SP.SN + w3.\~w2.w1.\~w0.SR.SP.\~SN + w3.\~w2.w1.\~w0.SR.\~SP.SN + w3.\~w2.w1.\~w0.\~SR.SP.SN								
+A saída PP tem a seguinte expressão: w3.\~w2.w1.\~w0.SR.SP.SN + w3.\~w2.w1.w0
+
+A saída M tem a seguinte expressão:	\~w3.\~w2.\~w1.\~w0.SR.SP.SN.\~A + \~w3.\~w2.\~w1.w0.SR + \~w3.\~w2.w1.\~w0.SP + \~w3.\~w2.w1.w0.SN + \~w3.w2.\~w1.\~w0.VL + w3.\~w2.\~w1.w0.SR.SP.\~SN + w3.\~w2.\~w1.w0.\\SR.\~SP.SN + w3.\~w2.\~w1.w0.\~SR.SP.SN + w3.\~w2.w1.\~w0.SR.SP.\~SN + w3.\~w2.w1.\~w0.SR.\~SP.SN + w3.\~w2.w1.\~w0.\~SR.SP.SN + w3.\~w2.w1.w0			
 
 Após a simplificação e fatoração de alguns termos utilizando a algebra de boole, as equações das saídas ficaram da seguinte forma:
 
@@ -156,13 +157,13 @@ Saída S2: \~w3.\~w2.\~w1.\~w0.SR.SP.SN.A.VL.B0.\~B1 + \~w3.w2.w1.w0
 
 Saída S3: \~w2.\~w1.\~w0(SR.SP.SN.A.VL.B0.B1 + w3)
 
-Saída P: w3.\~w2.SR.SP.SN(\~w1.w0 + w1.\~w0) + w3.\~w2.w1.w0
+Saída P: \~w3.w2.(\~w1.w0 + w1) + w3.\~w2.(SR.SP.SN.(\~w1.w0. + w1.\~w0) + w1.w0 + \~w1.\~w0)
 
-Saída AQ: w3.\~w2.w1.(SR.SP.SN + w0)
+Saída AQ: w3.\~w2.SR.SP.SN.(\~w1.w0. + w1.\~w0) + w3.\~w2.w1.w0 
 
-Saída PP: w3.\~w2.w1.w0
+Saída PP: w3.\~w2.w1.(SR.SP.SN + w0)
 
-Saída M: \~w3.\~w2.\~w1.SR(SP.SN.\~A + w0) + \~w3.\~w2.w1.(\~w0.SP + w0.SN) + \~w3.w2.\~w1.\~w0.VL + w3.\~w2.\~w1.w0.(SR.SP.\~SN + SR.\~SP.SN + \~SR.SP.SN) + w3.\~w2.w1.\~w0.(SR.SP.\~SN + SR.\~SP.SN + \~SR.SP.SN)
+Saída M: \~w3.\~w2.\~w1.SR(SP.SN.\~A + w0) + \~w3.\~w2.w1.(\~w0.SP + w0.SN) + \~w3.w2.\~w1.\~w0.VL + w3.\~w2.\~w1.w0.(SR.SP.\~SN + SR.\~SP.SN + \~SR.SP.SN) + w3.\~w2.w1.\~w0.(SR.SP.\~SN + SR.\~SP.SN + \~SR.SP.SN) + w3.\~w2.w1.w0
 
 \section{Desenho do circuito}
 
@@ -216,3 +217,74 @@ Por fim, na Figura 9 é possível verificar, após acionamento com a entrada "A"
 \end{figure}
 
 Outras simulações foram feitas, mas devido a quantidade de possibilidades de testes a serem feitos, não cabe a inserção neste relatório técnico.
+
+\section{Descrição do código}
+O código gerado contém a descrição do módulo chamado "MainCoffeeMachine". Esse módulo é parte principal da lógica da máquina de café e desempenha um papel crucial na coordenação das funcionalidades da máquina. O módulo possui várias entradas e saídas, incluindo sinais de controle como CLK, SR, SP, SN, A, V0, V1, B0 e B1, bem como sinais de saída para o display de sete segmentos (a, b, c, d, e, f, g, h, dig1, dig2, dig3, dig4) e para os LEDs (P, AQ, PP). O sinal de reticências ("...") na imagem representa continuação do código seguindo a mesma lógica do trecho posterior.
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=1\textwidth]{imagens/carbon_main.png}
+    \caption{Módulo principal do código importando os módulos da MEF e dos decodificadores}
+    \label{fig:carbon_main}
+\end{figure}
+
+Dentro do módulo, são declarados sinais de fio que serão utilizados posteriormente, como VL, E0, E1, E2, E3, S0, S1, S2, S3 e M. Esses sinais são usados para conectar os diferentes componentes do sistema e garantir o correto funcionamento da máquina de café.
+
+Uma parte importante do código é a determinação do valor de VL. Isso é feito através do uso de portas lógicas, como AND e OR, que verificam as combinações das entradas V0, V1, B0 e B1. O objetivo é determinar se essas entradas são iguais ou diferentes, e o resultado é atribuído ao sinal VL.
+
+Além disso, o módulo "MainCoffeeMachine" instancia dois outros módulos: "MefCoffeeMachine" e "Decoders". O primeiro é instanciado como "INST" e recebe diversas entradas e saídas, incluindo os sinais de controle, VL, B0, B1, e os sinais de saída P, AQ, PP e M. O segundo é instanciado como "INST2" e também recebe várias entradas e saídas, como os sinais de controle e os sinais de saída para o display de sete segmentos.
+
+Esses módulos adicionais desempenham funções específicas dentro do sistema da máquina de café. O "MefCoffeeMachine" implementa a lógica de controle principal da máquina, enquanto o "Decoders" é responsável por converter os sinais de controle em sinais adequados para o display de sete segmentos, permitindo a exibição das informações através das interfaces.
+
+O módulo "MefCoffeeMachine" é responsável por implementar a lógica de controle da máquina, permitindo que ela funcione corretamente. Dentro do módulo, são declarados sinais de fio que serão utilizados posteriormente, como Q3, Q2, Q1, Q0 e uma série de sinais w1 a w41 e s1 a s56. É utilizado quatro flip-flops (FFD) para armazenar o estado atual da máquina de café. Os sinais w1 a w41 são usados para codificar as equações de excitação dos estados e determinar o próximo estado com base nas entradas e no estado atual.
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=1\textwidth]{imagens/carbon_mef.png}
+    \caption{Módulo de implementação da Máquina de Estados Finitos}
+    \label{fig:carbon_mef}
+\end{figure}
+
+Em seguida, são codificadas as equações das saídas da máquina. Os sinais E0, E1, E2, E3, S0, S1, S2 e S3 representam as saídas específicas da máquina, que serão enviadas para os decodificadores como análise das interfaces do display de sete segmentos. Por fim, P, AQ e PP representam a pressurização, aquecimento e informação de bebida disponível para retirada, respectivamente. Esses sinais são enviados para o bloco principal.
+
+O módulo MEF também instancia o módulo de delay, dando 2 segundos para as saídas do pressurizador e aquecedor serem disponibilizadas. Como, em sessão, foi permitido a utilização de um código comportamental, o Delay foi importado do módulo DelayedOutput. Como esse bloco de código utiliza bastante recurso, foi apenas utilizado nas saídas do pressurizador e aquecedor, completando os requisitos solicitados no problema. 
+
+O módulo Decoders é responsável por enviar os sinais de acordo com a interface selecionada pela máquina de estados. O módulo possui uma série de decodificadores, que são comumente utilizados para exibir dígitos em displays de 7 segmentos, em que cada segmento pode ser ativado ou desativado para formar diferentes caracteres numéricos ou alfanuméricos. Os seguintes códigos alfanuméricos a serem exibidos no display de sete segmentos estão representados pelos seguintes sinais:
+
+\begin{itemize}
+    \item "CE01": escolha do S0;
+    \item "CL02": escolha do S1;
+    \item "CC05": escolha do S2;
+    \item "CP10": escolha do S3;
+    \item "ERSR": erro do sensor SR;
+    \item "ERSP": erro do sensor SP;
+    \item "ERSN": erro do sensor SN;
+    \item "ERDI": erro de validação do valor/dinheiro;
+    \item "....": modo de espera.
+\end{itemize}
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=1\textwidth]{imagens/carbon_decoders.png}
+    \caption{Módulo de implementação dos decodificadores das interfaces de saída}
+    \label{fig:carbon_decoders}
+\end{figure}
+
+O módulo "Decoders" possui diversas entradas e saídas que são utilizadas para controlar e exibir os dígitos no display. Para implementar a funcionalidade do decodificador de 7 segmentos, o módulo faz uso de outros módulos e interfaces. O módulo Contador é utilizado para gerar dois sinais de saída (saida1Contador e saida2Contador), que determinam o dígito atual a ser exibido no display. Esses sinais são utilizados como entrada para as interfaces correspondentes (InterfaceS0, InterfaceS1, InterfaceS2, InterfaceS3, InterfaceESR, InterfaceESP, InterfaceESN, InterfaceERDI), que recebem também os sinais de controle. Cada interface é responsável por gerar os sinais de saída correspondentes aos segmentos do display de 7 segmentos, dependendo das combinações específicas dos sinais de controle.
+
+Além disso, o código implementa a lógica de seleção do dígito atual a ser exibido. Por meio de portas lógicas and, os sinais saida1Contador e saida2Contador são combinados com sinais complementares para ativar apenas um dígito por vez. Os sinais resultantes (dig1, dig2, dig3, dig4) são utilizados para selecionar o dígito apropriado no display.
+
+Por fim, as portas nor são utilizadas para combinar os sinais dos segmentos individuais (A1 a A8, B1 a B8, etc.) em um único sinal para cada segmento do display (a, b, c, d, e, f, g). Esses sinais combinados representam os segmentos ativados ou desativados para exibir o dígito atual no display de 7 segmentos.
+
+O sinal h é conectado diretamente à entrada M por meio de um buffer (buf) para exibir um ponto decimal, representando o modo de espera no display.
+
+\section{Recursos físicos}
+
+Sem o código comportamental do Delay, a implementação consumiu os seguintes recursos:
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=1\textwidth]{imagens/hierarchy_info.png}
+    \caption{Tabela de consumo de recursos físicos do código}
+    \label{fig:hierarchy_info}
+\end{figure}
