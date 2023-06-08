@@ -132,42 +132,6 @@ Decoders:INST2|Contador:comb_4|FlipflopT:inst3
 
 # end
 # entity
-MefCoffeeMachine
-# storage
-db|MainCoffeeMachine.(1).cnf
-db|MainCoffeeMachine.(1).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-MefCoffeeMachine.v
-8d4416752f1a7bb5e7fbd4eb1437097
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-MefCoffeeMachine:INST
-}
-# macro_sequence
-
-# end
-# entity
 InterfaceS0
 # storage
 db|MainCoffeeMachine.(6).cnf
@@ -523,6 +487,79 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 }
 # hierarchies {
 |
+}
+# macro_sequence
+
+# end
+# entity
+DelayedOutput
+# storage
+db|MainCoffeeMachine.(14).cnf
+db|MainCoffeeMachine.(14).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+DelayedOutput.v
+5d123e1e4463105cff2dc73655867188
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+MefCoffeeMachine:INST|DelayedOutput:INST3
+MefCoffeeMachine:INST|DelayedOutput:INST4
+}
+# macro_sequence
+
+# end
+# entity
+MefCoffeeMachine
+# storage
+db|MainCoffeeMachine.(1).cnf
+db|MainCoffeeMachine.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+MefCoffeeMachine.v
+40d43d4934653761491ae437bd69b21
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+MefCoffeeMachine:INST
 }
 # macro_sequence
 

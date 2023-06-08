@@ -99,3 +99,4 @@ set_location_assignment PIN_92 -to f
 set_location_assignment PIN_39 -to g
 set_location_assignment PIN_96 -to h
 set_global_assignment -name MISC_FILE "C:/Users/usuario/Desktop/Douglas/coffee-machine/protótipo/MainCoffeeMachine/MainCoffeeMachine.dpf"
+set_global_assignment -name VERILOG_FILE DelayedOutput.v

@@ -12,13 +12,12 @@ E0, E1, E2, E3, S0, S1, S2, S3, P, AQ, PP, M);
 	w37, w38, w39, w40, w41;
 	
 	wire s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18,
-	s19, s20, s21, s22, s23, s24, s25, s26;
+	s19, s20, s21, s22, s23, s24, s25, s26, s27, s28, s29, s30, s31, s32, s33, s34, s35, s36,
+	s37, s38, s39, s40, s41, s42, s43, s44, s45, s46, s47, s48, s49, s50, s51, s52, s53, s54, s55, s56;
 	//////////////////////////////HEAD
 	
 	//////////////////////////////BODY
-	//InicializaÃ§Äƒo da mÃ¡quina
-	
-						
+	//Codificação das equações de excitação dos estados. Como a máquina possui 12 estados, 4 flip-flops são utilizados.		
 	or (w1, Q1, Q0);
 	and (w2, w1, Q2, ~Q3);
 	and (w3, A, VL, B0, B1, ~Q1);
@@ -68,20 +67,13 @@ E0, E1, E2, E3, S0, S1, S2, S3, P, AQ, PP, M);
  	or (w41, w28, w32, w40);
  	//w41 = Q0	
 	
-	//Estado prÃ³ximo
+	//Estado próximo
 	FFD D3(CLK, w7, Q3);
 	FFD D2(CLK, w12, Q2);
 	FFD D1(CLK, w27, Q1);
 	FFD D0(CLK, w41, Q0);
-	
-	//Estado prÃ³ximo
-	/*always @ (posedge CLK) begin
-		Q3 <= w7;
-		Q2 <= w12;
-		Q1 <= w27;
-		Q0 <= w41;
-	end*/
 
+	//Codificação das equações das saídas.
 	and (E0, ~Q3, ~Q2, ~Q1, ~SR); //E0
 	
 	or (s2, SR, Q1);
@@ -123,15 +115,17 @@ E0, E1, E2, E3, S0, S1, S2, S3, P, AQ, PP, M);
 	and (s32, s31, Q3, ~Q2);
 	or (s33, Q0, Q1);
 	and (s34, s33, ~Q3, Q2);
-	or (P, s34, s32); //P
+	or (Pbuffer, s34, s32); //P
+	DelayedOutput INST3(CLK, Pbuffer, P);
 	
 	and (s36, Q3, ~Q2, Q1, Q0);
 	and (s37, s27, Q3, ~Q2, SR, SP, SN); 
-	or (AQ, s37, s36); //AQ		
+	or (AQbuffer, s37, s36); //AQ
+	DelayedOutput INST4(CLK, AQbuffer, AQ);
 		
 	and (s39, SR, SP, SN);
 	or (s40, s39, Q0);
-	and (PP, s40, Q3, ~Q2, Q1); //PP
+	and (PPbuffer, s40, Q3, ~Q2, Q1); //PP
 	
 	and (s42, Q3, ~Q2, Q1, Q0); 
 	and (s43, SP, SR, ~SN);

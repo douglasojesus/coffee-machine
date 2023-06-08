@@ -1,0 +1,31 @@
+module DelayedOutput (
+  input wire clk,
+  input wire value_in,
+  output wire value_out
+);
+
+  reg [1:0] counter;
+  reg value_delayed;
+  reg value_stored;
+  wire value_changed;
+
+  always @(posedge clk) begin
+    if (counter == 2) begin
+      value_delayed <= value_in;
+      value_stored <= value_in;
+    end else begin
+      value_delayed <= value_stored;
+      value_stored <= value_in;
+    end
+
+    if (counter == 3) begin
+      counter <= 0;
+    end else begin
+      counter <= counter + 1;
+    end
+  end
+
+  assign value_changed = (value_in != value_stored);
+  assign value_out = (value_changed) ? value_delayed : value_stored;
+
+endmodule

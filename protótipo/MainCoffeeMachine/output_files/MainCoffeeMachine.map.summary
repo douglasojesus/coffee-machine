@@ -1,9 +1,9 @@
-Analysis & Synthesis Status : Successful - Wed Jun 07 20:42:06 2023
+Analysis & Synthesis Status : Successful - Wed Jun 07 21:53:23 2023
 Quartus II Version : 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition
 Revision Name : MainCoffeeMachine
 Top-level Entity Name : MainCoffeeMachine
 Family : MAX II
-Total logic elements : 93
+Total logic elements : 180
 Total pins : 24
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MainCoffeeMachine
-Wed Jun 07 20:42:06 2023
+Wed Jun 07 21:53:23 2023
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -45,12 +45,12 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                               ;
 +-----------------------------+----------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Wed Jun 07 20:42:06 2023        ;
+; Analysis & Synthesis Status ; Successful - Wed Jun 07 21:53:23 2023        ;
 ; Quartus II Version          ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name               ; MainCoffeeMachine                            ;
 ; Top-level Entity Name       ; MainCoffeeMachine                            ;
 ; Family                      ; MAX II                                       ;
-; Total logic elements        ; 93                                           ;
+; Total logic elements        ; 180                                          ;
 ; Total pins                  ; 24                                           ;
 ; Total virtual pins          ; 0                                            ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                                ;
@@ -143,41 +143,43 @@ applicable agreement for further details.
 ; InterfaceESP.v                   ; yes             ; User Verilog HDL File  ; C:/Users/usuario/Desktop/Douglas/coffee-machine/protótipo/MainCoffeeMachine/InterfaceESP.v      ;
 ; InterfaceESR.v                   ; yes             ; User Verilog HDL File  ; C:/Users/usuario/Desktop/Douglas/coffee-machine/protótipo/MainCoffeeMachine/InterfaceESR.v      ;
 ; FlipflopT.v                      ; yes             ; User Verilog HDL File  ; C:/Users/usuario/Desktop/Douglas/coffee-machine/protótipo/MainCoffeeMachine/FlipflopT.v         ;
+; DelayedOutput.v                  ; yes             ; User Verilog HDL File  ; C:/Users/usuario/Desktop/Douglas/coffee-machine/protótipo/MainCoffeeMachine/DelayedOutput.v     ;
 +----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                  ;
-+---------------------------------------------+--------------------------------+
-; Resource                                    ; Usage                          ;
-+---------------------------------------------+--------------------------------+
-; Total logic elements                        ; 93                             ;
-;     -- Combinational with no register       ; 87                             ;
-;     -- Register only                        ; 0                              ;
-;     -- Combinational with a register        ; 6                              ;
-;                                             ;                                ;
-; Logic element usage by number of LUT inputs ;                                ;
-;     -- 4 input functions                    ; 61                             ;
-;     -- 3 input functions                    ; 14                             ;
-;     -- 2 input functions                    ; 16                             ;
-;     -- 1 input functions                    ; 2                              ;
-;     -- 0 input functions                    ; 0                              ;
-;                                             ;                                ;
-; Logic elements by mode                      ;                                ;
-;     -- normal mode                          ; 93                             ;
-;     -- arithmetic mode                      ; 0                              ;
-;     -- qfbk mode                            ; 0                              ;
-;     -- register cascade mode                ; 0                              ;
-;     -- synchronous clear/load mode          ; 1                              ;
-;     -- asynchronous clear/load mode         ; 0                              ;
-;                                             ;                                ;
-; Total registers                             ; 6                              ;
-; I/O pins                                    ; 24                             ;
-; Maximum fan-out node                        ; MefCoffeeMachine:INST|FFD:D0|Q ;
-; Maximum fan-out                             ; 20                             ;
-; Total fan-out                               ; 342                            ;
-; Average fan-out                             ; 2.92                           ;
-+---------------------------------------------+--------------------------------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Total logic elements                        ; 180   ;
+;     -- Combinational with no register       ; 106   ;
+;     -- Register only                        ; 1     ;
+;     -- Combinational with a register        ; 73    ;
+;                                             ;       ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 77    ;
+;     -- 3 input functions                    ; 16    ;
+;     -- 2 input functions                    ; 84    ;
+;     -- 1 input functions                    ; 2     ;
+;     -- 0 input functions                    ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 118   ;
+;     -- arithmetic mode                      ; 62    ;
+;     -- qfbk mode                            ; 0     ;
+;     -- register cascade mode                ; 0     ;
+;     -- synchronous clear/load mode          ; 65    ;
+;     -- asynchronous clear/load mode         ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 74    ;
+; Total logic cells in carry chains           ; 64    ;
+; I/O pins                                    ; 24    ;
+; Maximum fan-out node                        ; CLK   ;
+; Maximum fan-out                             ; 73    ;
+; Total fan-out                               ; 680   ;
+; Average fan-out                             ; 3.33  ;
++---------------------------------------------+-------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -185,19 +187,21 @@ applicable agreement for further details.
 +-------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node    ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                               ; Library Name ;
 +-------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------+--------------+
-; |MainCoffeeMachine            ; 93 (1)      ; 6            ; 0          ; 24   ; 0            ; 87 (1)       ; 0 (0)             ; 6 (0)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine                                                ; work         ;
-;    |Decoders:INST2|           ; 45 (33)     ; 2            ; 0          ; 0    ; 0            ; 43 (33)      ; 0 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|Decoders:INST2                                 ; work         ;
+; |MainCoffeeMachine            ; 180 (1)     ; 74           ; 0          ; 24   ; 0            ; 106 (1)      ; 1 (0)             ; 73 (0)           ; 64 (0)          ; 0 (0)      ; |MainCoffeeMachine                                                ; work         ;
+;    |Decoders:INST2|           ; 44 (33)     ; 2            ; 0          ; 0    ; 0            ; 42 (33)      ; 0 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|Decoders:INST2                                 ; work         ;
 ;       |Contador:comb_4|       ; 2 (0)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|Decoders:INST2|Contador:comb_4                 ; work         ;
 ;          |FlipflopT:inst1|    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|Decoders:INST2|Contador:comb_4|FlipflopT:inst1 ; work         ;
 ;          |FlipflopT:inst2|    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|Decoders:INST2|Contador:comb_4|FlipflopT:inst2 ; work         ;
-;       |InterfaceERDI:comb_12| ; 4 (4)       ; 0            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|Decoders:INST2|InterfaceERDI:comb_12           ; work         ;
+;       |InterfaceERDI:comb_12| ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|Decoders:INST2|InterfaceERDI:comb_12           ; work         ;
 ;       |InterfaceESN:comb_11|  ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|Decoders:INST2|InterfaceESN:comb_11            ; work         ;
 ;       |InterfaceESP:comb_10|  ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|Decoders:INST2|InterfaceESP:comb_10            ; work         ;
 ;       |InterfaceS0:comb_5|    ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|Decoders:INST2|InterfaceS0:comb_5              ; work         ;
 ;       |InterfaceS1:comb_6|    ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|Decoders:INST2|InterfaceS1:comb_6              ; work         ;
 ;       |InterfaceS2:comb_7|    ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|Decoders:INST2|InterfaceS2:comb_7              ; work         ;
 ;       |InterfaceS3:comb_8|    ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|Decoders:INST2|InterfaceS3:comb_8              ; work         ;
-;    |MefCoffeeMachine:INST|    ; 47 (43)     ; 4            ; 0          ; 0    ; 0            ; 43 (43)      ; 0 (0)             ; 4 (0)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|MefCoffeeMachine:INST                          ; work         ;
+;    |MefCoffeeMachine:INST|    ; 135 (41)    ; 72           ; 0          ; 0    ; 0            ; 63 (41)      ; 1 (0)             ; 71 (0)           ; 64 (0)          ; 0 (0)      ; |MainCoffeeMachine|MefCoffeeMachine:INST                          ; work         ;
+;       |DelayedOutput:INST3|   ; 45 (45)     ; 34           ; 0          ; 0    ; 0            ; 11 (11)      ; 0 (0)             ; 34 (34)          ; 32 (32)         ; 0 (0)      ; |MainCoffeeMachine|MefCoffeeMachine:INST|DelayedOutput:INST3      ; work         ;
+;       |DelayedOutput:INST4|   ; 45 (45)     ; 34           ; 0          ; 0    ; 0            ; 11 (11)      ; 1 (1)             ; 33 (33)          ; 32 (32)         ; 0 (0)      ; |MainCoffeeMachine|MefCoffeeMachine:INST|DelayedOutput:INST4      ; work         ;
 ;       |FFD:D0|                ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|MefCoffeeMachine:INST|FFD:D0                   ; work         ;
 ;       |FFD:D1|                ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|MefCoffeeMachine:INST|FFD:D1                   ; work         ;
 ;       |FFD:D2|                ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |MainCoffeeMachine|MefCoffeeMachine:INST|FFD:D2                   ; work         ;
@@ -206,14 +210,32 @@ applicable agreement for further details.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-----------------------------------------------------------------------+
-; Registers Removed During Synthesis                                    ;
-+--------------------------------------------------+--------------------+
-; Register name                                    ; Reason for Removal ;
-+--------------------------------------------------+--------------------+
-; Decoders:INST2|Contador:comb_4|FlipflopT:inst3|Q ; Lost fanout        ;
-; Total Number of Removed Registers = 1            ;                    ;
-+--------------------------------------------------+--------------------+
++--------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                               ;
++---------------------------------------------------------+----------------------------------------+
+; Register name                                           ; Reason for Removal                     ;
++---------------------------------------------------------+----------------------------------------+
+; MefCoffeeMachine:INST|DelayedOutput:INST4|delay[0..6]   ; Stuck at GND due to stuck port data_in ;
+; MefCoffeeMachine:INST|DelayedOutput:INST4|delay[7]      ; Stuck at VCC due to stuck port data_in ;
+; MefCoffeeMachine:INST|DelayedOutput:INST4|delay[8..9]   ; Stuck at GND due to stuck port data_in ;
+; MefCoffeeMachine:INST|DelayedOutput:INST4|delay[10]     ; Stuck at VCC due to stuck port data_in ;
+; MefCoffeeMachine:INST|DelayedOutput:INST4|delay[11..14] ; Stuck at GND due to stuck port data_in ;
+; MefCoffeeMachine:INST|DelayedOutput:INST4|delay[15]     ; Stuck at VCC due to stuck port data_in ;
+; MefCoffeeMachine:INST|DelayedOutput:INST4|delay[16]     ; Stuck at GND due to stuck port data_in ;
+; MefCoffeeMachine:INST|DelayedOutput:INST4|delay[17..20] ; Stuck at VCC due to stuck port data_in ;
+; MefCoffeeMachine:INST|DelayedOutput:INST4|delay[21..31] ; Stuck at GND due to stuck port data_in ;
+; MefCoffeeMachine:INST|DelayedOutput:INST3|delay[0..6]   ; Stuck at GND due to stuck port data_in ;
+; MefCoffeeMachine:INST|DelayedOutput:INST3|delay[7]      ; Stuck at VCC due to stuck port data_in ;
+; MefCoffeeMachine:INST|DelayedOutput:INST3|delay[8..9]   ; Stuck at GND due to stuck port data_in ;
+; MefCoffeeMachine:INST|DelayedOutput:INST3|delay[10]     ; Stuck at VCC due to stuck port data_in ;
+; MefCoffeeMachine:INST|DelayedOutput:INST3|delay[11..14] ; Stuck at GND due to stuck port data_in ;
+; MefCoffeeMachine:INST|DelayedOutput:INST3|delay[15]     ; Stuck at VCC due to stuck port data_in ;
+; MefCoffeeMachine:INST|DelayedOutput:INST3|delay[16]     ; Stuck at GND due to stuck port data_in ;
+; MefCoffeeMachine:INST|DelayedOutput:INST3|delay[17..20] ; Stuck at VCC due to stuck port data_in ;
+; MefCoffeeMachine:INST|DelayedOutput:INST3|delay[21..31] ; Stuck at GND due to stuck port data_in ;
+; Decoders:INST2|Contador:comb_4|FlipflopT:inst3|Q        ; Lost fanout                            ;
+; Total Number of Removed Registers = 65                  ;                                        ;
++---------------------------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -221,8 +243,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 6     ;
-; Number of registers using Synchronous Clear  ; 1     ;
+; Total registers                              ; 74    ;
+; Number of registers using Synchronous Clear  ; 65    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -279,7 +301,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Wed Jun 07 20:42:04 2023
+    Info: Processing started: Wed Jun 07 21:53:22 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MainCoffeeMachine -c MainCoffeeMachine
 Info: Found 1 design units, including 1 entities, in source file MainCoffeeMachine.v
     Info: Found entity 1: MainCoffeeMachine
@@ -314,37 +336,15 @@ Info: Found 1 design units, including 1 entities, in source file Demux.v
     Info: Found entity 1: Demux
 Info: Found 1 design units, including 1 entities, in source file FlipflopT.v
     Info: Found entity 1: FlipflopT
+Info: Found 1 design units, including 1 entities, in source file DelayedOutput.v
+    Info: Found entity 1: DelayedOutput
 Warning (10236): Verilog HDL Implicit Net warning at MainCoffeeMachine.v(21): created implicit net for "val1"
 Warning (10236): Verilog HDL Implicit Net warning at MainCoffeeMachine.v(22): created implicit net for "val2"
 Warning (10236): Verilog HDL Implicit Net warning at MainCoffeeMachine.v(23): created implicit net for "val3"
 Warning (10236): Verilog HDL Implicit Net warning at MainCoffeeMachine.v(24): created implicit net for "val4"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(118): created implicit net for "s27"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(119): created implicit net for "s28"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(120): created implicit net for "s29"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(121): created implicit net for "s30"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(122): created implicit net for "s31"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(123): created implicit net for "s32"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(124): created implicit net for "s33"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(125): created implicit net for "s34"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(128): created implicit net for "s36"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(129): created implicit net for "s37"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(132): created implicit net for "s39"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(133): created implicit net for "s40"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(136): created implicit net for "s42"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(137): created implicit net for "s43"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(138): created implicit net for "s44"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(139): created implicit net for "s45"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(140): created implicit net for "s46"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(141): created implicit net for "s47"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(142): created implicit net for "s48"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(143): created implicit net for "s49"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(144): created implicit net for "s50"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(145): created implicit net for "s51"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(146): created implicit net for "s52"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(147): created implicit net for "s53"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(148): created implicit net for "s54"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(149): created implicit net for "s55"
-Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(150): created implicit net for "s56"
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(118): created implicit net for "Pbuffer"
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(123): created implicit net for "AQbuffer"
+Warning (10236): Verilog HDL Implicit Net warning at MefCoffeeMachine.v(128): created implicit net for "PPbuffer"
 Warning (10236): Verilog HDL Implicit Net warning at Contador.v(7): created implicit net for "Q3"
 Critical Warning (10846): Verilog HDL Instantiation warning at Decoders.v(24): instance has no name
 Critical Warning (10846): Verilog HDL Instantiation warning at Decoders.v(27): instance has no name
@@ -357,7 +357,9 @@ Critical Warning (10846): Verilog HDL Instantiation warning at Decoders.v(33): i
 Critical Warning (10846): Verilog HDL Instantiation warning at Decoders.v(34): instance has no name
 Info: Elaborating entity "MainCoffeeMachine" for the top level hierarchy
 Info: Elaborating entity "MefCoffeeMachine" for hierarchy "MefCoffeeMachine:INST"
+Warning (10034): Output port "PP" at MefCoffeeMachine.v(5) has no driver
 Info: Elaborating entity "FFD" for hierarchy "MefCoffeeMachine:INST|FFD:D3"
+Info: Elaborating entity "DelayedOutput" for hierarchy "MefCoffeeMachine:INST|DelayedOutput:INST3"
 Info: Elaborating entity "Decoders" for hierarchy "Decoders:INST2"
 Info: Elaborating entity "Contador" for hierarchy "Decoders:INST2|Contador:comb_4"
 Info: Elaborating entity "FlipflopT" for hierarchy "Decoders:INST2|Contador:comb_4|FlipflopT:inst1"
@@ -596,18 +598,20 @@ Warning (10739): Verilog HDL warning at InterfaceERDI.v(65): actual bit length 3
 Info: Ignored 1 buffer(s)
     Info: Ignored 1 SOFT buffer(s)
 Warning: 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning: Output pins are stuck at VCC or GND
+    Warning (13410): Pin "PP" is stuck at GND
 Info: 1 registers lost all their fanouts during netlist optimizations. The first 1 are displayed below.
     Info: Register "Decoders:INST2|Contador:comb_4|FlipflopT:inst3|Q" lost all its fanouts during netlist optimizations.
-Info: Implemented 117 device resources after synthesis - the final resource count might be different
+Info: Implemented 204 device resources after synthesis - the final resource count might be different
     Info: Implemented 9 input pins
     Info: Implemented 15 output pins
-    Info: Implemented 93 logic cells
+    Info: Implemented 180 logic cells
 Info: Generated suppressed messages file C:/Users/usuario/Desktop/Douglas/coffee-machine/protótipo/MainCoffeeMachine/output_files/MainCoffeeMachine.map.smsg
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 267 warnings
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 246 warnings
     Info: Peak virtual memory: 226 megabytes
-    Info: Processing ended: Wed Jun 07 20:42:06 2023
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Processing ended: Wed Jun 07 21:53:23 2023
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:02
 
 
 +------------------------------------------+

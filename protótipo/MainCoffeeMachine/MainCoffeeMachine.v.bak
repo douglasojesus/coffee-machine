@@ -3,7 +3,7 @@ P, AQ, PP, a, b, c, d, e, f, g, h, dig1, dig2, dig3, dig4);
 
 	/*P=LED9
 	AQ=LED8
-	PP=LED7
+	PP=LED-RGB VERDE
 	M=SEG-P (TODOS OS DIGITOS)*/
 
 	//////////////////////////////HEAD
